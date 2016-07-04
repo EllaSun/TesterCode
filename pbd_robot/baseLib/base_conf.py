@@ -3,7 +3,7 @@ import os,re
 import ConfigParser
 from baseLib import base_data
 
-# 配置文件
+# 閰嶇疆鏂囦欢
 class Config:
 	def __init__(self, section, cfg, cfg_bak = None, mode = 1):
 		self.cf = ConfigParser.ConfigParser()
@@ -24,7 +24,7 @@ class Config:
 			self.setWithoutSection(item, value)
 
 	def setSection(self, item, value, isStrip):
-		'''设置配置项'''
+		'''set configuration item'''
 		if self.mode == 1:
 			item = "\"" + item + "\""
 			value = "\"" + value + "\""
@@ -55,7 +55,7 @@ class Config:
 		f.close()
 
 	def get(self, item):
-		'''获取配置项'''
+		'''get configuration item'''
 		if self.mode == 1:
 			item = "\"" + item + "\""
 		try:
@@ -73,7 +73,7 @@ class Config:
 		return res
 
 	def remove(self, item, isStrip = 1):
-		'''删除配置项'''
+		'''remove configuration item'''
 		if self.mode == 1:
 			item = "\"" + item + "\""
 		try:
@@ -86,13 +86,13 @@ class Config:
 			print "Error"
 
 	def recover(self):
-		'''恢复配置文件'''
+		'''recover configuration item'''
 		cmd = 'cp -f ' + self.cfg_bak + ' ' + self.cfg
 		os.system(cmd)
 		self.cf.read(self.cfg)
 
 	def strip(self):
-		'''去掉配置项等号左右空格,注：模块自动添加空格，server读取失败'''
+		'''Remove the spaces around the equal sign configuration items, note: moduler add spcaes autoly. server fail to read that configuration'''
 		lines = self.data.read(self.cfg)
 		newLines = []
 		for l in lines:
