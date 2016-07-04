@@ -5,7 +5,7 @@
 
 | *** Test Cases *** |
 | cheat pid type |
-|    | [Documentation] | 剔除有子pid，cheatpid的pid |
+|    | [Documentation] | delete pid which has sub pid |
 |    | note | havesubpid_$date | pid |
 |    | write data | havesubpid_${date} | sogou-clse-2be9bd7a3434f703 |
 |    | note | cheatpid_$date | pid |
@@ -23,7 +23,7 @@
 |    | Should Be equal | ${pid_type} | 2 |
 
 | get_pid_cost_info |
-|    | [Documentation] | pid消耗情况获取正确 |
+|    | [Documentation] | get each pid's consume correctly |
 |    | ... | sh $SCRIPT_PATH/get_pid_cost_info.sh $INPUT_PATH/testusers $INPUT_PATH/cd_ie_log.$date $PID_INFO_PATH $SUBPID_INFO_PATH $OUTPUT_PATH/adterm_monitor.$date $ERR $SCRIPT_PATH |
 |    | note | testusers | accountid |
 |    | write data | testusers | 1111 |
