@@ -1,0 +1,29 @@
+#coding=gbk
+
+class x_server_header(object) :
+'''
+header struct
+           unit16_t id, //id  1
+           unit16_t version, //version num
+           unit32_t log_id, 
+           char provider[16], //client flag
+           uint32_t magic_num //special flag, as a beginning of package, e.g. 0xaaaaaaaa
+           unit32_t reserved; //reserved
+           unit32_t body_len; //head
+'''
+        
+        
+    id=1
+    version=1
+    log_id=111
+    provider="client"
+    magic_num=socket.htonl(0xffee7799)
+    reserved=0
+
+
+
+#protocol
+(id,version,log_id,reserved,body_len)=(socket.htons(x_server_header.id),socket.htons(x_server_header.version),socket.htonl(x_server_header.log_id),socket.htons(x_server_header.reserved),socket.htonl(x_server_header.body_len))
+
+header_str=struct.pack("!HHI16sIII",id,version,log_id,provider,magic_num,reserved,body_len)
+

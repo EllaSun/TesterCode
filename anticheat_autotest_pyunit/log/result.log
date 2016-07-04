@@ -1,0 +1,2598 @@
+对于合法上下文各等级请求，比例为70时，检查客户上下文5级联盟消耗比例控制是否正确。 ... Finished! total=6 valid=6 send=0
+ok
+对于合法搜索上下文请求，比例为30时，检查客户上下文5级联盟消耗比例控制是否正确。 ... Finished! total=4 valid=4 send=0
+ok
+对于合法不同acid请求，比例为50时，检查客户上下文5级联盟消耗比例控制是否正确。 ... Finished! total=4 valid=4 send=0
+ok
+对于合法与非法请求，比例为50时，检查客户上下文5级联盟消耗比例控制是否正确。 ... Finished! total=2 valid=2 send=0
+ok
+对于合法请求，比例为100时，检查客户上下文5级联盟消耗比例控制是否正确。 ... Finished! total=3 valid=3 send=0
+ok
+对于合法请求，比例为0时，检查客户上下文5级联盟消耗比例控制是否正确。 ... Finished! total=3 valid=3 send=0
+ok
+检查客户上下文5级联盟消耗放行比例正确工作(搜索) ... Finished! total=3 valid=3 send=0
+Finished! total=1 valid=1 send=0
+Finished! total=10 valid=10 send=0
+Finished! total=10 valid=10 send=0
+ok
+五级消耗控制放行比例正确工作(晨星） ... Finished! total=3 valid=3 send=0
+Finished! total=1 valid=1 send=0
+Finished! total=10 valid=10 send=0
+Finished! total=10 valid=10 send=0
+ok
+测试acid_five_level_consume_hash_0点是否被正确清空 ... Finished! total=2 valid=2 send=0
+Finished! total=2 valid=2 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 62.346s
+
+OK
+点击通过规则判断模块情况下，若累计消耗达到总消耗阈值，检查是否可以被计费。 ... Finished! total=28 valid=28 send=0
+ok
+点击通过规则判断模块情况下，若累计消耗未达到总消耗阈值，检查是否可以被计费。 ... Finished! total=14 valid=14 send=0
+ok
+reload客户保护文件，若总消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=14 valid=14 send=0
+Finished! total=14 valid=14 send=0
+ok
+reload客户保护文件，若总消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=14 valid=14 send=0
+Finished! total=14 valid=14 send=0
+ok
+reload客户保护文件，若总消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=14 valid=14 send=0
+ERROR
+reload客户保护文件，若总消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=14 valid=14 send=0
+ERROR
+一级联盟点击通过规则判断模块情况下，若累计消耗达到一级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+一级联盟点击通过规则判断模块情况下，若累计消耗未达到一级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非一级联盟点击通过规则判断模块情况下，若累计消耗达到一级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=8 valid=8 send=0
+ok
+reload客户保护文件，若一级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若一级联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若一级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+二级联盟点击通过规则判断模块情况下，若累计消耗达到二级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+二级联盟点击通过规则判断模块情况下，若累计消耗未达到二级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非二级联盟点击通过规则判断模块情况下，若累计消耗达到二级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=8 valid=8 send=0
+ERROR
+reload客户保护文件，若二级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若二级联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若二级联盟消耗阈值由无到有，检查是否可以被计费 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若二级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+三级联盟点击通过规则判断模块情况下，若累计消耗达到三级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非三级联盟点击通过规则判断模块情况下，若累计消耗达到三级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若三级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若三级联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若三级联盟消耗阈值由无到有，检查是否可以被计费 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若三级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+四级联盟点击通过规则判断模块情况下，若累计消耗达到四级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+四级联盟点击通过规则判断模块情况下，若累计消耗未达到四级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非四级联盟点击通过规则判断模块情况下，若累计消耗达到四级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若四级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若四级联盟消耗阈值由无到有，检查是否可以被计费 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若四级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+五级联盟点击通过规则判断模块情况下，若累计消耗达到五级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+五级联盟点击通过规则判断模块情况下，若累计消耗未达到五级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非五级联盟点击通过规则判断模块情况下，若累计消耗达到五级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若五级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若五级联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若五级联盟消耗阈值由无到有，检查是否可以被计费 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若五级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+六级联盟点击通过规则判断模块情况下，若累计消耗未达到六级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非六级联盟点击通过规则判断模块情况下，若累计消耗达到六级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若六级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若六级联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若六级联盟消耗阈值由无到有，检查是否可以被计费 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若六级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+七级联盟点击通过规则判断模块情况下，若累计消耗达到七级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+七级联盟点击通过规则判断模块情况下，若累计消耗未达到七级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非七级联盟点击通过规则判断模块情况下，若累计消耗达到七级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若七级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若七级联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若七级联盟消耗阈值由无到有，检查是否可以被计费 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若七级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+八级联盟点击通过规则判断模块情况下，若累计消耗达到八级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+八级联盟点击通过规则判断模块情况下，若累计消耗未达到八级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非八级联盟点击通过规则判断模块情况下，若累计消耗达到八级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若八级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若八级联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若八级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+九级联盟点击通过规则判断模块情况下，若累计消耗达到九级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+九级联盟点击通过规则判断模块情况下，若累计消耗未达到九级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非九级联盟点击通过规则判断模块情况下，若累计消耗达到九级联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若九级联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若九级联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若九级联盟消耗阈值由无到有，检查是否可以被计费 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若九级联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+搜索点击通过规则判断模块情况下，若累计消耗达到搜索消耗阈值，检查是否可以被计费。 ... Finished! total=12 valid=12 send=0
+ok
+非搜索点击通过规则判断模块情况下，若累计消耗达到搜索消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若搜索消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=6 valid=6 send=0
+ERROR
+reload客户保护文件，若搜索消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=6 valid=6 send=0
+ERROR
+reload客户保护文件，若搜索消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=6 valid=6 send=0
+Finished! total=6 valid=6 send=0
+ok
+reload客户保护文件，若搜索消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=6 valid=6 send=0
+Finished! total=6 valid=6 send=0
+ok
+sogou/sohu搜索点击通过规则判断模块情况下，若累计消耗达到sogou/sohu搜索消耗阈值，检查是否可以被计费。 ... Finished! total=8 valid=8 send=0
+ok
+sogou/sohu搜索点击通过规则判断模块情况下，若累计消耗未达到sogou/sohu搜索消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非sogou/sohu搜索点击通过规则判断模块情况下，若累计消耗达到sogou/sohu搜索消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若sogou/sohu搜索消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若sogou/sohu搜索消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+测试目的：reload客户保护文件，若sogou/sohu搜索消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+sogou-bd搜索点击通过规则判断模块情况下，若累计消耗达到sogou-bd搜索消耗阈值，检查是否可以被计费。 ... Finished! total=8 valid=8 send=0
+ok
+sogou-bd搜索点击通过规则判断模块情况下，若累计消耗未达到sogou-bd搜索消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非sogou-bd搜索点击通过规则判断模块情况下，若累计消耗达到sogou-bd搜索消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若sogou-bd搜索消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若sogou-bd搜索消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若sogou-bd搜索消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若sogou-bd搜索消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+搜索&联盟点击通过规则判断模块情况下，若累计消耗未达到搜索&联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非搜索&联盟点击通过规则判断模块情况下，若累计消耗达到搜索&联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若搜索&联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若搜索&联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若搜索&联盟消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若搜索&联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+联盟点击通过规则判断模块情况下，若累计消耗达到联盟消耗阈值，检查是否可以被计费。 ... Finished! total=18 valid=18 send=0
+ok
+联盟点击通过规则判断模块情况下，若累计消耗未达到联盟消耗阈值，检查是否可以被计费。 ... Finished! total=9 valid=9 send=0
+ok
+非联盟点击通过规则判断模块情况下，若累计消耗达到联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若联盟消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=9 valid=9 send=0
+Finished! total=9 valid=9 send=0
+ok
+reload客户保护文件，若联盟消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=9 valid=9 send=0
+Finished! total=9 valid=9 send=0
+ok
+reload客户保护文件，若联盟消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=9 valid=9 send=0
+Finished! total=9 valid=9 send=0
+ok
+reload客户保护文件，若联盟消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=9 valid=9 send=0
+Finished! total=9 valid=9 send=0
+ok
+诚信联盟点击通过规则判断模块情况下，若累计消耗达到诚信联盟消耗阈值，检查是否可以被计费。 ... Finished! total=8 valid=8 send=0
+ok
+诚信联盟点击通过规则判断模块情况下，若累计消耗未达到诚信联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非诚信联盟点击通过规则判断模块情况下，若累计消耗达到诚信联盟消耗阈值，检查是否可以被计费。 ... Finished! total=10 valid=10 send=0
+ok
+reload客户保护文件，若诚信消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若诚信消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若诚信消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若诚信消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+小联盟点击通过规则判断模块情况下，若累计消耗达到小联盟消耗阈值，检查是否可以被计费。 ... Finished! total=8 valid=8 send=0
+ok
+小联盟点击通过规则判断模块情况下，若累计消耗未达到小联盟消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非小联盟点击通过规则判断模块情况下，若累计消耗达到小联盟消耗阈值，检查是否可以被计费。 ... Finished! total=10 valid=10 send=0
+ok
+reload客户保护文件，若小消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若小消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若小消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若小消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+上下文强制消耗点击通过规则判断模块情况下，若累计消耗达到上下文强制消耗消耗阈值，检查是否可以被计费。 ... Finished! total=6 valid=6 send=0
+FAIL
+上下文强制消耗点击通过规则判断模块情况下，若累计消耗未达到上下文强制消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+上下文非强制消耗点击通过规则判断模块情况下，若累计消耗达到上下文强制消耗阈值，检查是否可以被计费。 ... Finished! total=8 valid=8 send=0
+ok
+非上下文强制消耗点击通过规则判断模块情况下，若累计消耗达到上下文强制消耗阈值，检查是否可以被计费。 ... Finished! total=9 valid=9 send=0
+ok
+reload客户保护文件，若上下文强制消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+FAIL
+reload客户保护文件，若上下文强制消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+FAIL
+reload客户保护文件，若上下文强制消耗阈值由无到有，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+FAIL
+reload客户保护文件，若上下文强制消耗阈值由有到无，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+搜索&联盟点击通过规则判断模块情况下，若累计消耗达到搜索&联盟消耗阈值，检查是否可以被计费。 ... Finished! total=8 valid=8 send=0
+ok
+
+======================================================================
+ERROR: reload客户保护文件，若总消耗阈值由无到有，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 301, in test_acc_protect_006
+    self.assertEqual(self.antiCheat.log.getIeField(i, 'ret'), '0')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: reload客户保护文件，若总消耗阈值由有到无，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 360, in test_acc_protect_007
+    self.assertEqual(self.antiCheat.log.getIeField(i, 'ret'), '0')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: 非二级联盟点击通过规则判断模块情况下，若累计消耗达到二级联盟消耗阈值，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 763, in test_acc_protect_017
+    self.assertEqual(self.antiCheat.log.getIeField(i, 'ret'), '0')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: reload客户保护文件，若搜索消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 3045, in test_acc_protect_075
+    self.assertEqual(self.antiCheat.log.getIeField(i, 'ret'), '0')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: reload客户保护文件，若搜索消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 3096, in test_acc_protect_076
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ret'), '0')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+FAIL: 上下文强制消耗点击通过规则判断模块情况下，若累计消耗达到上下文强制消耗消耗阈值，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 5118, in test_acc_protect_121
+    self.assertEqual(self.antiCheat.log.getIeField(5, 'ret'), '2')
+AssertionError: '0' != '2'
+
+======================================================================
+FAIL: reload客户保护文件，若上下文强制消耗阈值变小，点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 5275, in test_acc_protect_125
+    self.assertEqual(self.antiCheat.log.getIeField(i, 'ret'), '2')
+AssertionError: '0' != '2'
+
+======================================================================
+FAIL: reload客户保护文件，若上下文强制消耗阈值变大，点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 5306, in test_acc_protect_126
+    self.assertEqual(self.antiCheat.log.getIeField(2, 'ret'), '2')
+AssertionError: '0' != '2'
+
+======================================================================
+FAIL: reload客户保护文件，若上下文强制消耗阈值由无到有，检查是否可以被计费。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP1.py", line 5368, in test_acc_protect_127
+    self.assertEqual(self.antiCheat.log.getIeField(i, 'ret'), '2')
+AssertionError: '0' != '2'
+
+----------------------------------------------------------------------
+Ran 119 tests in 807.233s
+
+FAILED (failures=4, errors=5)
+客户保护type维度文件数据重复情况下，检查系统加载数据是否正确。 ... Finished! total=4 valid=4 send=0
+ok
+客户保护type维度文件含空行，检查系统加载数据是否正确。 ... Finished! total=4 valid=4 send=0
+ERROR
+客户保护type维度文件为空，检查系统加载数据是否正确。 ... Finished! total=4 valid=4 send=0
+ok
+sp_sogou转化文件数据重复情况下，检查系统加载数据是否正确。 ... Finished! total=4 valid=4 send=0
+ok
+sp_sogou转化文件数据前2个字段重复，阈值不同情况下，检查系统加载数据是否正确。 ... ok
+sp_sogou转化文件含非法格式数据情况下，检查系统加载数据是否正确。 ... ok
+sp_sogou转化文件含非法内容数据情况下，检查系统加载数据是否正确。 ... ok
+sp_sogou转化文件不存在，检查系统加载数据是否正确。 ... ok
+sp_sogou转化文件为空，检查系统加载数据是否正确。 ... Finished! total=4 valid=4 send=0
+ok
+客户保护type维度文件为空的情况下，执行该加载客户保护type维度文件命令，检查reload是否正常。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+文件格式错误情况下，执行该加载客户保护type维度文件命令，检查reload是否正常。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+sp_sogou转化文件为空的情况下，执行该加载sp_sogou转化文件命令，检查reload是否正常。 ... Finished! total=4 valid=4 send=0
+ok
+sp_sogou转化文件不存在情况下，执行该加载sp_sogou转化文件命令，检查reload是否正常。 ... Finished! total=4 valid=4 send=0
+ok
+sp_sogou转化文件格式错误情况下，执行该加载sp_sogou转化文件命令，检查reload是否正常。 ... Finished! total=4 valid=4 send=0
+ok
+搜索点击通过规则判断模块情况下，若对应acid和type在数据文件中，且累计消耗达到消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+搜索点击通过规则判断模块情况下，若对应acid不在数据文件中，type在数据文件中，且累计消耗达到消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非搜索点击通过规则判断模块情况下，若对应acid和type在数据文件中，且累计消耗达到消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+搜索点击通过规则判断模块情况下，若对应acid在数据文件中，type不在数据文件中，且累计消耗达到消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若消耗阈值变小，文件中对应点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若消耗阈值变大，文件中对应点击消耗可达旧阈值，但现在不可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若消耗阈值由无到有，检查文件中对应点击是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若消耗阈值由有到无，检查文件中对应点击是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+上下文点击通过规则判断模块情况下，若对应acid和type在数据文件中，且累计消耗达到消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+上下文点击通过规则判断模块情况下，若对应acid不在数据文件中，type在数据文件中，且累计消耗达到消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+非上下文点击通过规则判断模块情况下，若对应acid和type在数据文件中，且累计消耗达到消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+上下文点击通过规则判断模块情况下，若对应acid在数据文件中，type不在数据文件中，且累计消耗达到消耗阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若消耗阈值变小，文件中对应点击消耗未达旧阈值，但现在可达新阈值，检查是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若消耗阈值由无到有，检查文件中对应点击是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+reload客户保护文件，若消耗阈值由有到无，检查文件中对应点击是否可以被计费。 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+来自上下文的点击，其type在数据文件中，且转换比例为1，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其type在数据文件中，且转换比例为0，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其type在数据文件中，且转换比例为0.3，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=100 valid=100 send=0
+ok
+来自上下文的点击，其type不在数据文件中，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其type在数据文件中，且转化比例为1，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其type在数据文件中，且转换比例为1，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其type在数据文件中，且转换比例为0，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其type在数据文件中，且转换比例为0.3，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=100 valid=100 send=0
+ok
+来自搜索的点击，其type不在数据文件中，检查发送给ADM计费请求中的pid是否正确。 ... Finished! total=10 valid=10 send=0
+ok
+强制消耗过来的请求，pid修改为sp_sogou ... Finished! total=4 valid=4 send=0
+ok
+请求不是来自非强制消耗，并且pid非sogou-的，pid保持不变。 ... Finished! total=4 valid=4 send=0
+ERROR
+
+======================================================================
+ERROR: 客户保护type维度文件含空行，检查系统加载数据是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP2.py", line 1148, in test_a002a_005
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ret'), "0")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: 请求不是来自非强制消耗，并且pid非sogou-的，pid保持不变。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatAP2.py", line 741, in test_a82_002
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'pid'), "xxxxx")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 40 tests in 298.836s
+
+FAILED (errors=2)
+<pid-url>大于指定范围之后就会被过滤 ... Finished! total=15 valid=15 send=0
+FAIL
+<pid-url>大于指定范围之后就会被过滤 ... Finished! total=15 valid=15 send=0
+FAIL
+<pid-url>大于指定范围之后就会被过滤 ... Finished! total=15 valid=15 send=0
+FAIL
+来自联盟的<pid-url>大于指定范围之后就会被过滤 ... Finished! total=15 valid=15 send=0
+FAIL
+来自联盟的<pid-url>大于指定范围之后就会被过滤 ... Finished! total=15 valid=15 send=0
+FAIL
+
+======================================================================
+FAIL: <pid-url>大于指定范围之后就会被过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatBlackList.py", line 42, in test_black_list_001
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(11, 0, testType), "90100")
+AssertionError: '0' != '90100'
+
+======================================================================
+FAIL: <pid-url>大于指定范围之后就会被过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatBlackList.py", line 65, in test_black_list_002
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(11, 0, testType), "90100")
+AssertionError: '0' != '90100'
+
+======================================================================
+FAIL: <pid-url>大于指定范围之后就会被过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatBlackList.py", line 88, in test_black_list_003
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(11, 0, testType), "90100")
+AssertionError: '0' != '90100'
+
+======================================================================
+FAIL: 来自联盟的<pid-url>大于指定范围之后就会被过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatBlackList.py", line 116, in test_black_list_004
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(11, 0, testType), "90100")
+AssertionError: '0' != '90100'
+
+======================================================================
+FAIL: 来自联盟的<pid-url>大于指定范围之后就会被过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatBlackList.py", line 144, in test_black_list_005
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(11, 0, testType), "90100")
+AssertionError: '0' != '90100'
+
+----------------------------------------------------------------------
+Ran 5 tests in 23.073s
+
+FAILED (failures=5)
+对于客户id在客户制衡文件中, 消耗超过上限， 被anticheat过滤 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+对于客户id在客户制衡文件中, 消耗超过上限， 被anticheat过滤 ... Finished! total=4 valid=4 send=0
+ok
+对于客户id在客户制衡文件中, 对于搜索业务无效 ... Finished! total=4 valid=4 send=0
+ok
+reload acc cc ... Finished! total=4 valid=4 send=0
+Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+reload zero ... Finished! total=5 valid=5 send=0
+Finished! total=5 valid=5 send=0
+ok
+对于关键词在关键词制衡文件中，点击超过上限，被anticheat过滤 ... Finished! total=5 valid=5 send=0
+ok
+关键词制衡在搜索无效 ... Finished! total=5 valid=5 send=0
+ok
+关键词制衡在晨星无效 ... Finished! total=5 valid=5 send=0
+ok
+reload kwd cc ... Finished! total=4 valid=4 send=0
+Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+检查放行阈值生效 ... Finished! total=12 valid=12 send=0
+ok
+检查放行阈值生效 ... Finished! total=12 valid=12 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 74.744s
+
+OK
+接收到pid = sohu的计费请求时，总pid click大于100，且pid ctr大于总ctr的10倍，检查该点击是否有效。 ... Finished! total=130 valid=130 send=0
+Finished! total=5 valid=5 send=0
+ok
+接收到pid = sohu的计费请求时，总pid click小于等于100，且pid ctr大于总ctr的10倍，检查该点击是否有效。 ... Finished! total=110 valid=110 send=0
+Finished! total=5 valid=5 send=0
+ok
+接收到pid = sohu的计费请求时，总pid click大于100，且pid ctr小于总ctr的10倍，检查该点击是否有效。 ... Finished! total=20 valid=20 send=0
+Finished! total=5 valid=5 send=0
+ok
+接收到pid = sohu的计费请求时，总pid click小于等于100，且pid ctr小于总ctr的10倍，检查该点击是否有效。 ... Finished! total=110 valid=110 send=0
+Finished! total=5 valid=5 send=0
+ok
+接收到pid = sogou的计费请求时，总pid click大于100，且pid ctr大于总ctr的10倍，检查该点击是否有效。 ... Finished! total=130 valid=130 send=0
+Finished! total=5 valid=5 send=0
+ok
+接收到pid = sogou的计费请求时，总pid click小于等于100，且pid ctr大于总ctr的10倍，检查该点击是否有效。 ... Finished! total=110 valid=110 send=0
+Finished! total=5 valid=5 send=0
+ok
+接收到pid = sogou的计费请求时，总pid click大于100，且pid ctr小于总ctr的10倍，检查该点击是否有效。 ... Finished! total=20 valid=20 send=0
+Finished! total=5 valid=5 send=0
+ok
+接收到pid = sogou的计费请求时，总pid click小于等于100，且pid ctr小于总ctr的10倍，检查该点击是否有效。 ... Finished! total=110 valid=110 send=0
+Finished! total=5 valid=5 send=0
+ok
+检查reload_normal正确 ... Finished! total=130 valid=130 send=0
+Finished! total=5 valid=5 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 58.422s
+
+OK
+决策树规则1 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则1，来自联盟 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则2 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则2，来自联盟 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则3，不被过滤 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则4 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则4，来自联盟 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则5，不会过滤 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则6 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则6，来自联盟 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则7，对来自搜索的的点击没有作用 ... Finished! total=2 valid=2 send=0
+ok
+决策树规则7，来自联盟 ... Finished! total=2 valid=2 send=0
+ok
+决策树规则8，不会过滤 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则9，对来自搜索的点击没有作用 ... Finished! total=2 valid=2 send=0
+ok
+决策树规则9，来自联盟 ... Finished! total=2 valid=2 send=0
+ok
+决策树规则10，不会过滤 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则11 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则11，来自联盟 ... Finished! total=1 valid=1 send=0
+ok
+决策树规则12，不会过滤 ... Finished! total=1 valid=1 send=0
+ERROR
+
+======================================================================
+ERROR: 决策树规则12，不会过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatDt.py", line 596, in test_cpc_dt_rule_019
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(0, 0, testType), "0")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 19 tests in 85.103s
+
+FAILED (errors=1)
+emerge_rule_file passType/letgoType精准匹配， 满足条件的passType判为作弊，不满足条件的判为通过 ... Finished! total=3 valid=3 send=0
+ERROR
+emerge_rule_file acid精确匹配，满足条件的acid判作弊，不满足条件判为通过 ... Finished! total=2 valid=2 send=0
+ERROR
+emerge_rule_file adId精确匹配，满足条件的acid判作弊，不满足条件判为通过 ... Finished! total=2 valid=2 send=0
+ok
+emerge_rule_file clickId精准匹配， 满足条件的clickId判为作弊，不满足条件的判为通过 ... Finished! total=2 valid=2 send=0
+ok
+emerge_rule_file各项配置为*时，检查被判为作弊 ... Finished! total=1 valid=1 send=0
+ok
+emerge_rule_file ip配置为模糊匹配时，满足条件的ip被判为作弊, 不满足条件判为通过 ... Finished! total=40 valid=40 send=0
+ok
+emerge_rule_file ip配置为精确匹配时，满足条件的ip被判为作弊, 不满足条件判为通过 ... Finished! total=20 valid=20 send=0
+ok
+当emerg_rule_file无数据时，检查正确计费 ... Finished! total=1 valid=1 send=0
+ok
+emerge_rule_file grpId精确匹配，满足条件的acid判作弊，不满足条件判为通过 ... Finished! total=2 valid=2 send=0
+ok
+emerge_rule_file ip配置为模糊匹配且查询词模糊匹配时，满足条件被判为作弊, 不满足条件判为通过 ... Finished! total=4 valid=4 send=0
+ok
+emerge_rule_file keyword模糊匹配，满足条件的keyword判作弊，不满足条件判为通过 ... Finished! total=40 valid=40 send=0
+ok
+emerge_rule_file keyword精确匹配，满足条件的keyword判作弊，不满足条件判为通过 ... Finished! total=20 valid=20 send=0
+ok
+emerge_rule_file pidLevel精准匹配， 满足条件的pidLevel判为作弊，不满足条件的判为通过 ... Finished! total=2 valid=2 send=0
+ok
+emerge_rule_file pid模糊匹配，满足条件的pid判作弊，不满足条件判为通过 ... Finished! total=40 valid=40 send=0
+ok
+emerge_rule_file pid精确匹配，满足条件的pid判作弊，不满足条件判为通过 ... Finished! total=20 valid=20 send=0
+ok
+emerge_rule_file queryWord模糊匹配，满足条件的queryWord判作弊，不满足条件判为通过 ... Finished! total=40 valid=40 send=0
+ok
+emerge_rule_file queryWord精确匹配，满足条件的queryWord判作弊，不满足条件判为通过 ... Finished! total=20 valid=20 send=0
+ok
+emerge_rule_file refer模糊匹配， 满足条件的refer判为作弊，不满足条件的判为通过 ... Finished! total=5 valid=5 send=0
+ok
+emerge_rule_file refer精准匹配， 满足条件的refer判为作弊，不满足条件的判为通过 ... Finished! total=3 valid=3 send=0
+ok
+emerge_rule_file  两条记录，满足任意一条被判为作弊, 两者都不满足条件判为通过 ... Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+emerge_rule_file  两条记录，满足任意一条被判为作弊, 两者都不满足条件判为通过 ... Finished! total=3 valid=3 send=0
+ok
+emerge_rule_file suid精确匹配，满足条件的suid判作弊，不满足条件判为通过 ... Finished! total=2 valid=2 send=0
+ok
+emerge_rule_file yyid精确匹配，满足条件的yyid判作弊，不满足条件判为通过 ... Finished! total=2 valid=2 send=0
+ok
+
+======================================================================
+ERROR: emerge_rule_file passType/letgoType精准匹配， 满足条件的passType判为作弊，不满足条件的判为通过
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatEmerge.py", line 436, in test_ac_type_rule_001
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ret'), '8')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: emerge_rule_file acid精确匹配，满足条件的acid判作弊，不满足条件判为通过
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatEmerge.py", line 219, in test_acid_rule_001
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ret'), '8')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 23 tests in 111.007s
+
+FAILED (errors=2)
+配置项存在，文件内容正确，检查server正确启动 ... Finished! total=20 valid=20 send=0
+FAIL
+配置项bd_pid_pass_rate_file不存在，检查server启动失败 ... ok
+bd_pid_pass_rate_file文件不存在，检查server启动失败 ... ok
+bd_pid_pass_rate_file文件有两行内容，判断server加载第一行 ... Finished! total=20 valid=20 send=0
+ok
+bd_pid_pass_rate_file文件存在错行，判断server跳过错行 ... ok
+配置项pid_real_time_protect_file，检查server报错 ... ok
+文件pid_real_time_protect_file不存在，检查server不能启动 ... ok
+配置项pid_real_time_protect_threshold不存在，检查server不能启动 ... ok
+bd_pid_pass_rate_file无pid+errcode信息，reload后信息更新正确 ... Finished! total=30 valid=30 send=0
+Finished! total=10 valid=10 send=0
+FAIL
+bd_pid_rate_file文件不存在，检查reload不成功 ... Finished! total=30 valid=30 send=0
+Finished! total=10 valid=10 send=0
+ok
+
+======================================================================
+FAIL: 配置项存在，文件内容正确，检查server正确启动
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatFrame.py", line 56, in test_bd_pid_pass_rate_001
+    assert self.antiCheat.log.getErrCodeNum("103011",5) <=  5
+AssertionError
+
+======================================================================
+FAIL: bd_pid_pass_rate_file无pid+errcode信息，reload后信息更新正确
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatFrame.py", line 177, in test_reload_bd_pid_rate_001
+    assert self.antiCheat.log.getErrCodeNum(errCode,5) ==  8
+AssertionError
+
+----------------------------------------------------------------------
+Ran 10 tests in 78.943s
+
+FAILED (failures=2)
+referer为空，检查不更新pv_refer hash ... Finished! total=22 valid=22 send=0
+ok
+referer为空，检查不更新pv_refer_domain_hash ... Finished! total=22 valid=22 send=0
+ok
+refer为空，检查不更新ip refer hash ... Finished! total=22 valid=22 send=0
+ok
+refer为空，检查不更新ipB段 + refer hash ... Finished! total=42 valid=42 send=0
+ok
+查询词为空时，不更新hash表 ... Finished! total=42 valid=42 send=0
+ok
+查询词为空时，不更新hash表 ... Finished! total=31 valid=31 send=0
+ok
+晨星和旭日对应相同adid，秙uid_adid_num对应不同 ... Finished! total=6 valid=6 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 34.179s
+
+OK
+检查计费报文各个字段(搜索) ... Finished! total=1 valid=1 send=0
+ok
+检查发送给ADM的有效转无效报文各字段正确(搜索) ... Finished! total=23 valid=23 send=0
+ok
+检查发给ADM无效转有效报文各字段正确(联盟) ... Finished! total=2 valid=2 send=0
+ok
+有效报文，有效转无效报文(搜索), 计费类型为reserved第9位 ... Finished! total=23 valid=23 send=0
+ok
+有效，有效转无效报文(搜索), 计费类型为reserved第9位 ... Finished! total=23 valid=23 send=0
+ok
+有效，有效转无效报文(联盟), 计费类型为0, (不考虑reserved第9位） ... Finished! total=23 valid=23 send=0
+ok
+有效，有效转无效报文(联盟), 计费类型为0, 不考虑reserved第9位 ... Finished! total=23 valid=23 send=0
+ok
+无效，无效转有效报文(联盟), 计费类型为0，不考虑reserved第9位 ... Finished! total=2 valid=2 send=0
+ok
+无效，无效转有效报文(联盟), 计费类型为0, 不考虑reserved第9位 ... Finished! total=2 valid=2 send=0
+ok
+检查链接单元正确打印LU到日志 ... Finished! total=1 valid=1 send=0
+ERROR
+检查LU参数超长截断 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20601, 日志原样打印，发送ADM后端转化为20100 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20601, 有效变无效，日志打印正确，发送后端正确 ... Finished! total=14 valid=14 send=0
+ok
+serviceType为20601, 无效报文，日志打印正确，发送后端正确 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20601, 无效转有效报文，日志打印正确，发送后端正确 ... Finished! total=2 valid=2 send=0
+ok
+serviceType为20602, 日志原样打印，发送ADM后端转化为20200 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20602, 有效变无效，日志打印正确，发送后端正确 ... Finished! total=14 valid=14 send=0
+ok
+serviceType为20602, 无效报文，日志打印正确，发送后端正确 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20602, 无效转有效报文，日志打印正确，发送后端正确 ... Finished! total=2 valid=2 send=0
+ok
+serviceType为20603, 日志原样打印，发送ADM后端转化为20300 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20603, 有效变无效，日志打印正确，发送后端正确 ... Finished! total=14 valid=14 send=0
+ok
+serviceType为20603, 无效报文，日志打印正确，发送后端正确 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20603, 无效转有效报文，日志打印正确，发送后端正确 ... Finished! total=2 valid=2 send=0
+ok
+serviceType为20604, 日志原样打印，发送ADM后端转化为20400 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20604, 有效变无效，日志打印正确，发送后端正确 ... Finished! total=14 valid=14 send=0
+ok
+serviceType为20604, 无效报文，日志打印正确，发送后端正确 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20604, 无效转有效报文，日志打印正确，发送后端正确 ... Finished! total=2 valid=2 send=0
+ok
+serviceType为20605, 日志原样打印，发送ADM后端转化为20150 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20605, 有效变无效，日志打印正确，发送后端正确 ... Finished! total=14 valid=14 send=0
+ok
+serviceType为20605, 无效报文，日志打印正确，发送后端正确 ... Finished! total=1 valid=1 send=0
+ok
+serviceType为20605, 无效转有效报文，日志打印正确，发送后端正确 ... Finished! total=2 valid=2 send=0
+ok
+无planId, 检查日志，adm，cc收到planId字段正确 ... Finished! total=1 valid=1 send=0
+ok
+planId为0，检查日志，adm，cc收到planId字段正确 ... Finished! total=1 valid=1 send=0
+ok
+无planId字段，检查日志，adm，cc的planId字段为0 ... Finished! total=23 valid=23 send=0
+ok
+planId字段为0，检查日志，adm，cc的planId字段为0 ... Finished! total=23 valid=23 send=0
+ok
+无效报文, 无planId，检查server正确处理 ... Finished! total=3 valid=3 send=0
+ok
+无效报文, 无planId，检查server正确处理 ... Finished! total=3 valid=3 send=0
+ok
+无效转有效, PlanId为空，检查server正确 ... Finished! total=2 valid=2 send=0
+ok
+无效转有效, PlanId为0，检查server正确 ... Finished! total=2 valid=2 send=0
+ok
+晨星有效报文 ... Finished! total=1 valid=1 send=0
+ok
+检查发送给晨星的有效转无效报文各字段正确(搜索) ... Finished! total=14 valid=14 send=0
+ok
+检查发给晨星的无效报文各字段正确 ... Finished! total=1 valid=1 send=0
+ok
+检查发给晨星无效转有效报文各字段正确(联盟) ... Finished! total=2 valid=2 send=0
+ok
+
+======================================================================
+ERROR: 检查链接单元正确打印LU到日志
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatInterface.py", line 1103, in test_lu_001
+    self.assertEqual(self.antiCheat.log.ie.get(0, 32), lu)
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 43 tests in 334.079s
+
+FAILED (errors=1)
+来自上下文的N[99]条点击，其中有M[6]条相同ipc_accid，检查是否被新客户保护规则判为作弊。 ... Finished! total=99 valid=99 send=0
+ok
+来自搜索的N[99]条点击，其中有M[6]条相同ipc_accid，检查是否被新客户保护规则判为作弊。 ... Finished! total=99 valid=99 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 9.609s
+
+OK
+来自搜索sogou-的计费请求，放行文件中有其type、errcode，放行概率为1，类型为搜索，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自搜索sogou-的计费请求，放行文件中有其errcode，无type，放行概率为1，类型为搜索，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自搜索sogou-的计费请求，放行文件中有其type，无errCode，放行概率为1，类型为搜索，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自搜索sogou-的计费请求，放行文件中有其type、errCode，放行概率为0，类型为搜索，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自搜索sogou-的计费请求，放行文件中有其type、errCode，放行概率为0.3，类型为搜索，检查是否被放行。 ... Finished! total=50 valid=50 send=0
+ok
+来自搜索sogou-的计费请求，放行文件中有其type、errCode，放行概率为1，类型为联盟（0），检查是否被放行？ ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(2级联盟)的计费请求，放行文件中有其type、errcode，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ERROR
+来自上下文(2级联盟)的计费请求，放行文件中有其errcode，无type，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ERROR
+来自上下文(2级联盟)的计费请求，放行文件中有其type，无errCode，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ERROR
+来自上下文(2级联盟)的计费请求，放行文件中有其type、errCode，放行概率为0，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ERROR
+来自上下文(2级联盟)的计费请求，放行文件中有其type、errCode，放行概率为0.3，类型为联盟，检查是否被放行。 ... Finished! total=50 valid=50 send=0
+ok
+来自上下文(2级联盟)的计费请求，放行文件中有其type、errCode，放行概率为1，类型为搜索（1），检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(3级联盟)的计费请求，放行文件中有其type、errcode，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(3级联盟)的计费请求，放行文件中有其errcode，无type，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(3级联盟)的计费请求，放行文件中有其type，无errCode，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(3级联盟)的计费请求，放行文件中有其type、errCode，放行概率为0，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(3级联盟)的计费请求，放行文件中有其type、errCode，放行概率为0.3，类型为联盟，检查是否被放行。 ... Finished! total=50 valid=50 send=0
+ok
+来自上下文(3级联盟)的计费请求，放行文件中有其type、errCode，放行概率为1，类型为搜索（1），检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(4级联盟)的计费请求，放行文件中有其type、errcode，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(4级联盟)的计费请求，放行文件中有其type，无errCode，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(4级联盟)的计费请求，放行文件中有其type、errCode，放行概率为0，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(4级联盟)的计费请求，放行文件中有其type、errCode，放行概率为0.3，类型为联盟，检查是否被放行。 ... Finished! total=50 valid=50 send=0
+ok
+来自上下文(4级联盟)的计费请求，放行文件中有其type、errCode，放行概率为1，类型为搜索（1），检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文5级以上的计费请求，放行文件中有其type、errcode，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文5级以上的计费请求，放行文件中有其errcode，无type，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文5级以上的计费请求，放行文件中有其type，无errCode，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文5级以上的计费请求，放行文件中有其type、errCode，放行概率为0，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文5级以上的计费请求，放行文件中有其type、errCode，放行概率为0.3，类型为联盟，检查是否被放行。 ... Finished! total=50 valid=50 send=0
+ok
+来自上下文5级以上的计费请求，放行文件中有其type、errCode，放行概率为1，类型为搜索（1），检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自上下文(4级联盟)的计费请求，放行文件中有其errcode，无type，放行概率为1，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自搜索的计费请求，放行文件中有其type、errcode，放行概率为1，类型为搜索，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自搜索的计费请求，放行文件中有其errcode，无type，放行概率为1，类型为搜索，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+来自搜索的计费请求，放行文件中有其type，无errCode，放行概率为1，类型为搜索，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ERROR
+来自搜索的计费请求，放行文件中有其type、errCode，放行概率为0，类型为联盟，检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ERROR
+来自搜索的计费请求，放行文件中有其type、errCode，放行概率为0.3，类型为联盟，检查是否被放行。 ... Finished! total=50 valid=50 send=0
+ok
+来自搜索的计费请求，放行文件中有其type、errCode，放行概率为1，类型为联盟（0），检查是否被放行。 ... Finished! total=5 valid=5 send=0
+ok
+
+======================================================================
+ERROR: 来自上下文(2级联盟)的计费请求，放行文件中有其type、errcode，放行概率为1，类型为联盟，检查是否被放行。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatLetgo.py", line 51, in test_context_level2_001
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(0, 0, testType), "0")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: 来自上下文(2级联盟)的计费请求，放行文件中有其errcode，无type，放行概率为1，类型为联盟，检查是否被放行。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatLetgo.py", line 166, in test_context_level2_002
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(0, 0, testType), "0")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: 来自上下文(2级联盟)的计费请求，放行文件中有其type，无errCode，放行概率为1，类型为联盟，检查是否被放行。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatLetgo.py", line 305, in test_context_level2_003
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(0, 0, testType), "0")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: 来自上下文(2级联盟)的计费请求，放行文件中有其type、errCode，放行概率为0，类型为联盟，检查是否被放行。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatLetgo.py", line 455, in test_context_level2_004
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(0, 0, testType), "0")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: 来自搜索的计费请求，放行文件中有其type，无errCode，放行概率为1，类型为搜索，检查是否被放行。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatLetgo.py", line 1098, in test_sogou_003
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(0, 0, testType), "0")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: 来自搜索的计费请求，放行文件中有其type、errCode，放行概率为0，类型为联盟，检查是否被放行。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatLetgo.py", line 1140, in test_sogou_004
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(0, 0, testType), "0")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 36 tests in 161.423s
+
+FAILED (errors=6)
+有效，有效转无效报文(联盟), 计费类型为0, (不考虑reserved第9位） ... Finished! total=23 valid=23 send=0
+ok
+无效，无效转有效报文(联盟) ... Finished! total=2 valid=2 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 12.927s
+
+OK
+当cookie中的adClickCount大于配置文件中设定的max_click_times_min时，被过滤 ... Finished! total=1 valid=1 send=0
+ok
+当cookie中的adClickCount大于配置文件中设定的max_click_times_min时，被过滤 ... Finished! total=1 valid=1 send=0
+ok
+当点击的serverTime大于配置文件中设定的max_pv_cl_inte_max与Cookie中的last_view_time之和时，被过滤 ... Finished! total=1 valid=1 send=0
+ok
+当点击的serverTime大于配置文件中设定的max_pv_cl_inte_max与Cookie中的last_view_time之和时，被过滤 ... Finished! total=1 valid=1 send=0
+ok
+检验相同pv数下的点击次数限制 ... Finished! total=2 valid=2 send=0
+ok
+检验相同pv数下的点击次数限制 ... Finished! total=2 valid=2 send=0
+ok
+点击频率限制，sohu/sogou间隔限制为1s ... Finished! total=1 valid=1 send=0
+ok
+点击频率限制，sohu/sogou间隔限制为1s ... Finished! total=1 valid=1 send=0
+ok
+点击频率限制，小联盟为61s ... Finished! total=1 valid=1 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 41.243s
+
+OK
+test_url_md5_case_001 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=2 valid=2 send=0
+ok
+test_url_md5_case_002 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=4 valid=4 send=0
+ok
+test_url_md5_case_003 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=4 valid=4 send=0
+ok
+test_url_md5_case_004 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=4 valid=4 send=0
+ok
+test_url_md5_case_005 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=4 valid=4 send=0
+ok
+test_url_md5_case_006 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=4 valid=4 send=0
+ok
+test_white_acid_double_clicks_001 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=6 valid=6 send=0
+ok
+test_white_acid_double_clicks_002 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=3 valid=3 send=0
+Finished! total=3 valid=3 send=0
+ok
+test_white_acid_double_clicks_003 (case.antiCheatMd5.AntiCheatMd5) ... Finished! total=6 valid=6 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 42.402s
+
+OK
+同refer；点击大于等于20；新cookie比例大于95%；过滤该refer所有新cookie的点击(serviceType为10300) ... Finished! total=21 valid=21 send=0
+ok
+同refer；点击大于等于20；新cookie比例大于95%；过滤该refer所有新cookie的点击(serviceType为10301) ... Finished! total=21 valid=21 send=0
+ok
+同refer；点击大于等于30；新cookie比例大于95%；不过滤该refer旧cookie的点击(serviceType为10300) ... Finished! total=22 valid=22 send=0
+ok
+同refer；点击大于等于20；新cookie比例小于95%；不过滤该refer所有新cookie的点击(serviceType为10300) ... Finished! total=32 valid=32 send=0
+ok
+同refer；点击大于等于20；新cookie比例大于95%；过滤该refer所有新cookie的点击(serviceType为10302) ... Finished! total=21 valid=21 send=0
+ok
+同refer；点击大于等于20；点击有效度异常的比例大于95%；过滤该refer所有点击有效度异常的点击 ... Finished! total=21 valid=21 send=0
+ok
+同refer；点击大于等于20；点击有效度异常的比例大于95%；不过滤该refer所有点击有效度正常的点击 ... Finished! total=22 valid=22 send=0
+ok
+同refer；点击大于等于20；点击有效度异常的比例小于95%；不过滤该refer所有点击有效度正常的点击 ... Finished! total=22 valid=22 send=0
+ok
+同refer；点击 > 20；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该refer所有快速点击 ... Finished! total=21 valid=21 send=0
+ok
+同refer；点击 > 20；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该refer非快速点击 ... Finished! total=22 valid=22 send=0
+ok
+同refer；点击 > 20；快速点击（pv点击时间差小于10秒）比例首先大于95%然后小于；正确过滤该refer非快速点击 ... Finished! total=32 valid=32 send=0
+ok
+同ip；点击大于等于20；点击有效度异常的比例大于95%；过滤该ip所有点击有效度异常的点击 ... Finished! total=21 valid=21 send=0
+ok
+同ip；点击大于等于20；点击有效度异常的比例大于95%；不过滤该ip所有点击有效度正常的点击 ... Finished! total=22 valid=22 send=0
+ok
+同refer；点击大于等于20；点击有效度异常的比例小于95%；不过滤该refer所有点击有效度正常的点击 ... Finished! total=22 valid=22 send=0
+ok
+同ip；点击大于等于20；新cookie比例大于95%；过滤该refer所有新cookie的点击(serviceType为10300) ... Finished! total=41 valid=41 send=0
+ok
+同ip；点击大于等于20；新cookie比例大于95%；过滤该ip所有新cookie的点击(serviceType为10301) ... Finished! total=21 valid=21 send=0
+ok
+同ip；点击大于等于20；新cookie比例大于95%；不过滤该ip旧cookie的点击(serviceType为10300) ... Finished! total=22 valid=22 send=0
+ERROR
+同ip；点击大于等于20；新cookie比例小于95%；不过滤该ip所有新cookie的点击(serviceType为10300) ... Finished! total=42 valid=42 send=0
+ok
+同ip；点击大于等于20；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该ip所有快速点击 ... Finished! total=21 valid=21 send=0
+ok
+同ip；点击大于等于20；点击有效度异常的比例小于95%；不过滤该ip所有点击有效度正常的点击 ... Finished! total=22 valid=22 send=0
+ok
+同查询词；点击大于等于30；点击有效度异常的比例大于95%；过滤该查询词所有点击有效度异常的点击 ... Finished! total=31 valid=31 send=0
+ok
+同查询词；点击大于等于30；点击有效度异常的比例大于95%；不过滤该查询词所有点击有效度正常的点击 ... Finished! total=32 valid=32 send=0
+ok
+同查询词；点击大于等于30；点击有效度异常的比例小于95%；不过滤该查询词所有点击有效度正常的点击 ... Finished! total=32 valid=32 send=0
+ok
+同pid；点击大于等于30；点击有效度异常的比例大于95%；过滤该pid所有点击有效度异常的点击 ... Finished! total=31 valid=31 send=0
+ok
+同pid；点击大于等于30；点击有效度异常的比例大于95%；不过滤该pid所有点击有效度正常的点击 ... Finished! total=32 valid=32 send=0
+ok
+同pid；点击大于等于30；点击有效度异常的比例小于95%；不过滤该pid所有点击有效度正常的点击 ... Finished! total=32 valid=32 send=0
+ok
+同pid；点击大于等于30；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该pid所有快速点击 ... Finished! total=31 valid=31 send=0
+ok
+同pid；点击大于等于30；快速点击（pv点击时间差小于10秒）比例小于10%；过滤该pid所有非快速点击 ... Finished! total=31 valid=31 send=0
+ok
+同pid，(鼠标点击间隔 > 10000 || 鼠标点击间隔 < -1 )的点击 数量 > 10 &&比例 > 5%，过滤 ... Finished! total=202 valid=202 send=0
+ok
+同query，(鼠标点击间隔 > 10000 || 鼠标点击间隔 < -1 )的点击 数量 > 10 &&比例 > 5%，过滤 ... Finished! total=202 valid=202 send=0
+ok
+同pid，(鼠标点击间隔 == 0 )的点击 数量 > 10 &&比例 > 10%，过滤 ... Finished! total=101 valid=101 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(ml < 100)；过滤该客户用户有效度异常的点击(bd渠道) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(ml < 100)；不过滤该客户用户有效度正常的点击(bd渠道) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例 < 80%(ml < 100)；不过滤该客户用户有效度异常的点击(bd渠道) ... Finished! total=12 valid=12 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(mc  <= 0)；过滤该客户用户有效度异常的点击(bd) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(mc  <= 0)；过滤该客户用户有效度异常的点击(bd渠道) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(mc > 10000)；过滤该客户用户有效度异常的点击(bd渠道) ... Finished! total=11 valid=11 send=0
+ok
+ml == -1, mc == -1, 非用户异常点击 ... Finished! total=11 valid=11 send=0
+ok
+10000 > mc > 0, ml > 100, 非用户异常点击 ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%；不过滤该客户用户有效度异常的点击(10400) ... Finished! total=11 valid=11 send=0
+ok
+BD渠道，同pid，点击 > 20 && 有页面滚动的比例 > 0.8，过滤该pid所有有页面滚动的点击 ... Finished! total=22 valid=22 send=0
+ok
+BD渠道，同pid点击 > 20, ma解析失败比例 > 0.5, 过滤该pid所有ml, mc解析成功且ma解析失败的点击 ... Finished! total=23 valid=23 send=0
+ok
+bd渠道，同refer点击大于20， ma解析失败比例大于0.5, 过滤正确解析ml, mc，不正确解析ma的所有点击 ... Finished! total=23 valid=23 send=0
+ok
+103018: 同ip  >= 15，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10300 ... Finished! total=16 valid=16 send=0
+ok
+103018: 同ip  >= 15，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10301 ... Finished! total=16 valid=16 send=0
+ok
+103019: 同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10300 ... Finished! total=21 valid=21 send=0
+ok
+103019: 同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10301 ... Finished! total=21 valid=21 send=0
+ok
+103020: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10300 ... Finished! total=11 valid=11 send=0
+ok
+103020: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10301 ... Finished! total=11 valid=11 send=0
+ok
+
+======================================================================
+ERROR: 同ip；点击大于等于20；新cookie比例大于95%；不过滤该ip旧cookie的点击(serviceType为10300)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPBd.py", line 484, in test_nap_sogou_bd_005_2
+    self.assertEqual(self.antiCheat.log.getIeErrMsg(40, 0, testType), "103004")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 56, in get
+    lines = self.getLine(line, key)
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 53, in getLine
+    return lines[int(line)]
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 49 tests in 260.533s
+
+FAILED (errors=1)
+回滚策略103001，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=32 valid=32 send=0
+ok
+回滚策略103002，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+回滚策略103003，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+回滚策略103004，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=32 valid=32 send=0
+ok
+回滚策略103005，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+回滚策略103006，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+回滚策略103007，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=32 valid=32 send=0
+ok
+回滚策略103008，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=32 valid=32 send=0
+ok
+回滚策略103009，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=32 valid=32 send=0
+ok
+回滚策略103010，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=32 valid=32 send=0
+ok
+回滚策略103011，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=203 valid=203 send=0
+ok
+回滚策略103012，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=203 valid=203 send=0
+ok
+回滚策略103013，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=102 valid=102 send=0
+ok
+回滚策略103014，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=12 valid=12 send=0
+ok
+策略110100，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=130 valid=130 send=0
+Finished! total=5 valid=5 send=0
+ok
+策略101100，指定pid，检查该pid点击按比例过滤 ... Finished! total=13 valid=13 send=0
+ok
+策略105001，指定pid，检查该pid点击按比例过滤 ... Finished! total=41 valid=41 send=0
+ok
+规则103001, 指定pid，通过率设为0.9，检查来自该pid的点击按比例过滤，非该pid的点击全部过滤 ... Finished! total=30 valid=30 send=0
+FAIL
+规则103001, 指定pid，通过率设为0.2，检查按比例过滤 ... Finished! total=40 valid=40 send=0
+FAIL
+规则103011, 指定pid，通过率设为0，检查按比例过滤 ... Finished! total=30 valid=30 send=0
+ok
+规则103011, 指定pid, 通过率设为1，检查按比例过滤 ... Finished! total=20 valid=20 send=0
+ok
+规则103001, 不指定pid，通过率设为0.9，检查按比例过滤 ... Finished! total=30 valid=30 send=0
+FAIL
+规则103001, 不指定pid，通过率设为0.3，检查按比例过滤 ... Finished! total=40 valid=40 send=0
+FAIL
+规则103001, 不指定pid，通过率设为0，检查按比例过滤 ... Finished! total=30 valid=30 send=0
+ok
+规则103001, 不指定pid, 通过率设为1，检查按比例过滤 ... Finished! total=30 valid=30 send=0
+ok
+策略103002，指定pid，检查该pid点击按比例过滤 ... Finished! total=21 valid=21 send=0
+ok
+策略103003，指定pid，检查该pid点击按比例过滤 ... Finished! total=21 valid=21 send=0
+ok
+策略103005，指定pid，检查该pid点击按比例过滤 ... Finished! total=21 valid=21 send=0
+ok
+策略103004，指定pid，检查该pid点击按比例过滤 ... Finished! total=31 valid=31 send=0
+ok
+策略103006，指定pid，检查该pid点击按比例过滤 ... Finished! total=21 valid=21 send=0
+ok
+策略103007，指定pid，检查该pid点击按比例过滤 ... Finished! total=31 valid=31 send=0
+ok
+策略103008，指定pid，检查该pid点击按比例过滤 ... Finished! total=31 valid=31 send=0
+ok
+策略103009，指定pid，检查该pid点击按比例过滤 ... Finished! total=31 valid=31 send=0
+ok
+策略103010，指定pid，检查该pid点击按比例过滤 ... Finished! total=31 valid=31 send=0
+ok
+策略103011，指定pid，检查该pid点击按比例过滤 ... Finished! total=202 valid=202 send=0
+ok
+策略103012，指定pid，检查该pid点击按比例过滤 ... Finished! total=202 valid=202 send=0
+ok
+策略103013，指定pid，检查该pid点击按比例过滤 ... Finished! total=101 valid=101 send=0
+ok
+策略103014，指定pid，检查该pid电机按比例过滤 ... Finished! total=11 valid=11 send=0
+ok
+策略102001，指定pid，检查按照比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+策略102002，指定pid，检查该pid点击按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+策略102003，指定pid，检查该pid点击按比例过滤 ... Finished! total=42 valid=42 send=0
+ok
+策略102004，指定pid，检查该pid点击按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+策略102005，指定pid，检查该pid点击按比例过滤 ... Finished! total=42 valid=42 send=0
+ok
+策略102006，指定pid，检查该pid点击按比例过滤 ... Finished! total=11 valid=11 send=0
+ok
+策略102007，指定pid，检查该pid点击按比例过滤 ... Finished! total=11 valid=11 send=0
+ok
+策略102008，指定pid，检查该pid点击按比例过滤 ... Finished! total=11 valid=11 send=0
+ok
+策略102009，指定pid，检查该pid点击按比例过滤 ... Finished! total=23 valid=23 send=0
+ok
+策略102010，指定pid，检查该pid点击按比例过滤 ... Finished! total=24 valid=24 send=0
+ok
+策略102011，指定pid，检查该pid点击按比例过滤 ... Finished! total=63 valid=63 send=0
+ok
+策略102012，指定pid，检查该pid点击按比例过滤 ... Finished! total=46 valid=46 send=0
+ok
+策略102013，指定pid，检查该pid点击按比例过滤 ... Finished! total=47 valid=47 send=0
+ok
+策略102014，指定pid，检查该pid点击按比例过滤 ... Finished! total=21 valid=21 send=0
+ok
+策略104002，指定pid，检查该pid点击按比例过滤 ... Finished! total=41 valid=41 send=0
+ok
+策略104003，指定pid，检查该pid点击按比例过滤 ... Finished! total=21 valid=21 send=0
+ok
+回滚策略102001，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=23 valid=23 send=0
+ok
+回滚策略102001，指定pid, 检查所有该pid点击均按比例过滤 ... Finished! total=24 valid=24 send=0
+ok
+回滚策略102002，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=23 valid=23 send=0
+ok
+回滚策略102003，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=43 valid=43 send=0
+ok
+回滚策略102004，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+回滚策略102005，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=42 valid=42 send=0
+ok
+回滚策略102006，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=12 valid=12 send=0
+ok
+回滚策略102007，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=12 valid=12 send=0
+ok
+回滚策略102008，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=12 valid=12 send=0
+ok
+回滚策略102009，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=24 valid=24 send=0
+ok
+回滚策略102010，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=25 valid=25 send=0
+ok
+回滚策略102011，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=65 valid=65 send=0
+ok
+回滚策略102012，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=48 valid=48 send=0
+ok
+回滚策略102013，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=49 valid=49 send=0
+ok
+回滚策略102014，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+策略106001，指定pid，检查该pid点击按比例过滤 ... Finished! total=2 valid=2 send=0
+ok
+策略106002，指定pid，检查该pid点击按比例过滤 ... Finished! total=5 valid=5 send=0
+ok
+策略106003，指定pid，检查该pid点击按比例过滤 ... Finished! total=3 valid=3 send=0
+ok
+策略106004，指定pid，检查该pid点击按比例过滤 ... Finished! total=12 valid=12 send=0
+ok
+回滚策略101100，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=14 valid=14 send=0
+ok
+回滚策略104002，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=42 valid=42 send=0
+ok
+回滚策略104003，不指定pid, 检查所有点击均按比例过滤 ... Finished! total=22 valid=22 send=0
+ok
+
+======================================================================
+FAIL: 规则103001, 指定pid，通过率设为0.9，检查来自该pid的点击按比例过滤，非该pid的点击全部过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPLetgo.py", line 52, in test_nap_letgo_001_001
+    assert self.antiCheat.log.getErrCodeNum(errCode,5) <= 9
+AssertionError
+
+======================================================================
+FAIL: 规则103001, 指定pid，通过率设为0.2，检查按比例过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPLetgo.py", line 98, in test_nap_letgo_001_002
+    assert self.antiCheat.log.getErrCodeNum(errCode,5) ==  4
+AssertionError
+
+======================================================================
+FAIL: 规则103001, 不指定pid，通过率设为0.9，检查按比例过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPLetgo.py", line 194, in test_nap_letgo_002_001
+    assert self.antiCheat.log.getErrCodeNum(errCode,5) == 9
+AssertionError
+
+======================================================================
+FAIL: 规则103001, 不指定pid，通过率设为0.3，检查按比例过滤
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPLetgo.py", line 230, in test_nap_letgo_002_002
+    assert self.antiCheat.log.getErrCodeNum(errCode,5) <=  4
+AssertionError
+
+----------------------------------------------------------------------
+Ran 76 tests in 498.190s
+
+FAILED (failures=4)
+111001:对搜狗搜索（即refer包含www.sogou.com），如果点击满足 mouse_leave_time =0且mo=0且0< brsw <100且0< brsh <100，过滤 ... Finished! total=1 valid=1 send=0
+ok
+对同一个suid，如果连续点击多于10次，过滤这个suid所有的连续点击。（连续点击指距上次广告点击时间间隔小于5秒的点击） ... Finished! total=13 valid=13 send=0
+ok
+若suid|yyid为0|0，则不进hash ... Finished! total=13 valid=13 send=0
+ok
+同pid；点击数  >= 40；新cookie比例  >= 95%；过滤pid所有新cookie点击 ... Finished! total=41 valid=41 send=0
+ok
+同pid；点击数  >= 40；新cookie比例  >= 95%；过滤pid所有新cookie点击 ... Finished! total=41 valid=41 send=0
+ok
+105002: 上下文渠道，同pid点击大于等于40，cookie时间和/历史点击数和<40，过滤掉cookie时间小于三天的点击 ... Finished! total=41 valid=41 send=0
+FAIL
+105002: 上下文渠道，同pid点击大于等于40，cookie时间和/历史点击数和<40，过滤掉cookie时间小于三天的点击 ... Finished! total=41 valid=41 send=0
+FAIL
+105003: 上下文渠道，同refer点击大于等于40，cookie时间和/历史点击数和<40，过滤掉cookie时间小于三天的点击 ... Finished! total=41 valid=41 send=0
+FAIL
+serviceType为20301，检查不走该规则 ... Finished! total=41 valid=41 send=0
+ok
+107001: 同acid点击大于等于10，历史PV大于等于5，历史点击大于历史PV，历史点击大于历史PV的比例大于等于30%，servicetype10400 ... Finished! total=11 valid=11 send=0
+ok
+107001: 同acid点击大于等于10，历史PV大于等于5，历史点击大于历史PV，历史点击大于历史PV的比例大于等于30%，servicetype10401 ... Finished! total=11 valid=11 send=0
+ok
+107002: 浏览器渠道，同客户点击>=10，新cookie比例大于等于0.9，过滤所有cookie时间小于300秒的点击，serviceType=10400 ... Finished! total=11 valid=11 send=0
+ok
+107002: 浏览器渠道，同客户点击>=10，新cookie比例大于等于0.9，过滤所有cookie时间小于300秒的点击，serviceType=10401 ... Finished! total=11 valid=11 send=0
+ok
+108001: 同pid，点击数  >= 40；新cookie比例  >= 95%；过滤pid所有新cookie点击，servicetype=20300 ... Finished! total=41 valid=41 send=0
+ok
+108002: 同pid，点击大于等于40，点击有效度异常的比例大于70%，鼠标离开时间小于100，servicetype为20300 ... Finished! total=31 valid=31 send=0
+ok
+108003: 同refer，点击大于等于40，点击有效度异常的比例大于70%，鼠标离开时间小于100，servicetype为20300 ... Finished! total=31 valid=31 send=0
+ok
+同pid；点击数  >= 20；新cookie比例  >= 95%；过滤所有新cookie点击 ... Finished! total=41 valid=41 send=0
+ok
+业务类型为20201，检查不走该规则 ... Finished! total=41 valid=41 send=0
+ok
+同pid；点击数  >= 20；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该ip所有快速点击 ... Finished! total=21 valid=21 send=0
+ok
+
+======================================================================
+FAIL: 105002: 上下文渠道，同pid点击大于等于40，cookie时间和/历史点击数和<40，过滤掉cookie时间小于三天的点击
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPOther.py", line 176, in test_nap_context_002
+    self.assertNotEqual(self.antiCheat.log.getIeErrMsg(i, 0, testType), "105002")
+AssertionError: '105002' == '105002'
+
+======================================================================
+FAIL: 105002: 上下文渠道，同pid点击大于等于40，cookie时间和/历史点击数和<40，过滤掉cookie时间小于三天的点击
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPOther.py", line 197, in test_nap_context_002_1
+    self.assertNotEqual(self.antiCheat.log.getIeErrMsg(i, 0, testType), "105002")
+AssertionError: '105002' == '105002'
+
+======================================================================
+FAIL: 105003: 上下文渠道，同refer点击大于等于40，cookie时间和/历史点击数和<40，过滤掉cookie时间小于三天的点击
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPOther.py", line 224, in test_nap_context_003
+    self.assertNotEqual(self.antiCheat.log.getIeErrMsg(i, 0, testType), "105003")
+AssertionError: '105003' == '105003'
+
+----------------------------------------------------------------------
+Ran 19 tests in 97.958s
+
+FAILED (failures=3)
+同refer（完整字符串）的点击大于20，新cookie比例大于95%。过滤该refer新cookie的点击。(serviceType为10100) ... Finished! total=22 valid=22 send=0
+ok
+同refer（完整字符串）的点击大于20，新cookie比例大于95%。过滤该refer新cookie的点击。(serviceType为10200) ... Finished! total=22 valid=22 send=0
+ok
+同refer（完整字符串）的点击大于20，新cookie比例大于95%。不过滤该refer新cookie的点击。(serviceType为20100) ... Finished! total=22 valid=22 send=0
+ok
+同refer（完整字符串）的点击大于20，新cookie比例不大于95%。不过滤该refer新cookie的点击。 ... Finished! total=22 valid=22 send=0
+ok
+serviceType为10101，检查不走该规则 ... Finished! total=22 valid=22 send=0
+ok
+同refer（域名）的点击大于20，新cookie比例大于95%。过滤该refer新cookie的点击。 ... Finished! total=22 valid=22 send=0
+ok
+同查询词点击 > 40 ，新cookie比例大于95%，过滤这个查询词的新cookie点击。 ... Finished! total=42 valid=42 send=0
+ok
+同ip同refer点击 > 20，均价 > 3元, 过滤这个IP + refer大于1元的点击。 ... Finished! total=22 valid=22 send=0
+ok
+同ipB段同refer点击 > 40，均价 > 3元，过滤这个IPB段 + refer大于1元的点击。 ... Finished! total=42 valid=42 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(ml < 100)；过滤该客户用户有效度异常的点击(10100) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%；过滤该客户用户有效度异常的点击(10200) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%；不过滤该客户用户有效度异常的点击(10300) ... Finished! total=11 valid=11 send=0
+ERROR
+serviceType为20101，检查不走该规则 ... Finished! total=11 valid=11 send=0
+ERROR
+同acid；点击  >= 10；用户有效度异常比例  >= 80%；不过滤该客户用户有效度正常的点击(10100) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例 < 80%；不过滤该客户用户有效度异常的点击(10100) ... Finished! total=12 valid=12 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(mc  <= 0)；过滤该客户用户有效度异常的点击(10100) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(mc  <= 0)；过滤该客户用户有效度异常的点击(10100) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%(mc > 10000)；过滤该客户用户有效度异常的点击(10100) ... Finished! total=11 valid=11 send=0
+ok
+ml == -1, mc == -1, 非用户异常点击 ... Finished! total=11 valid=11 send=0
+ok
+10000 > mc > 0, ml > 100, 非用户异常点击 ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；用户有效度异常比例  >= 80%；不过滤该客户用户有效度正常的点击(10200) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；点击和pv时间小于10秒的比例  >= 90%；过滤该客户快速点击 ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；点击和pv时间小于10秒的比例 < 90%；不过滤该客户快速点击 ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；点击和pv时间小于10秒的比例  >= 90%；不过滤该客户正常点击 ... Finished! total=12 valid=12 send=0
+ok
+同acid；点击  >= 10；点击和pv时间小于10秒的比例  >= 90%；过滤该客户快速点击(serviceType为10200) ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；点击和pv时间小于10秒的比例 < 10%；过滤该客户非快速点击 ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；点击和pv时间小于10秒的比例 > 10%；过滤该客户非快速点击 ... Finished! total=11 valid=11 send=0
+ok
+同acid；点击  >= 10；点击和pv时间小于10秒的比例 < 10%；不过滤该客户快速点击 ... Finished! total=12 valid=12 send=0
+ok
+同acid；点击  >= 10；点击和pv时间小于10秒的比例 < 10%；过滤该客户非快速点击(serviceType为10200) ... Finished! total=11 valid=11 send=0
+ok
+同查询词的点击中，点击 > 20且pv点击时间差 < 10秒的点击比例 > 95% ，过滤该查询词所有pv点击时间差 < 10的点击 ... Finished! total=23 valid=23 send=0
+ok
+同查询词的点击中，点击 > 20且pv点击时间差 < 10秒的点击比例 < 95% ，不过滤该查询词所有pv点击时间差 < 10的点击 ... Finished! total=22 valid=22 send=0
+ok
+同查询词的点击中，点击 > 20且pv点击时间差 > 10秒的点击比例 > 95% ，过滤该查询词所有pv点击时间差 > 10的点击 ... Finished! total=24 valid=24 send=0
+ok
+同查询词的点击中，点击 > 20且pv点击时间差  >= 10秒的点击比例 < 95% ，不过滤该查询词所有pv点击时间差  >= 10的点击 ... Finished! total=22 valid=22 send=0
+ok
+同查询词的点击中，点击 > 50且pv点击时间差 > 5秒的点击比例 > 96% ，过滤该查询词所有pv点击时间差 > 5秒的点击 ... Finished! total=63 valid=63 send=0
+ok
+同查询词的点击中，点击 > 50且pv点击时间差 > 5秒的点击比例 < 96% ，不过滤该查询词所有pv点击时间差 > 5秒的点击 ... Finished! total=60 valid=60 send=0
+ok
+同查询词的点击 > 40  && 鼠标移动值 > 250 的点击比例 > 90%， 过滤该查询词所有鼠标移动值 > 250 的点击 ... Finished! total=46 valid=46 send=0
+ok
+同查询词的点击 > 40  && 鼠标移动值 > 250 的点击比例 < 90%， 过滤该查询词所有鼠标移动值 > 250 的点击 ... Finished! total=42 valid=42 send=0
+ok
+同acid的点击 > 40  && 鼠标移动值 > 250 的点击比例 > 90%， 过滤该acid所有鼠标移动值 > 250 的点击 ... Finished! total=47 valid=47 send=0
+ok
+同acid的点击 > 40  && 鼠标移动值 > 250 的点击比例 < 90%， 过滤该acid所有鼠标移动值 > 250 的点击 ... Finished! total=42 valid=42 send=0
+ok
+同refer域，点击  >= 20 && 鼠标点击间隔 == -1 的点击  >= 95%，过滤鼠标点击间隔 == -1的点击 ... Finished! total=21 valid=21 send=0
+ok
+同ip >= 15，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10100 ... Finished! total=16 valid=16 send=0
+ok
+同ip >= 15，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10200 ... Finished! total=16 valid=16 send=0
+ok
+同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10100 ... Finished! total=21 valid=21 send=0
+ok
+同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10200 ... Finished! total=21 valid=21 send=0
+ok
+102017: 对于sogou，同客户点击>=10，新cookie比例大于0.8，过滤所有cookie时间小于300秒的点击 ... Finished! total=11 valid=11 send=0
+ok
+102017: 对于sohu，同客户点击>=10，新cookie比例大于等于0.8，过滤所有cookie时间小于300秒的点击 ... Finished! total=11 valid=11 send=0
+ok
+102018: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10100 ... Finished! total=11 valid=11 send=0
+ok
+102018: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10200 ... Finished! total=11 valid=11 send=0
+ok
+
+======================================================================
+ERROR: 同acid；点击  >= 10；用户有效度异常比例  >= 80%；不过滤该客户用户有效度异常的点击(10300)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPSogou.py", line 542, in test_nap_sogou_006_10
+    self.assertNotEqual(self.antiCheat.log.getIeErrMsg(10, 0, testType), "102006")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 56, in get
+    lines = self.getLine(line, key)
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 53, in getLine
+    return lines[int(line)]
+IndexError: list index out of range
+
+======================================================================
+ERROR: serviceType为20101，检查不走该规则
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNAPSogou.py", line 565, in test_nap_sogou_006_11
+    self.assertNotEqual(self.antiCheat.log.getIeErrMsg(10, 0, testType), "102006")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 33, in getIeErrMsg
+    errMsg = self.getIeField(line, 'ruleErrMsg')
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 56, in get
+    lines = self.getLine(line, key)
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 53, in getLine
+    return lines[int(line)]
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 48 tests in 237.444s
+
+FAILED (errors=2)
+test_bd_rule_negupdate_001 (case.antiCheatNegUpdateNAPBd.AntiCheatNegUpdateNAPBd) ... Finished! total=25 valid=25 send=0
+ok
+test_bd_rule_negupdate_002 (case.antiCheatNegUpdateNAPBd.AntiCheatNegUpdateNAPBd) ... Finished! total=44 valid=44 send=0
+ok
+update_bd_rule_info: pv_click_span ... Finished! total=44 valid=44 send=0
+ok
+update_bd_rule_info: s5_con_click_num ... Finished! total=16 valid=16 send=0
+ok
+update_bd_rule_info: cuv_err_num ... Finished! total=44 valid=44 send=0
+ok
+update_bd_rule_info: mouse_click_interval ... Finished! total=202 valid=202 send=0
+ok
+update_bd_rule_info: num_scrl ... Finished! total=33 valid=33 send=0
+ok
+update_bd_rule_info: num_mass_visit ... Finished! total=18 valid=18 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 41.884s
+
+OK
+update_brws_rule_info: nums ... Finished! total=13 valid=13 send=0
+ok
+update_brws_rule_info: new_cookie_num ... Finished! total=22 valid=22 send=0
+ok
+update_brws_rule_info: num_mass_visit ... Finished! total=18 valid=18 send=0
+ok
+update_context_rule_info: nums ... Finished! total=44 valid=44 send=0
+ok
+update_context_rule_info: new_cookie_num ... Finished! total=53 valid=53 send=0
+ok
+update_context_rule_info: sum_cookie_time ... Finished! total=54 valid=54 send=0
+ok
+update_context_rule_info: sum_history_click ... cat: /search/autoTest/antiCheat/log/error_log**: No such file or directory
+cat: /search/autoTest/antiCheat/log/error_log**: No such file or directory
+cat: /search/autoTest/antiCheat/log/err.log*: No such file or directory
+cat: /search/autoTest/antiCheat/log/err.log*: No such file or directory
+cat: /search/autoTest/antiCheat/log/error_log**: No such file or directory
+cat: /search/autoTest/antiCheat/log/error_log**: No such file or directory
+cat: /search/autoTest/antiCheat/log/err.log*: No such file or directory
+cat: /search/autoTest/antiCheat/log/err.log*: No such file or directory
+ok
+update_lu_rule_info: nums ... Finished! total=43 valid=43 send=0
+ok
+update_lu_rule_info: new_cookie_num ... Finished! total=52 valid=52 send=0
+ok
+update_lu_rule_info: mouse_leave_time ... Finished! total=42 valid=42 send=0
+ok
+update_xml_rule_info: nums ... Finished! total=23 valid=23 send=0
+ok
+update_xml_rule_info: new_cookie_num ... Finished! total=33 valid=33 send=0
+ok
+update_xml_rule_info: pv_click_span ... Finished! total=33 valid=33 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 60.728s
+
+OK
+test_sogou_rule_negupdate_001 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=25 valid=25 send=0
+ok
+test_sogou_rule_negupdate_002 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=42 valid=42 send=0
+ok
+test_sogou_rule_negupdate_003 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=25 valid=25 send=0
+ok
+test_sogou_rule_negupdate_004 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=33 valid=33 send=0
+ok
+test_sogou_rule_negupdate_005 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=63 valid=63 send=0
+ok
+test_sogou_rule_negupdate_006 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=52 valid=52 send=0
+ok
+test_sogou_rule_negupdate_007 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=42 valid=42 send=0
+ok
+test_sogou_rule_negupdate_008 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=22 valid=22 send=0
+ok
+test_sogou_rule_negupdate_009 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=18 valid=18 send=0
+ok
+test_url_times_negupdate_001 (case.antiCheatNegUpdateNAPSogou.AntiCheatNegUpdateNAPSogou) ... Finished! total=6 valid=6 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 49.953s
+
+OK
+update_uint64_int_info: value ... Finished! total=17 valid=17 send=0
+ok
+update_ip_info: new_cookie_num, quick_clk_num, click_times ... Finished! total=13 valid=13 send=0
+FAIL
+update_bip_info: new_cookie_num, quick_clk_num, click_times ... Finished! total=13 valid=13 send=0
+FAIL
+update_cookie_info: pv_click ... Finished! total=13 valid=13 send=0
+FAIL
+update_ace_uint64_suid_info_hash ... Finished! total=20 valid=20 send=0
+FAIL
+update_string_anti_roll_info: nums ... Finished! total=6 valid=6 send=0
+ok
+update_string_anti_roll_info: short_spam ... Finished! total=16 valid=16 send=0
+ok
+
+======================================================================
+FAIL: update_ip_info: new_cookie_num, quick_clk_num, click_times
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNegUpdateOther.py", line 121, in test_low_union_rule_negupdate_001
+    self.assertEqual(self.antiCheat.log.getDebugInfo("update_ip_info", "12", "6"),"9")
+AssertionError: '' != '9'
+
+======================================================================
+FAIL: update_bip_info: new_cookie_num, quick_clk_num, click_times
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNegUpdateOther.py", line 157, in test_low_union_rule_negupdate_002
+    self.assertEqual(self.antiCheat.log.getDebugInfo("update_bip_info", "12", "7"),"9")
+AssertionError: '' != '9'
+
+======================================================================
+FAIL: update_cookie_info: pv_click
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNegUpdateOther.py", line 192, in test_low_union_rule_negupdate_003
+    self.assertEqual(self.antiCheat.log.getDebugInfo("update_cookie_info", "12", "8"),"9")
+AssertionError: '' != '9'
+
+======================================================================
+FAIL: update_ace_uint64_suid_info_hash
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatNegUpdateOther.py", line 216, in test_nap_rule_negupdate_002
+    self.assertEqual(self.antiCheat.log.getDebugInfo("update_ace_uint64_suid_info_hash", "12", "6"),"9")
+AssertionError: '' != '9'
+
+----------------------------------------------------------------------
+Ran 7 tests in 37.707s
+
+FAILED (failures=4)
+向anticheat发送来自搜索的点击（flag % 4 == 1），检查anticheat向ADM_Bill发送的计费信息是否正确。 ... Finished! total=1 valid=1 send=0
+ok
+向anticheat发送来自搜索的点击（flag % 4 == 3），检查anticheat向ADM_Bill发送的计费信息是否正确。 ... Finished! total=1 valid=1 send=0
+ok
+向anticheat发送来自上下文定向投放的点击（flag % 4 == 2），检查anticheat向ADM_Bill发送的计费信息是否正确。 ... Finished! total=1 valid=1 send=0
+ok
+向anticheat发送来自上下文展示投放的点击（flag % 4 == 0），检查anticheat向ADM_Bill发送的计费信息是否正确。 ... Finished! total=1 valid=1 send=0
+ok
+向anticheat发送来自上下文链接单元（flag < 15），检查anticheat向ADM_Bill发送的计费信息是否正确。 ... Finished! total=1 valid=1 send=0
+ok
+正常工作模式，AntiCheat使用BillServer传过来的时间作为点击时间。 ... Finished! total=1 valid=1 send=0
+ok
+模拟模式，AntiCheat使用click_log时间作为点击时间。 ... Finished! total=1 valid=1 send=0
+ok
+模拟模式，AntiCheat使用click_log时间作为点击时间。 ... Finished! total=1 valid=1 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 55.240s
+
+OK
+合法的计费请求，检查达到pid消耗阙值，不计费 ... Finished! total=6 valid=6 send=0
+ok
+不计费的请求，pid消耗阙值不累计 ... Finished! total=4 valid=4 send=0
+Finished! total=4 valid=4 send=0
+ok
+阙值变小，被过滤 ... Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+阙值变大，继续计费 ... Finished! total=2 valid=2 send=0
+Finished! total=2 valid=2 send=0
+ok
+从有阙值到无阙值，继续计费 ... Finished! total=2 valid=2 send=0
+Finished! total=2 valid=2 send=0
+ok
+阙值变大，继续计费 ... Finished! total=2 valid=2 send=0
+Finished! total=1 valid=1 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 34.336s
+
+OK
+来自搜索的点击，其pid和acid在数据文件中，过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其pid和acid在数据文件中，过滤比例为0，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其pid和acid在数据文件中，放行比例为0.3，检查是否被pid_acid规则过滤。 ... Finished! total=1000 valid=1000 send=0
+ok
+来自搜索的点击，其pid在数据文件中，acid不在，pid对应过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其pid在数据文件中，acid不在，pid对应过滤比例为0，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其pid在数据文件中，acid不在，且pid对应acid为*，pid对应过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其pid在数据文件中，acid不在，且pid对应acid为*，pid对应过滤比例为0，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+大量来自搜索的点击，其pid在数据文件中，acid不在，且pid对应acid为*，pid对应过滤比例为0.7，检查是否被pid_acid规则过滤。 ... Finished! total=1000 valid=1000 send=0
+ok
+来自搜索的点击，其acid在数据文件中，pid不在，acid对应过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其acid在数据文件中，pid不在，acid对应过滤比例为0，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自搜索的点击，其acid、pid均不在数据文件中，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其pid和acid在数据文件中，过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其pid和acid在数据文件中，过滤比例为0，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其pid和acid在数据文件中，放行比例为0.3，检查是否被pid_acid规则过滤。 ... Finished! total=1000 valid=1000 send=0
+ERROR
+来自上下文的点击，其pid在数据文件中，acid不在，pid对应过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其pid在数据文件中，acid不在，pid对应过滤比例为0，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其pid在数据文件中，acid不在，且pid对应acid为*，pid对应过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其pid在数据文件中，acid不在，且pid对应acid为*，pid对应过滤比例为0，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+大量来自上下文的点击，其pid在数据文件中，acid不在，且pid对应acid为*，pid对应过滤比例为0.7，检查是否被pid_acid规则过滤。 ... Finished! total=1000 valid=1000 send=0
+ok
+来自上下文的点击，其acid在数据文件中，pid不在，acid对应过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其acid在数据文件中，pid不在，acid对应过滤比例为0，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其acid、pid均不在数据文件中，检查是否被pid_acid规则过滤。 ... Finished! total=10 valid=10 send=0
+ok
+来自上下文的点击，其acid、pid均不在数据文件中，更新后使acid，pid在数据文件中，检查是否被pid_acid规则过滤。 ... Finished! total=3 valid=3 send=0
+Finished! total=3 valid=3 send=0
+Finished! total=3 valid=3 send=0
+ok
+pid, acid和业务类型在数据文件中，过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=9 valid=9 send=0
+ok
+pid和acid和业务类型在数据文件中，放行比例为0.3，检查是否被pid_acid规则过滤。 ... Finished! total=300 valid=300 send=0
+FAIL
+pid, acid在数据文件中，业务类型不再，过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=6 valid=6 send=0
+Finished! total=6 valid=6 send=0
+ok
+pid, acid不在数据文件中，业务类型在，过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=6 valid=6 send=0
+Finished! total=6 valid=6 send=0
+ok
+pid, acid在数据文件中，业务类型包含点击的所有类型，过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=6 valid=6 send=0
+Finished! total=6 valid=6 send=0
+Finished! total=300 valid=300 send=0
+ok
+pid, acid和业务类型均不在数据文件中，过滤比例为1，检查是否被pid_acid规则过滤。 ... Finished! total=3 valid=3 send=0
+Finished! total=3 valid=3 send=0
+ok
+被判为作弊的点击，其pid在，而业务类型不在pid_protect_file中，检查是否被pid放行策略放行。 ... Finished! total=5 valid=5 send=0
+ok
+被判为作弊的点击，部分业务类型在pid_protect_file中，且放行比例为1，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被参数校验判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为1，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被参数校验判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为0，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被urlmd5验证判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为1，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被urlmd5验证判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为0，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被新客户保护规则判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为1，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被新客户保护规则判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为0，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为1，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为1，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为0，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为0，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为0.7，检查是否被pid放行策略放行。 ... Finished! total=1000 valid=1000 send=0
+ERROR
+被判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为0.7，检查是否被pid放行策略放行。 ... Finished! total=1000 valid=1000 send=0
+ok
+被判为作弊的点击，其pid不在，而业务类型在pid_protect_file中，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+被判为作弊的点击，其pid不在，而业务类型在pid_protect_file中，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+ok
+来自"sogou-xx"且被判为作弊的点击，部分pid在pid_protect_file中，部分不在，检查是否被pid放行策略放行。 ... Finished! total=20 valid=20 send=0
+ok
+被判为作弊的点击，其pid在pid_protect_file中，改变放行比例，reload数据文件，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+Finished! total=10 valid=10 send=0
+ok
+被判为作弊的点击，其pid在pid_protect_file中，改变pid，reload数据文件，检查是否被pid放行策略放行。 ... Finished! total=10 valid=10 send=0
+Finished! total=10 valid=10 send=0
+ok
+被放行可计费的点击，可更新基于渠道新客户保护hash表。 ... Finished! total=6 valid=6 send=0
+ok
+不被放行可计费的点击，不更新基于渠道新客户保护hash表。 ... Finished! total=6 valid=6 send=0
+ok
+被放行可计费的点击，可更新基于类型新客户保护hash表。 ... Finished! total=6 valid=6 send=0
+ok
+
+======================================================================
+ERROR: 来自上下文的点击，其pid和acid在数据文件中，放行比例为0.3，检查是否被pid_acid规则过滤。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatPidProtect.py", line 93, in test_context_pid_protect_003
+    passedNumber = self.antiCheat.log.getPassedNumber()
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 55, in getPassedNumber
+    if self.ie.get(i,cdIeMap['ret']) == '0':
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+ERROR: 被判为作弊的点击，其pid和业务类型在pid_protect_file中，且放行比例为0.7，检查是否被pid放行策略放行。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatPidProtect.py", line 944, in test_pid_protect_other_013
+    passedNumber = self.antiCheat.log.getPassedNumber()
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 55, in getPassedNumber
+    if self.ie.get(i,cdIeMap['ret']) == '0':
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+======================================================================
+FAIL: pid和acid和业务类型在数据文件中，放行比例为0.3，检查是否被pid_acid规则过滤。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatPidProtect.py", line 1355, in test_pid_acid_pid_protect_002
+    assert passedNumber > 85
+AssertionError
+
+----------------------------------------------------------------------
+Ran 51 tests in 412.616s
+
+FAILED (failures=1, errors=2)
+adid搜索点击10次，全部计费通过，设置ration为10，pid在pid_real_time_protect文件中， ... Finished! total=29 valid=29 send=0
+FAIL
+adid搜索点击10次，全部计费通过，设置浮动范围变小，检查通过条数变多 ... Finished! total=29 valid=29 send=0
+ok
+adid搜索点击10次，全部计费通过，设置ratio为90，pid在pid_real_time_protect文件中, ... Finished! total=29 valid=29 send=0
+ok
+adid搜索点击10次，全部计费通过，设置ratio为0, pid在pid_real_time_protect文件中, ... Finished! total=30 valid=30 send=0
+ok
+adid在搜索没点击，设置ratio为10，pid在pid_real_time_protect文件中, 检查该pid的点击从开始被判为作弊 ... Finished! total=3 valid=3 send=0
+ok
+adid在搜索没点击，设置threshold为60，pid在pid_real_time_protect文件中, 检查同一adid该pid的点击超过60分才判为作弊 ... Finished! total=3 valid=3 send=0
+ok
+adid搜索点击10次，全部计费通过，设置ratio为0, pid不在pid_real_time_protect文件中, 检查该pid的点击全部通过 ... Finished! total=30 valid=30 send=0
+ok
+搜索点击从有效到无效回滚1条，设置ratio为90，pid在pid_real_time_protect文件中，检查该pid点击通过条数变小 ... Finished! total=60 valid=60 send=0
+FAIL
+搜索点击从无效到有效回滚2条，设置ratio为90，pid在pid_real_time_protect文件中, 检查该pid点击通过数变大 ... Finished! total=8 valid=8 send=0
+FAIL
+从不计费到计费回滚，但pid在pid_real_time_protect文件中，无搜索点击，检查回滚失败 ... Finished! total=2 valid=2 send=0
+ok
+从计费到不计费，ratio为0，pid在pid_real_time_protect文件中，检查该pid点击通过条数增加一条 ... Finished! total=83 valid=83 send=0
+ok
+从不计费到计费回滚，但pid在pid_real_time_protect文件中，有一条搜索点击，但超出到阈值，检查回滚失败 ... Finished! total=2 valid=2 send=0
+ok
+从计费到不计费，ratio为0，pid在pid_real_time_protect文件中，检查该pid点击通过条数增加一条 ... Finished! total=83 valid=83 send=0
+ok
+pid_real_time_protect文件为空，启动server后reload， reload生效 ... Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+
+======================================================================
+FAIL: adid搜索点击10次，全部计费通过，设置ration为10，pid在pid_real_time_protect文件中，
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatPidRealTimeProtect.py", line 52, in test_pid_realtime_protect_001
+    self.assertEqual(self.antiCheat.log.getIeField(20 + i, 'ret'), '11')
+AssertionError: '0' != '11'
+
+======================================================================
+FAIL: 搜索点击从有效到无效回滚1条，设置ratio为90，pid在pid_real_time_protect文件中，检查该pid点击通过条数变小
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatPidRealTimeProtect.py", line 263, in test_pid_realtime_protect_007
+    self.assertEqual(self.antiCheat.log.getIeField(58, 'ret'), '11')
+AssertionError: '0' != '11'
+
+======================================================================
+FAIL: 搜索点击从无效到有效回滚2条，设置ratio为90，pid在pid_real_time_protect文件中, 检查该pid点击通过数变大
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatPidRealTimeProtect.py", line 309, in test_pid_realtime_protect_008
+    self.assertEqual(self.antiCheat.log.getIeField(i + 6, 'ret'), '0')
+AssertionError: '11' != '0'
+
+----------------------------------------------------------------------
+Ran 14 tests in 98.284s
+
+FAILED (failures=3)
+test_reload_acid_double_clicks_file_001 (case.antiCheatReload.AntiCheatReload) ... Finished! total=3 valid=3 send=0
+Finished! total=3 valid=3 send=0
+ok
+测试新增的五级联盟白名单能否生效，能否被reload ... Finished! total=3 valid=3 send=0
+Finished! total=1 valid=1 send=0
+ok
+测试reload_ip_white是否能reload成功 ... Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+FAIL
+测试reload type_pass_ratio_file是否成功 ... Finished! total=5 valid=5 send=0
+Finished! total=1 valid=1 send=0
+ok
+测试reload白名单是否成功 ... Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+
+======================================================================
+FAIL: 测试reload_ip_white是否能reload成功
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatReload.py", line 222, in test_reload_ip_white_file_001
+    self.assertEqual(self.antiCheat.log.ie.getLineNum(), "2")
+AssertionError: '1' != '2'
+
+----------------------------------------------------------------------
+Ran 5 tests in 33.792s
+
+FAILED (failures=1)
+同refer；点击大于等于30；新cookie比例大于95%；过滤该refer所有新cookie的点击(serviceType为10300) ... Finished! total=32 valid=32 send=0
+ok
+同refer；点击大于等于30；新cookie比例大于95%；过滤该refer所有新cookie的点击(serviceType为10302) ... Finished! total=32 valid=32 send=0
+ok
+同refer；点击大于等于20；点击有效度异常的比例大于95%；过滤该refer所有点击有效度异常的点击 ... Finished! total=22 valid=22 send=0
+ok
+同refer；点击 > 20；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该refer所有快速点击 ... Finished! total=22 valid=22 send=0
+ok
+同ip；点击大于等于40；新cookie比例大于95%；过滤该ip所有新cookie的点击(serviceType为10300) ... Finished! total=42 valid=42 send=0
+ok
+同ip；点击大于等于20；点击有效度异常的比例大于95%；过滤该ip所有点击有效度异常的点击 ... Finished! total=22 valid=22 send=0
+ok
+同ip；点击大于等于20；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该ip所有快速点击 ... Finished! total=22 valid=22 send=0
+ok
+同查询词；点击大于等于30；点击有效度异常的比例大于95%；过滤该查询词所有点击有效度异常的点击 ... Finished! total=32 valid=32 send=0
+ok
+同pid；点击大于等于30；点击有效度异常的比例大于95%；过滤该pid所有点击有效度异常的点击 ... Finished! total=32 valid=32 send=0
+ok
+同pid；点击大于等于30；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该pid所有快速点击 ... Finished! total=32 valid=32 send=0
+ok
+同pid；点击大于等于30；快速点击（pv点击时间差小于10秒）比例小于10%；过滤该pid所有非快速点击 ... Finished! total=32 valid=32 send=0
+ok
+同pid，(鼠标点击间隔 > 10000 || 鼠标点击间隔 < -1 )的点击 数量 > 10 &&比例 > 5% ... Finished! total=203 valid=203 send=0
+ok
+同pid，(鼠标点击间隔 = = 0 )的点击 数量 > 10 &&比例 > 10%，过滤 (鼠标点击间隔 = = 0 )的点击 ... Finished! total=102 valid=102 send=0
+ok
+同acid；点击 >  = 10；用户有效度异常比例 >  = 80%(ml < 100)；过滤该客户用户有效度异常的点击(bd渠道) ... Finished! total=12 valid=12 send=0
+ok
+BD渠道，同pid，点击 > 20 && 有页面滚动的比例 > 0.8，过滤该pid所有有页面滚动的点击 ... Finished! total=22 valid=22 send=0
+ok
+BD渠道，同pid点击 > 20, ma解析失败比例 > 0.5, 过滤该pid所有ml, mc解析成功且ma解析失败的点击 ... Finished! total=22 valid=22 send=0
+ok
+bd渠道，同refer点击大于20， ma解析失败比例大于0.5, 过滤正确解析ml, mc，不正确解析ma的所有点击 ... Finished! total=22 valid=22 send=0
+ok
+回滚103018： 同ip  >= 15，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10300 ... Finished! total=17 valid=17 send=0
+ok
+回滚103018： 同ip  >= 15，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10301 ... Finished! total=17 valid=17 send=0
+ok
+回滚103019: 同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10300 ... Finished! total=22 valid=22 send=0
+ok
+回滚103019: 同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10301 ... Finished! total=22 valid=22 send=0
+ERROR
+回滚103020: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10300 ... Finished! total=12 valid=12 send=0
+ERROR
+回滚103020: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10301 ... Finished! total=12 valid=12 send=0
+ok
+
+======================================================================
+ERROR: 回滚103019: 同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10301
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRollbackBd.py", line 798, in test_bd_valid_2_unvalid_019_1
+    self.assertNotEqual(self.antiCheat.log.getIeField(i + 22, 'rollPolicy'), "103019")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 56, in get
+    lines = self.getLine(line, key)
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 53, in getLine
+    return lines[int(line)]
+IndexError: list index out of range
+
+======================================================================
+ERROR: 回滚103020: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10300
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRollbackBd.py", line 826, in test_bd_valid_2_unvalid_020
+    self.assertEqual(self.antiCheat.log.getIeField(i + 12, 'rollPolicy'), "103020")
+  File "/search/autoTest/pyunit/anticheat/lib/antiCheatLog.py", line 26, in getIeField
+    return self.ie.get(line,cdIeMap[field])
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 56, in get
+    lines = self.getLine(line, key)
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 53, in getLine
+    return lines[int(line)]
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 23 tests in 144.708s
+
+FAILED (errors=2)
+同pid；点击数 >  = 40；新cookie比例 >  = 95%；过滤pid所有新cookie点击 ... Finished! total=42 valid=42 send=0
+ok
+同pid；点击数 >  = 40；新cookie比例 >  = 95%；过滤pid所有新cookie点击 ... Finished! total=42 valid=42 send=0
+ok
+回滚105002: 上下文渠道，同pid点击大于等于40，cookie时间和/历史点击数和<=40，过滤掉cookie时间小于三天的点击 ... Finished! total=42 valid=42 send=0
+ok
+回滚105003: 上下文渠道，同refer点击大于等于40，cookie时间和/历史点击数和<=40，过滤掉cookie时间小于三天的点击 ... Finished! total=42 valid=42 send=0
+ok
+回滚107001: 同acid点击大于等于10，历史PV大于等于5，历史点击大于历史PV，历史点击大于历史PV的比例大于等于30%，servicetype10400 ... Finished! total=12 valid=12 send=0
+ok
+回滚107001: 同acid点击大于等于10，历史PV大于等于5，历史点击大于历史PV，历史点击大于历史PV的比例大于等于30%，servicetype10401 ... Finished! total=12 valid=12 send=0
+ok
+回滚107002: 浏览器渠道，同客户点击>=10，新cookie比例大于等于0.9，过滤所有cookie时间小于300秒的点击，serviceType=10400 ... Finished! total=12 valid=12 send=0
+ok
+回滚107002: 浏览器渠道，同客户点击>=10，新cookie比例大于等于0.9，过滤所有cookie时间小于300秒的点击，serviceType=10401 ... Finished! total=12 valid=12 send=0
+ok
+回滚108001: 同pid，点击数  >= 40；新cookie比例  >= 95%；过滤pid所有新cookie点击，servicetype=20300 ... Finished! total=42 valid=42 send=0
+ok
+回滚108002: 同pid，点击大于等于40，点击有效度异常的比例大于70%，鼠标离开时间小于100，serviceType为20300 ... Finished! total=32 valid=32 send=0
+ok
+回滚108003: 同refer，点击大于等于40，点击有效度异常的比例大于70%，鼠标离开时间小于100，servicetype为20300 ... Finished! total=32 valid=32 send=0
+ok
+搜索，pid为sogou-xxx, 发给adm转化为sogou ... Finished! total=2 valid=2 send=0
+ok
+联盟，pid为sogou-xx, 发给ADM的pid变为sogou ... Finished! total=2 valid=2 send=0
+ok
+无效转有效，强制消耗，pid转化成sp_sogou ... Finished! total=2 valid=2 send=0
+ok
+关闭roll1开关，无法从有效到无效回滚 ... Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+ok
+roll1关闭，开启roll1开关，可以reload ... Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+ok
+计费到不计费不超出总数限制，检查回滚 ... Finished! total=23 valid=23 send=0
+ok
+roll2开启，reload关闭后，检查不回滚 ... Finished! total=2 valid=2 send=0
+Finished! total=2 valid=2 send=0
+ok
+roll2关闭，reload关闭后，检查回滚 ... Finished! total=2 valid=2 send=0
+Finished! total=2 valid=2 send=0
+ok
+rollback1_ratio设为1，即有效变无效, 回滚比例为1 ... Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+Finished! total=23 valid=23 send=0
+ok
+rollback1_ratio设为5，即回滚比例为0.2 ... Finished! total=23 valid=23 send=0
+ok
+rollback1_ratio设为1000，即回滚比例接近0 ... Finished! total=23 valid=23 send=0
+ok
+不计费到计费未超出额度，检查正确回滚 ... Finished! total=4 valid=4 send=0
+ok
+不计费到计费超出额度，检查回滚失败 ... Finished! total=4 valid=4 send=0
+ok
+上下文，pid = = 5, 2层判定从不计费到计费，五级消耗比例高于阕值，回滚失败 ... Finished! total=4 valid=4 send=0
+ok
+搜索，2层判定从不计费到计费，客户channel保护策略不通过，回滚失败 ... Finished! total=3 valid=3 send=0
+ok
+搜索，2层判定从不计费到计费，客户type保护策略不通过，回滚失败 ... Finished! total=3 valid=3 send=0
+ok
+一层作弊点击，通过二层所有策略，回滚成计费点击 ... Finished! total=2 valid=2 send=0
+ok
+搜索，pidlevel为4级, 被leadDt过滤，也被其他规则过滤，2层不回滚 ... Finished! total=2 valid=2 send=0
+ok
+搜索，pidlevel为4级, 只被leadDt过滤，时间差小于800， 不回滚 ... Finished! total=2 valid=2 send=0
+ok
+搜索，pidlevel为4级, 只被leadDt过滤，时间差大于900， 不回滚 ... Finished! total=2 valid=2 send=0
+ok
+搜索，pidlevel为4级, 被其他规则过滤，不回滚 ... Finished! total=4 valid=4 send=0
+ok
+搜索，pidlevel为6级, 被其他规则过滤，不回滚 ... Finished! total=4 valid=4 send=0
+ok
+联盟，pidlevel为4级, 被cpcDT过滤，2层回滚，检查回滚值，发无效到有效报文 ... Finished! total=2 valid=2 send=0
+ok
+联盟，pidlevel为4级, 被cpcDT过滤和其他规则过滤，2层不回滚 ... Finished! total=2 valid=2 send=0
+ok
+联盟，pidlevel为4级, 被其他规则过滤，2层不回滚 ... Finished! total=4 valid=4 send=0
+ok
+联盟，pidlevel为6级, flag为98， 被其他规则过滤，2层不回滚 ... Finished! total=4 valid=4 send=0
+ok
+联盟，pidlevel为6级, 被cpcDT过滤，不发无效报文，且2层不回滚, 不发无效到有效报文 ... Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+对同一个suid，如果连续点击多于10次，过滤这个suid所有的连续点击。（连续点击指距上次广告点击时间间隔小于5秒的点击） ... Finished! total=14 valid=14 send=0
+ok
+同pid；点击数 >  = 20；新cookie比例 >  = 95%；过滤所有新cookie点击(xml) ... Finished! total=42 valid=42 send=0
+ok
+同pid；点击数 >  = 20；快速点击（pv点击时间差小于10秒）比例大于95%；过滤该ip所有快速点击 ... Finished! total=22 valid=22 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 283.166s
+
+OK
+同refer（完整字符串）的点击大于20，新cookie比例大于95%。过滤该refer新cookie的点击，回滚, 错误码为2 ... Finished! total=23 valid=23 send=0
+ok
+同refer（完整字符串）的点击不大于20，新cookie比例大于95%。过滤该refer新cookie的点击，不回滚 ... Finished! total=22 valid=22 send=0
+ok
+同refer（域名）的点击大于20，新cookie比例大于95%。过滤该refer新cookie的点击, 回滚 ... Finished! total=23 valid=23 send=0
+ok
+同查询词点击 > 40 ，新cookie比例大于95%，过滤这个查询词的新cookie点击 ... Finished! total=43 valid=43 send=0
+ok
+同ip同refer点击 > 20，均价 > 3元, 过滤这个IP + refer大于1元的点击 ... Finished! total=22 valid=22 send=0
+ok
+同ipB段同refer点击 > 40，均价 > 3元，过滤这个IPB段 + refer大于1元的点击。 ... Finished! total=42 valid=42 send=0
+ok
+同acid；点击 >  = 10；用户有效度异常比例 >  = 80%(ml < 100)；过滤该客户用户有效度异常的点击(10100) ... Finished! total=12 valid=12 send=0
+ok
+同acid；点击 >  = 10；点击和pv时间小于10秒的比例 > 90%；过滤该客户快速点击 ... Finished! total=12 valid=12 send=0
+ok
+同acid；点击 >  = 10；点击和pv时间小于10秒的比例 < 10%；过滤该客户非快速点击 ... Finished! total=12 valid=12 send=0
+ok
+同查询词的点击中，点击 > 20且pv点击时间差 < 10秒的点击比例 > 95% ，过滤该查询词所有pv点击时间差 < 10的点击 ... Finished! total=24 valid=24 send=0
+ok
+同查询词的点击中，点击 > 20且pv点击时间差 < 10秒的点击比例 < 95% ，不过滤该查询词所有pv点击时间差 < 10的点击 ... Finished! total=23 valid=23 send=0
+ok
+同查询词的点击中，点击 > 20且pv点击时间差 > 10秒的点击比例 > 95% ，过滤该查询词所有pv点击时间差 > 10的点击 ... Finished! total=25 valid=25 send=0
+ok
+同查询词的点击中，点击 > 20且pv点击时间差 >  = 10秒的点击比例 < 95% ，不过滤该查询词所有pv点击时间差 >  = 10的点击 ... Finished! total=23 valid=23 send=0
+ok
+同查询词的点击中，点击 > 50且pv点击时间差 > 5秒的点击比例 > 96% ，过滤该查询词所有pv点击时间差 > 5秒的点击 ... Finished! total=65 valid=65 send=0
+ok
+同查询词的点击中，点击 > 50且pv点击时间差 > 5秒的点击比例 < 96% ，不过滤该查询词所有pv点击时间差 > 5秒的点击 ... Finished! total=62 valid=62 send=0
+ok
+同查询词的点击 > 40  && 鼠标移动值 > 250 的点击比例 > 90%， 过滤该查询词所有鼠标移动值 > 250 的点击 ... Finished! total=48 valid=48 send=0
+ok
+同查询词的点击 > 40  && 鼠标移动值 > 250 的点击比例 < 90%， 过滤该查询词所有鼠标移动值 > 250 的点击 ... Finished! total=44 valid=44 send=0
+ok
+同acid的点击 > 40  && 鼠标移动值 > 250 的点击比例 > 90%， 过滤该acid所有鼠标移动值 > 250 的点击 ... Finished! total=49 valid=49 send=0
+ok
+同acid的点击 > 40  && 鼠标移动值 > 250 的点击比例 < 90%， 过滤该acid所有鼠标移动值 > 250 的点击 ... Finished! total=44 valid=44 send=0
+ok
+同refer域，点击 >  = 20 && 鼠标点击间隔 = = -1 的点击 >  = 95%，过滤鼠标点击间隔 = = -1的点击 ... Finished! total=22 valid=22 send=0
+ok
+同ip >= 15，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10100 ... Finished! total=17 valid=17 send=0
+ok
+同ip >= 15，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10200 ... Finished! total=17 valid=17 send=0
+ok
+同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10100 ... Finished! total=22 valid=22 send=0
+ok
+同refer >= 20，且有页面滚动的点击 > 80%，过滤所有有页面滚动的点击, servertype为10200 ... Finished! total=22 valid=22 send=0
+ok
+回滚102017: 对于sogou，同客户点击>=10，新cookie比例大于0.8，过滤所有cookie时间小于300秒的点击 ... Finished! total=12 valid=12 send=0
+ok
+回滚102017: 对于sohu，同客户点击>=10，新cookie比例大于0.8，过滤所有cookie时间小于300秒的点击 ... Finished! total=12 valid=12 send=0
+ok
+回滚102018: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10100 ... Finished! total=12 valid=12 send=0
+ok
+回滚102018: 同acid点击 >= 10，历史PV >= 5，历史点击>历史PV占比例 > 30%，历史点击 > 历史PV，servicetype = 10200 ... Finished! total=12 valid=12 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 201.281s
+
+OK
+点击cookie为空，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自sogou情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自上下文6级且配为一半走低级别联盟判断情况下，检查调用规则是否正确。 ... Finished! total=100 valid=100 send=0
+FAIL
+点击来自上下文7级且配为一半走低级别联盟判断情况下，检查调用规则是否正确。 ... Finished! total=100 valid=100 send=0
+FAIL
+点击来自上下文8级且配为一半走低级别联盟判断情况下，检查调用规则是否正确。 ... Finished! total=100 valid=100 send=0
+FAIL
+点击来自上下文9级且配为一半走低级别联盟判断情况下，检查调用规则是否正确。 ... Finished! total=100 valid=100 send=0
+FAIL
+点击来自链接单元情况下（2-5级），检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自链接单元情况下（非2-5级），检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自sohu情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自sogou-情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自sogou__pic情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自上下文2级情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自上下文3级情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自上下文4级情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自上下文5级情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+FAIL
+点击来自上下文5级以上且配为均走低级别联盟判断情况下，检查调用规则是否正确。 ... Finished! total=3 valid=3 send=0
+ok
+ucweb，检查调用规则是否正确。 ... Finished! total=1 valid=1 send=0
+ok
+
+======================================================================
+FAIL: 点击cookie为空，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 577, in test_cookie_null_1
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,-1,-1,-1,-1,-1,-1,0,-1,-1")
+AssertionError: '0,0,-1,-1,-1,0,-1,-1,0,-1,-1' != '0,0,-1,-1,-1,-1,-1,-1,0,-1,-1'
+
+======================================================================
+FAIL: 点击来自sogou情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 65, in test_rules_call_1
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,0,-1,-1,-1,-1,0,0,0,-1")
+AssertionError: '0,0,-1,-1,-1,0,-1,0,0,0,-1' != '0,0,0,-1,-1,-1,-1,0,0,0,-1'
+
+======================================================================
+FAIL: 点击来自上下文6级且配为一半走低级别联盟判断情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 367, in test_rules_call_10
+    self.assertEqual(self.antiCheat.log.getIeField(i + 1, 'ruleErrMsg'), "0,256,-1,80700,-1,0,0,-1,0,0,-1")
+AssertionError: '0,256,-1,80100,-1,0,0,-1,100900,0,-1' != '0,256,-1,80700,-1,0,0,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自上下文7级且配为一半走低级别联盟判断情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 402, in test_rules_call_11
+    self.assertEqual(self.antiCheat.log.getIeField(i + 1, 'ruleErrMsg'), "0,256,-1,80700,-1,0,0,-1,0,0,-1")
+AssertionError: '0,256,-1,80100,-1,0,0,-1,100900,0,-1' != '0,256,-1,80700,-1,0,0,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自上下文8级且配为一半走低级别联盟判断情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 437, in test_rules_call_12
+    self.assertEqual(self.antiCheat.log.getIeField(i + 1, 'ruleErrMsg'), "0,256,-1,80700,-1,0,0,-1,0,0,-1")
+AssertionError: '0,256,-1,80100,-1,0,0,-1,100900,0,-1' != '0,256,-1,80700,-1,0,0,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自上下文9级且配为一半走低级别联盟判断情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 471, in test_rules_call_13
+    self.assertEqual(self.antiCheat.log.getIeField(i + 1, 'ruleErrMsg'), "0,256,-1,80700,-1,0,0,-1,0,0,-1")
+AssertionError: '0,256,-1,80100,-1,0,0,-1,100900,0,-1' != '0,256,-1,80700,-1,0,0,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自链接单元情况下（2-5级），检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 510, in test_rules_call_14
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,0,-1,-1,-1,-1,-1,0,0,-1")
+AssertionError: '0,0,-1,-1,-1,0,-1,-1,0,0,-1' != '0,0,0,-1,-1,-1,-1,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自链接单元情况下（非2-5级），检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 544, in test_rules_call_15
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,0,-1,-1,0,-1,-1,0,0,-1")
+AssertionError: '0,0,-1,-1,-1,0,-1,-1,0,0,-1' != '0,0,0,-1,-1,0,-1,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自sohu情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 99, in test_rules_call_2
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,0,-1,-1,-1,-1,0,0,0,-1")
+AssertionError: '0,0,-1,-1,-1,0,-1,0,0,0,-1' != '0,0,0,-1,-1,-1,-1,0,0,0,-1'
+
+======================================================================
+FAIL: 点击来自sogou-情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 133, in test_rules_call_3
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,0,-1,-1,-1,-1,0,0,0,-1")
+AssertionError: '0,0,-1,-1,-1,0,-1,0,0,0,-1' != '0,0,0,-1,-1,-1,-1,0,0,0,-1'
+
+======================================================================
+FAIL: 点击来自sogou__pic情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 167, in test_rules_call_4
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,-1,80100,-1,-1,0,-1,0,0,-1")
+AssertionError: '0,0,-1,80100,-1,0,0,-1,0,0,-1' != '0,0,-1,80100,-1,-1,0,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自上下文2级情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 201, in test_rules_call_5
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,-1,80100,-1,-1,0,-1,0,0,-1")
+AssertionError: '0,0,-1,80100,-1,0,0,-1,0,0,-1' != '0,0,-1,80100,-1,-1,0,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自上下文3级情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 235, in test_rules_call_6
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,-1,80100,-1,-1,0,-1,0,0,-1")
+AssertionError: '0,0,-1,80100,-1,0,0,-1,0,0,-1' != '0,0,-1,80100,-1,-1,0,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自上下文4级情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 269, in test_rules_call_7
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,-1,80100,-1,-1,0,-1,0,0,-1")
+AssertionError: '0,0,-1,80100,-1,0,0,-1,0,0,-1' != '0,0,-1,80100,-1,-1,0,-1,0,0,-1'
+
+======================================================================
+FAIL: 点击来自上下文5级情况下，检查调用规则是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatRulesCall.py", line 304, in test_rules_call_8
+    self.assertEqual(self.antiCheat.log.getIeField(0, 'ruleErrMsg'), "0,0,-1,80100,-1,-1,0,-1,0,0,-1")
+AssertionError: '0,0,-1,80100,-1,0,0,-1,0,0,-1' != '0,0,-1,80100,-1,-1,0,-1,0,0,-1'
+
+----------------------------------------------------------------------
+Ran 17 tests in 86.557s
+
+FAILED (failures=15)
+同一个suid对同一个广告1分钟内的点击不计费 ... Finished! total=3 valid=3 send=0
+ok
+不同suid对同一个广告1分钟内的点击，计费通过 ... Finished! total=3 valid=3 send=0
+ok
+同一个suid对不同一个广告1分钟内的点击, 判定为计费 ... Finished! total=3 valid=3 send=0
+ok
+同一个suid对同一个广告点击间隔超过1分钟，全部计费 ... Finished! total=3 valid=3 send=0
+ok
+suid为0，对同一个广告1分钟内的点击，不更新hash ... Finished! total=3 valid=3 send=0
+ok
+同一个suid对同一个广告一天只允许3次点击 ... Finished! total=5 valid=5 send=0
+ok
+不同suid对同一个广告一天内无限制 ... Finished! total=4 valid=4 send=0
+ok
+同一个suid对不同广告一天可点击小于10次 ... Finished! total=4 valid=4 send=0
+ok
+suid为0, 不更新hash ... Finished! total=4 valid=4 send=0
+ok
+同一次pv同一个广告一分钟内最多只允许1次广告点击 ... Finished! total=2 valid=2 send=0
+ok
+不同pv同一个广告一分钟内点击次数无限制 ... Finished! total=2 valid=2 send=0
+ok
+同pv不同广告一分钟内点击次数无限制 ... Finished! total=2 valid=2 send=0
+ok
+同pv同广告, 点击间隔超过一分钟，点击次数无限制 ... Finished! total=2 valid=2 send=0
+ok
+同一个suid 连续点击不同广告（10秒内）大于10个，过滤该suid连续点击(10秒内) ... Finished! total=12 valid=12 send=0
+ok
+不同suid 连续点击不同广告（10秒内）大于10个，计费全部通过 ... Finished! total=12 valid=12 send=0
+ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 102.650s
+
+OK
+检查anticheat与userServer接口所有字段是否正确。 ... Finished! total=1 valid=1 send=0
+ERROR
+配置is_send_to_user = false, 检查是否不向userServer发送点击信息。 ... Finished! total=1 valid=1 send=0
+ok
+点击被过滤, 检查是否不向userServer发送点击信息。 ... Finished! total=1 valid=1 send=0
+ok
+上下文点击, 检查是否不向userServer发送点击信息。 ... Finished! total=1 valid=1 send=0
+ok
+XML点击, 检查是否不向userServer发送点击信息。 ... Finished! total=1 valid=1 send=0
+Finished! total=2 valid=2 send=0
+ok
+
+======================================================================
+ERROR: 检查anticheat与userServer接口所有字段是否正确。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatUser.py", line 63, in test_user_profilter_1
+    self.assertEqual(self.user.checkUserLogMsg(1), "4")
+  File "/search/autoTest/pyunit/anticheat/lib/userServer.py", line 16, in checkUserLogMsg
+    return self.udp.get(index, column)
+  File "/search/autoTest/pyunit/anticheat/baseLib/base_log.py", line 63, in get
+    res = str(lines.split(seg)[column])
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 5 tests in 66.716s
+
+FAILED (errors=1)
+检查xml_ip_black_file有效：xml ip在黑名单第一行，中间，末尾，raito为100，检查过滤 ... Finished! total=3 valid=3 send=0
+ok
+检查xml_ip_black_check_raito：0，检查ratio有效 ... Finished! total=1 valid=1 send=0
+ok
+检查xml_ip_black_check_raito：20，检查ratio有效 ... Finished! total=100 valid=100 send=0
+ok
+检查xml_ip_black_check_raito：80，检查ratio有效 ... Finished! total=100 valid=100 send=0
+FAIL
+ip在黑名单，检查过滤，将ipd从黑名单删除，reload xml_ip_black_file, 不过滤 ... Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+ip不在黑名单，检查不过滤，将ip添加黑名单，reload xml_ip_black_file, 过滤 ... Finished! total=1 valid=1 send=0
+Finished! total=1 valid=1 send=0
+ok
+检查url_md5对xml有效 ... Finished! total=3 valid=3 send=0
+ok
+检查leadDt不检查xml ... Finished! total=1 valid=1 send=0
+ok
+检查ctr对xml有效 ... Finished! total=130 valid=130 send=0
+Finished! total=5 valid=5 send=0
+ok
+
+======================================================================
+FAIL: 检查xml_ip_black_check_raito：80，检查ratio有效
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/search/autoTest/pyunit/anticheat/case/antiCheatXmlWhiteIp.py", line 155, in test_xml_ip_black_004
+    assert checkNum < 80
+AssertionError
+
+----------------------------------------------------------------------
+Ran 9 tests in 58.206s
+
+FAILED (failures=1)

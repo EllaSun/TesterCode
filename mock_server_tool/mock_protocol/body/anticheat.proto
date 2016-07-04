@@ -1,0 +1,82 @@
+package BS;
+message PublicItems
+{
+    // bill生成字段
+    optional uint32 click_time = 1;         // 3,点击时间
+    optional uint32 click_ip = 2;           // 8,点击ip
+    optional uint32 search_or_sohu = 3;     // 12
+    optional uint32 cookie_time = 4;        // 31,最早访问时间
+    optional uint32 click_ret = 5;          // 52,click server返回值
+    optional uint32 get_recv = 6;           // 25,是否需要返回值
+    optional uint32 price = 7;              // 13,计费价格
+    optional uint32 ml = 8;                 // 23,ml参数
+    optional uint32 mc = 9;                 // 24,mc参数
+    optional bytes clickid = 10;            // 20
+    optional bytes concern_cookie = 11;     // 4
+    optional bytes xml_cookie = 12;         // 27
+    optional bytes ld_cookie = 13;          // 48
+    optional bytes ad_cookie = 14;          // 49
+    optional bytes rd_cookie = 15;          // 50
+    optional bytes uri_md5 = 16;            // 7,uri的签名
+    optional bytes ak = 17;                 // 45,ak参数
+    optional bytes ma = 18;                 // 34,ma参数
+
+    // 展示server生成字段
+    optional uint32 service_type = 19;      // 26
+    optional uint32 flag = 20;              // 1
+    optional uint32 reserved = 21;          // 2
+    optional uint32 extend_reserved = 22;   // 28
+    optional uint32 query_reserved = 23;    // 39
+    optional uint32 account_id = 24;        // 16
+    optional uint32 plan_id = 25;           // 33
+    optional uint32 group_id = 26;          // 14
+    optional uint32 adid = 27;              // 6
+    optional uint32 creative_id = 28;       // 29
+    optional uint32 bid_price = 29;         // 40,广告出价        
+    optional uint32 public_region = 30;     // 11
+    optional uint32 server_ip = 31;         // 21
+    optional uint32 pass_type = 32;         // 22
+    optional uint32 show_time = 33;         // 32
+    optional uint32 cx_type = 34;           // 35
+    optional uint32 cx_indus = 35;          // 36
+    optional uint32 upos = 36;              // 38
+    optional uint32 domain_id = 37;         // 41
+    optional uint32 upid = 38;              // 42
+    optional uint32 acid_indus = 39;        // 43
+    optional uint32 kid_indus = 40;         // 44
+    optional uint32 fd = 41;                // 46
+    optional uint32 sd = 42;                // 47
+    optional uint32 ssi0 = 43;              // 54
+    optional uint32 res2 = 44;              // 56
+    optional bytes keyword = 45;            // 15,广告关键词
+    optional bytes search_key = 46;         // 17,搜索词
+    optional bytes pid = 47;                // 9
+    optional bytes pv_refer = 48;           // 18
+    optional bytes suid_yyid = 49;          // 19
+    optional bytes lu = 50;                 // 37
+    optional bytes cxid = 51;               // 51
+    optional bytes flow_flag = 52;          // 53
+    optional bytes tseq = 53;               // 56
+}
+
+// 扩展信息子项
+message ExtendItem
+{
+    required bytes key = 1;
+    required bytes value = 2;
+}
+
+message AntiSendInfo
+{
+    // 版本号
+    optional uint32 version = 1;
+    optional bytes req = 2;
+}
+
+message AntiResultInfo
+{
+    // 版本号
+    optional uint32 version = 1;
+    optional uint32 res = 2;
+}
+

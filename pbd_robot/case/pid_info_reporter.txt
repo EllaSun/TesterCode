@@ -1,0 +1,50 @@
+| *** Test Cases *** |
+| low_ctr |
+|    | [Documentation] | Click/pv<l_click_pv，打印Ctr低 |
+|    | ... |
+|    | ... | python $SCRIPT_PATH/pid_info_reporter.py $PID_INFO_PATH/pid_ip_type $PID_INFO_PATH/pid_refer_type $PID_INFO_PATH/pid_query_type $PID_INFO_PATH/pid_cost $PID_INFO_PATH/pid_type_rank data/cheatpid_type/cheatpid_type_$date $INPUT_PATH/lyb_info $PID_INFO_PATH/pid_ml_stat_info $HOT_KWD_PID_FILE $RULE_PID_WHITE_LIST $FEATURE_CONF_FILE \ $OUTPUT_PATH/pid.report.$date |
+|    | note | pid_ip_type | pid | ip |
+|    | write data | pid_ip_type | sogou-clse-2be9bd7a3434f703 | 1.2.3.4 |
+|    | note | pid_refer_type | pid | refer |
+|    | write data | pid_refer_type | sogou-clse-2be9bd7a3434f703 | 123.sogou.com |
+|    | note | pid_query_type | pid | query |
+|    | write data | pid_query_type | sogou-clse-2be9bd7a3434f703 | flower |
+|    | note | pid_cost | pid | cost |
+|    | write data | pid_cost | sogou-clse-2be9bd7a3434f703 | 1000 |
+|    | note | pid_type_rank | pid | type0 num | type0 num | type1 num | type2 num |
+|    | ... | type3 num | type4 num | type5 num | type6 num | type7 num | type8 num |
+|    | ... | type9 num | type10 num | type11 num | type12 num | type13 num | type14 num |
+|    | ... | type15 num | type16num | type17 num | type18 num | type19 num | type20 num |
+|    | ... | type21 num | rank0 num | rank1 num | rank2 num | rank3 num | rank4 num |
+|    | ... | rank5 num | rank6 num | rank7 num | rank8 num | rank9 num | rank10 num |
+|    | ... | rank11 num | rank12 num | rank13 num | rank14 num | rank15 num | rank16 num |
+|    | ... | rank17 num | rank18 num | rank19 num | rank20 num | rank21 num | click |
+|    | ... | err_click | fake_click |
+|    | write data | pid_type_rank | sogou-clse-2be9bd7a3434f703 | 104 | 49 | 2 | 0 |
+|    | ... | 0 | 0 | 0 | 0 | 0 | 0 |
+|    | ... | 0 | 0 | 0 | 0 | 0 | 0 |
+|    | ... | 0 | 0 | 0 | 0 | 0 | 15 |
+|    | ... | 0 | 28 | 8 | 3 | 4 | 3 |
+|    | ... | 2 | 1 | 0 | 0 | 0 | 0 |
+|    | ... | 0 | 0 | 0 | 0 | 0 | 0 |
+|    | ... | 0 | 0 | 0 | 4 | 7 | 58 |
+|    | ... | 1 | 13 |
+|    | note | cheat_type_$date | pid | type | type=0 \ \ 不在havesubpid, 且不在cheatpid中 \ |    | \ type=1 \ \ pid在havesubpid或cheatpid中 \ |
+|    | ... |    | \ type=2 \ \ pid[0,27] 在havesubpid或cheatpid中 |
+|    | write data | cheat_type_$date | sogou-clse-2be9bd7a3434f703 | 0 |
+|    | note | lyb_info | pid | 1 | lyb_sn | arrive_rate | sj_rate |
+|    | ... | new lyb_sn | ave_user_vitality | avg_stay_time | avg_user_active_time | avg_clk_user_vitality | bill_pass_clk |
+|    | ... | short_cookie_rate |
+|    | write data | lyb_info | sogou-clse-2be9bd7a3434f703 | 1 | 260 | 85 | 40 |
+|    | ... | 452 | 358 | 26 | 8 | 280 | 34287 |
+|    | ... | 0.62 |
+|    | note | pid_ml_stat_info | pid | pid_num | ml<10 pid_num | ml<20 pid_num | ml<30 pid_num |
+|    | ... | ml<40 pid_num | ml<50 pid_num | ml<60 pid_num | ml<70 pid_num | ml<80 pid_num | ml<90 pid_num |
+|    | ... | ml<100 pid_num |
+|    | write data | pid_ml_stat_info | sogou-clse-2be9bd7a3434f703 | 5 | 0 | 0 | 0 |
+|    | ... | 0 | 0 | 0 | 0 | 0 | 0 |
+|    | ... | 0 |
+|    | note | hot_kwd_pid_list | pid |
+|    | write data | hot_kwd_pid_list | sogou-clse-2be9bd7a3434f713 |
+|    | note | rule_pid_white_list | pid |
+|    | write data | rule_pid_white_list | sogou-netb-1d054d2981bea746-7613 |

@@ -1,0 +1,39 @@
+| *** Settings *** |
+| Test Setup     | clear data |
+| Library        | lib/pbd.py |
+| Resource       | conf/pbd_var.txt |
+
+| *** Test Cases *** |
+| cheat pid type |
+|    | [Documentation] | 剔除有子pid，cheatpid的pid |
+|    | note | havesubpid_$date | pid |
+|    | write data | havesubpid_${date} | sogou-clse-2be9bd7a3434f703 |
+|    | note | cheatpid_$date | pid |
+|    | write data | cheatpid_${date} | sogou-cheatpid |
+|    | note | pid_list | pid |
+|    | write data | pid_list | sogou-clse-2be9bd7a3434f703 |
+|    | note | $PID_INFO_PATH/pid_list | pid |
+|    | write data | subpid_list | sogou-cheatpid |
+|    | #run script |
+|    | run_out_redirect | cheat_pid_type.py | ${data_path}/cheatpid_type_$date | ${input_path}/havesubpid_{date} | ${input_path}/cheatpid_${date} | ${data_path}/pid_list | ${data_path}/subpid_list |
+|    | #check result |
+|    | ${pid_type}= | get_pid_type | ${data_path}/cheatpid_type_$date | sogou-cheatpid |
+|    | Should Be equal | ${pid_type} | 1 |
+|    | ${pid_type}= | get_pid_type | ${data_path}/cheatpid_type_$date | sogou-clse-2be9bd7a3434f703 |
+|    | Should Be equal | ${pid_type} | 2 |
+
+| get_pid_cost_info |
+|    | [Documentation] | pid消耗情况获取正确 |
+|    | ... | sh $SCRIPT_PATH/get_pid_cost_info.sh $INPUT_PATH/testusers $INPUT_PATH/cd_ie_log.$date $PID_INFO_PATH $SUBPID_INFO_PATH $OUTPUT_PATH/adterm_monitor.$date $ERR $SCRIPT_PATH |
+|    | note | testusers | accountid |
+|    | write data | testusers | 1111 |
+|    | note | cd_ie_log.$date | pid | accountid | keyword | ret | price |
+|    | ... | servicetype |
+|    | write data | cd_ie_log.${date} | sogou-clse-2be9bd7a3434f703 | 1112 | flower | 0 | 30 |
+|    | ... | 10100 |
+|    | #run script |
+|    | run | get_pid_cost_info.sh | ${input_path}/testusers  | ${input_paht}/cd_ie_log.${date} | ${data_path} | ${result_path} | ${result_path}/adterm_monitor.${date} |
+|    | ... | err | ${script_path} |
+|    | #check result |
+|    | ${pid_cost}= | get_pid_cost | sogou-clse-2be9bd7a3434f703 | 30 |
+|    | Should Be equal | ${pid_cost} | 30 |

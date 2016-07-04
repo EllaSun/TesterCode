@@ -1,0 +1,51 @@
+Common Mockserver
+
+
+Introduction
+============
+
+    Common Mockserver is a tool that can make your mockserver development more efficiently.
+  Through a simple configuration, you can generate a mockserver conveniently.
+
+    The mockserver can simulate servers which use socket (tcp or udp) as the communication
+  mode. And use protobuffer or thrift (binary or compact) as the protocol mode.
+
+
+Hierarchy
+=========
+
+  MockServer/
+
+    conf/
+      Configurations of the mockserver
+
+    Interface/
+      Interface of the communication module, the protocol module, and the other function modules
+
+    lib/
+      Implementation details of the communication module and the protocol module
+
+    mock_lib/
+      Tools for the mockserver
+
+    mock_protocol/
+      Interface definitions file for header data and body data
+
+    stub.py
+      File to start the mockserver
+    
+
+Resources
+=========
+
+  http://10.11.193.12/svn/adqa/tool/MockServer2.0
+
+
+Installation
+============
+
+  1. Get the resources of the mockserver.
+  2. Put the idl files to the mock_protocol/body.
+  3. Edit the configurations according to your need.
+  4. Start the mockserver with the right options. (You can use 'python stub.py -h' to view the help 
+     information of the options.)

@@ -1,0 +1,3938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20140301 12:15:17.067" generator="Robot 2.6.3 (Python 2.6.8 on linux2)">
+<suite name="showQ q1 hour">
+<doc></doc>
+<metadata>
+</metadata>
+<suite source="/search/odin/autotest/showQ_q1_hour/pybot/case/acc_kwd_black_list.txt" name="Acc Kwd Black List">
+<doc></doc>
+<metadata>
+</metadata>
+<kw type="setup" name="showQ_q1_hour.Split Script" timeout="">
+<doc></doc>
+<arguments>
+<arg>Q1_hour_clean.sh</arg>
+</arguments>
+<msg timestamp="20140301 12:15:17.314" level="INFO">Q1_hour_clean.sh ('48', '215') -&gt; ctr
+Q1_hour_clean.sh ('215', '227') -&gt; query
+Q1_hour_clean.sh ('227', '245') -&gt; account
+Q1_hour_clean.sh ('253', '305') -&gt; history
+Q1_hour_clean.sh ('305', '322') -&gt; brand
+Q1_hour_clean.sh ('322', '344') -&gt; reverse
+Q1_hour_clean.sh ('344', '365') -&gt; filter</msg>
+<status status="PASS" endtime="20140301 12:15:17.314" starttime="20140301 12:15:17.180"></status>
+</kw>
+<test name="acc kwd black list" timeout="">
+<doc>若客户+词在黑名单中，则强制为1星广告</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:17.323" starttime="20140301 12:15:17.322"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:17.333" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:17.333" starttime="20140301 12:15:17.324"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:17.334" starttime="20140301 12:15:17.334"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp4</arg>
+<arg>3</arg>
+<arg>1111</arg>
+<arg>6178323</arg>
+<arg>白羊座</arg>
+<arg>103</arg>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:17.336" starttime="20140301 12:15:17.335"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Filter Black" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:17.341" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/filter.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:17.341" starttime="20140301 12:15:17.337"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:17.851" level="INFO">${star} = 1</msg>
+<status status="PASS" endtime="20140301 12:15:17.851" starttime="20140301 12:15:17.342"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20140301 12:15:17.853" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:17.853" starttime="20140301 12:15:17.852"></status>
+</kw>
+<tags>
+</tags>
+<status status="PASS" endtime="20140301 12:15:17.854" critical="yes" starttime="20140301 12:15:17.315"></status>
+</test>
+<status status="PASS" endtime="20140301 12:15:17.854" starttime="20140301 12:15:17.097"></status>
+</suite>
+<suite source="/search/odin/autotest/showQ_q1_hour/pybot/case/brand_protect.txt" name="Brand Protect">
+<doc></doc>
+<metadata>
+</metadata>
+<kw type="setup" name="showQ_q1_hour.Split Script" timeout="">
+<doc></doc>
+<arguments>
+<arg>Q1_hour_clean.sh</arg>
+</arguments>
+<msg timestamp="20140301 12:15:17.983" level="INFO">Q1_hour_clean.sh ('48', '215') -&gt; ctr
+Q1_hour_clean.sh ('215', '227') -&gt; query
+Q1_hour_clean.sh ('227', '245') -&gt; account
+Q1_hour_clean.sh ('253', '305') -&gt; history
+Q1_hour_clean.sh ('305', '322') -&gt; brand
+Q1_hour_clean.sh ('322', '344') -&gt; reverse
+Q1_hour_clean.sh ('344', '365') -&gt; filter</msg>
+<status status="PASS" endtime="20140301 12:15:17.983" starttime="20140301 12:15:17.860"></status>
+</kw>
+<test name="brand protect" timeout="">
+<doc>若keyword在品专词白名单里，则非Q1Q2广告</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:17.987" starttime="20140301 12:15:17.986"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:17.988" starttime="20140301 12:15:17.988"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>酷讯旅游</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:17.990" starttime="20140301 12:15:17.989"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:17.991" starttime="20140301 12:15:17.991"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/acc_keyword_white</arg>
+<arg>2222</arg>
+<arg>酷讯旅游</arg>
+</arguments>
+<msg timestamp="20140301 12:15:17.993" level="INFO">new file</msg>
+<status status="PASS" endtime="20140301 12:15:17.993" starttime="20140301 12:15:17.992"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Brand Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:17.997" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/brand.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:17.998" starttime="20140301 12:15:17.993"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp3</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:18.504" level="INFO">${star} = None</msg>
+<status status="PASS" endtime="20140301 12:15:18.503" starttime="20140301 12:15:17.998"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>${None}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:18.505" level="INFO">Argument types are:
+&lt;type 'NoneType'&gt;
+&lt;type 'NoneType'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:18.506" starttime="20140301 12:15:18.504"></status>
+</kw>
+<tags>
+</tags>
+<status status="PASS" endtime="20140301 12:15:18.506" critical="yes" starttime="20140301 12:15:17.984"></status>
+</test>
+<status status="PASS" endtime="20140301 12:15:18.507" starttime="20140301 12:15:17.855"></status>
+</suite>
+<suite source="/search/odin/autotest/showQ_q1_hour/pybot/case/filter.txt" name="Filter">
+<doc>行业 地名 单字过滤</doc>
+<metadata>
+</metadata>
+<kw type="setup" name="showQ_q1_hour.Split Script" timeout="">
+<doc></doc>
+<arguments>
+<arg>Q1_hour_clean.sh</arg>
+</arguments>
+<msg timestamp="20140301 12:15:18.635" level="INFO">Q1_hour_clean.sh ('48', '215') -&gt; ctr
+Q1_hour_clean.sh ('215', '227') -&gt; query
+Q1_hour_clean.sh ('227', '245') -&gt; account
+Q1_hour_clean.sh ('253', '305') -&gt; history
+Q1_hour_clean.sh ('305', '322') -&gt; brand
+Q1_hour_clean.sh ('322', '344') -&gt; reverse
+Q1_hour_clean.sh ('344', '365') -&gt; filter</msg>
+<status status="PASS" endtime="20140301 12:15:18.636" starttime="20140301 12:15:18.513"></status>
+</kw>
+<test name="yeyou industry Filter 001" timeout="">
+<doc>1)客户行业为页游行业 2)accountid不在页游黑名单中 3)keyword不允许出现在页游广告中 ==&gt;输出带有“noyeyoukwd”</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:18.642" starttime="20140301 12:15:18.641"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:18.654" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_kwd.1000.out</msg>
+<status status="PASS" endtime="20140301 12:15:18.654" starttime="20140301 12:15:18.643"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:18.655" starttime="20140301 12:15:18.655"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>玄幻小说</arg>
+<arg>1151600</arg>
+<arg>103</arg>
+<arg>200</arg>
+<arg>50</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:18.657" starttime="20140301 12:15:18.656"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Run" timeout="">
+<doc></doc>
+<arguments>
+<arg>industry_match.sh</arg>
+<arg>${CUR_TIME}</arg>
+<arg>result/${CUR_DATE}/Q1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:18.662" starttime="20140301 12:15:18.658"></status>
+</kw>
+<kw type="kw" name="${industry}, ${flag} = showQ_q1_hour.Get Industry List Tmp3" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:19.164" level="INFO">${industry} = </msg>
+<msg timestamp="20140301 12:15:19.164" level="INFO">${flag} = noyeyoukwd</msg>
+<status status="PASS" endtime="20140301 12:15:19.164" starttime="20140301 12:15:18.662"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${flag}</arg>
+<arg>noyeyoukwd</arg>
+</arguments>
+<msg timestamp="20140301 12:15:19.165" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:19.166" starttime="20140301 12:15:19.165"></status>
+</kw>
+<tags>
+<tag>Filter</tag>
+<tag>important</tag>
+<tag>industry</tag>
+<tag>yeyou</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:19.166" critical="yes" starttime="20140301 12:15:18.636"></status>
+</test>
+<test name="yeyou industry Filter 002" timeout="">
+<doc>1）accid在页游白名单 2）accountid不在页游黑名单中 3)keyword不允许出现在页游广告中 ==&gt;输出带有“noyeyoukwd”</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.172" starttime="20140301 12:15:19.172"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:19.184" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_kwd.1000.out</msg>
+<status status="PASS" endtime="20140301 12:15:19.185" starttime="20140301 12:15:19.173"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.186" starttime="20140301 12:15:19.185"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+<arg>111222</arg>
+<arg>玄幻小说</arg>
+<arg>1234567</arg>
+<arg>103</arg>
+<arg>200</arg>
+<arg>50</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.188" starttime="20140301 12:15:19.186"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Run" timeout="">
+<doc></doc>
+<arguments>
+<arg>industry_match.sh</arg>
+<arg>${CUR_TIME}</arg>
+<arg>result/${CUR_DATE}/Q1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.192" starttime="20140301 12:15:19.189"></status>
+</kw>
+<kw type="kw" name="${industry}, ${flag} = showQ_q1_hour.Get Industry List Tmp3" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:19.695" level="INFO">${industry} = </msg>
+<msg timestamp="20140301 12:15:19.695" level="INFO">${flag} = noyeyoukwd</msg>
+<status status="PASS" endtime="20140301 12:15:19.695" starttime="20140301 12:15:19.193"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${flag}</arg>
+<arg>noyeyoukwd</arg>
+</arguments>
+<msg timestamp="20140301 12:15:19.696" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:19.697" starttime="20140301 12:15:19.696"></status>
+</kw>
+<tags>
+<tag>Filter</tag>
+<tag>industry</tag>
+<tag>normal</tag>
+<tag>yeyou</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:19.697" critical="yes" starttime="20140301 12:15:19.167"></status>
+</test>
+<test name="yeyou industry Filter 003" timeout="">
+<doc>1）客户行业为页游行业 2）accountid不在页游黑名单中 3)keyword行业非“游戏/网络游戏”，非“博彩/赌博” ==&gt;输出带有“no网络游戏”</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.705" starttime="20140301 12:15:19.704"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:19.717" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_kwd.1000.out</msg>
+<status status="PASS" endtime="20140301 12:15:19.717" starttime="20140301 12:15:19.705"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.718" starttime="20140301 12:15:19.718"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>鲜花</arg>
+<arg>1151600</arg>
+<arg>103</arg>
+<arg>200</arg>
+<arg>50</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.720" starttime="20140301 12:15:19.719"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.721" starttime="20140301 12:15:19.721"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+<arg>鲜花</arg>
+<arg>生活服务/鲜花服务</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.723" starttime="20140301 12:15:19.722"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Run" timeout="">
+<doc></doc>
+<arguments>
+<arg>industry_match.sh</arg>
+<arg>${CUR_TIME}</arg>
+<arg>result/${CUR_DATE}/Q1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:19.727" starttime="20140301 12:15:19.723"></status>
+</kw>
+<kw type="kw" name="${industry}, ${flag} = showQ_q1_hour.Get Industry List Tmp3" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:20.230" level="INFO">${industry} = 生活服务/鲜花服务</msg>
+<msg timestamp="20140301 12:15:20.230" level="INFO">${flag} = no网络游戏</msg>
+<status status="PASS" endtime="20140301 12:15:20.230" starttime="20140301 12:15:19.728"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${flag}</arg>
+<arg>no网络游戏</arg>
+</arguments>
+<msg timestamp="20140301 12:15:20.231" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:20.232" starttime="20140301 12:15:20.231"></status>
+</kw>
+<tags>
+<tag>Filter</tag>
+<tag>important</tag>
+<tag>industry</tag>
+<tag>yeyou</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:20.233" critical="yes" starttime="20140301 12:15:19.698"></status>
+</test>
+<test name="netshop industry Filter" timeout="">
+<doc>1）客户行业为网店行业 2）keyword不允许出现在网店名单 ==&gt;输出带有“nowangdiankwd”</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:20.238" starttime="20140301 12:15:20.237"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:20.250" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_kwd.1000.out</msg>
+<status status="PASS" endtime="20140301 12:15:20.250" starttime="20140301 12:15:20.239"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:20.252" starttime="20140301 12:15:20.251"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>非常静距离</arg>
+<arg>2160100</arg>
+<arg>103</arg>
+<arg>200</arg>
+<arg>50</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:20.254" starttime="20140301 12:15:20.252"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Run" timeout="">
+<doc></doc>
+<arguments>
+<arg>industry_match.sh</arg>
+<arg>${CUR_TIME}</arg>
+<arg>result/${CUR_DATE}/Q1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:20.258" starttime="20140301 12:15:20.254"></status>
+</kw>
+<kw type="kw" name="${industry}, ${flag} = showQ_q1_hour.Get Industry List Tmp3" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:20.760" level="INFO">${industry} = </msg>
+<msg timestamp="20140301 12:15:20.760" level="INFO">${flag} = nowangdiankwd</msg>
+<status status="PASS" endtime="20140301 12:15:20.760" starttime="20140301 12:15:20.259"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${flag}</arg>
+<arg>nowangdiankwd</arg>
+</arguments>
+<msg timestamp="20140301 12:15:20.761" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:20.762" starttime="20140301 12:15:20.761"></status>
+</kw>
+<tags>
+<tag>Filter</tag>
+<tag>important</tag>
+<tag>industry</tag>
+<tag>wangdian</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:20.762" critical="yes" starttime="20140301 12:15:20.233"></status>
+</test>
+<test name="language industry Filter" timeout="">
+<doc>1）客户行业为语言行业 2）keyword不允许出现在语言培训名单 ==&gt;输出带有“noyuyan”</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:20.768" starttime="20140301 12:15:20.767"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:20.780" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_kwd.1000.out</msg>
+<status status="PASS" endtime="20140301 12:15:20.780" starttime="20140301 12:15:20.769"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:20.781" starttime="20140301 12:15:20.781"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>翻译</arg>
+<arg>2110500</arg>
+<arg>103</arg>
+<arg>200</arg>
+<arg>50</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:20.784" starttime="20140301 12:15:20.782"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Run" timeout="">
+<doc></doc>
+<arguments>
+<arg>industry_match.sh</arg>
+<arg>${CUR_TIME}</arg>
+<arg>result/${CUR_DATE}/Q1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:20.788" starttime="20140301 12:15:20.784"></status>
+</kw>
+<kw type="kw" name="${industry}, ${flag} = showQ_q1_hour.Get Industry List Tmp3" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:21.290" level="INFO">${industry} = </msg>
+<msg timestamp="20140301 12:15:21.290" level="INFO">${flag} = noyuyan</msg>
+<status status="PASS" endtime="20140301 12:15:21.290" starttime="20140301 12:15:20.789"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${flag}</arg>
+<arg>noyuyan</arg>
+</arguments>
+<msg timestamp="20140301 12:15:21.291" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:21.292" starttime="20140301 12:15:21.291"></status>
+</kw>
+<tags>
+<tag>Filter</tag>
+<tag>important</tag>
+<tag>industry</tag>
+<tag>language</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:21.292" critical="yes" starttime="20140301 12:15:20.763"></status>
+</test>
+<test name="place Filter 001" timeout="">
+<doc>若keyword是地名，且accid不在白名单中，输出“地名	地名”</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:21.297" starttime="20140301 12:15:21.296"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:21.309" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_kwd.1000.out</msg>
+<status status="PASS" endtime="20140301 12:15:21.309" starttime="20140301 12:15:21.298"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:21.310" starttime="20140301 12:15:21.310"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>朝阳区</arg>
+<arg>1234567</arg>
+<arg>103</arg>
+<arg>200</arg>
+<arg>50</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:21.312" starttime="20140301 12:15:21.311"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Run" timeout="">
+<doc></doc>
+<arguments>
+<arg>industry_match.sh</arg>
+<arg>${CUR_TIME}</arg>
+<arg>result/${CUR_DATE}/Q1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:21.316" starttime="20140301 12:15:21.313"></status>
+</kw>
+<kw type="kw" name="${industry}, ${flag} = showQ_q1_hour.Get Industry List Tmp3" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:21.819" level="INFO">${industry} = 地名</msg>
+<msg timestamp="20140301 12:15:21.819" level="INFO">${flag} = 地名</msg>
+<status status="PASS" endtime="20140301 12:15:21.819" starttime="20140301 12:15:21.317"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${flag}</arg>
+<arg>地名</arg>
+</arguments>
+<msg timestamp="20140301 12:15:21.821" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:21.821" starttime="20140301 12:15:21.820"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${industry}</arg>
+<arg>地名</arg>
+</arguments>
+<msg timestamp="20140301 12:15:21.822" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:21.822" starttime="20140301 12:15:21.821"></status>
+</kw>
+<tags>
+<tag>Filter</tag>
+<tag>important</tag>
+<tag>place</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:21.823" critical="yes" starttime="20140301 12:15:21.293"></status>
+</test>
+<test name="place Filter 002" timeout="">
+<doc>若keyword是地名，且accid不在白名单中，输出“地名	地名”</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:21.828" starttime="20140301 12:15:21.827"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:21.840" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_kwd.1000.out</msg>
+<status status="PASS" endtime="20140301 12:15:21.840" starttime="20140301 12:15:21.828"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:21.841" starttime="20140301 12:15:21.841"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>澳大利亚</arg>
+<arg>1234567</arg>
+<arg>103</arg>
+<arg>200</arg>
+<arg>50</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:21.843" starttime="20140301 12:15:21.842"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Run" timeout="">
+<doc></doc>
+<arguments>
+<arg>industry_match.sh</arg>
+<arg>${CUR_TIME}</arg>
+<arg>result/${CUR_DATE}/Q1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:21.847" starttime="20140301 12:15:21.844"></status>
+</kw>
+<kw type="kw" name="${industry}, ${flag} = showQ_q1_hour.Get Industry List Tmp3" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:22.350" level="INFO">${industry} = 地名</msg>
+<msg timestamp="20140301 12:15:22.350" level="INFO">${flag} = 地名</msg>
+<status status="PASS" endtime="20140301 12:15:22.350" starttime="20140301 12:15:21.848"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${flag}</arg>
+<arg>地名</arg>
+</arguments>
+<msg timestamp="20140301 12:15:22.352" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:22.352" starttime="20140301 12:15:22.351"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${industry}</arg>
+<arg>地名</arg>
+</arguments>
+<msg timestamp="20140301 12:15:22.353" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:22.353" starttime="20140301 12:15:22.352"></status>
+</kw>
+<tags>
+<tag>Filter</tag>
+<tag>important</tag>
+<tag>place</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:22.354" critical="yes" starttime="20140301 12:15:21.823"></status>
+</test>
+<test name="black word Filter" timeout="">
+<doc>若keyword是地名，且accid不在白名单中，输出“地名	地名”</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:22.358" starttime="20140301 12:15:22.358"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:22.370" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_kwd.1000.out</msg>
+<status status="PASS" endtime="20140301 12:15:22.370" starttime="20140301 12:15:22.359"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:22.372" starttime="20140301 12:15:22.371"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>习近平</arg>
+<arg>1234567</arg>
+<arg>103</arg>
+<arg>200</arg>
+<arg>50</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:22.374" starttime="20140301 12:15:22.372"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Run" timeout="">
+<doc></doc>
+<arguments>
+<arg>industry_match.sh</arg>
+<arg>${CUR_TIME}</arg>
+<arg>result/${CUR_DATE}/Q1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:22.378" starttime="20140301 12:15:22.374"></status>
+</kw>
+<kw type="kw" name="${industry}, ${flag} = showQ_q1_hour.Get Industry List Tmp3" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:22.881" level="INFO">${industry} = 黑词</msg>
+<msg timestamp="20140301 12:15:22.881" level="INFO">${flag} = 黑词</msg>
+<status status="PASS" endtime="20140301 12:15:22.881" starttime="20140301 12:15:22.379"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${flag}</arg>
+<arg>黑词</arg>
+</arguments>
+<msg timestamp="20140301 12:15:22.883" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:22.883" starttime="20140301 12:15:22.882"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${industry}</arg>
+<arg>黑词</arg>
+</arguments>
+<msg timestamp="20140301 12:15:22.884" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:22.884" starttime="20140301 12:15:22.883"></status>
+</kw>
+<tags>
+<tag>Filter</tag>
+<tag>important</tag>
+<tag>place</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:22.885" critical="yes" starttime="20140301 12:15:22.354"></status>
+</test>
+<status status="PASS" endtime="20140301 12:15:22.886" starttime="20140301 12:15:18.507"></status>
+</suite>
+<suite source="/search/odin/autotest/showQ_q1_hour/pybot/case/get_account_industry.txt" name="Get Account Industry">
+<doc>从CA报文中获取行业，添加至industry_list文件</doc>
+<metadata>
+</metadata>
+<kw type="setup" name="showQ_q1_hour.Split Script" timeout="">
+<doc></doc>
+<arguments>
+<arg>Q1_hour_clean.sh</arg>
+</arguments>
+<msg timestamp="20140301 12:15:23.016" level="INFO">Q1_hour_clean.sh ('48', '215') -&gt; ctr
+Q1_hour_clean.sh ('215', '227') -&gt; query
+Q1_hour_clean.sh ('227', '245') -&gt; account
+Q1_hour_clean.sh ('253', '305') -&gt; history
+Q1_hour_clean.sh ('305', '322') -&gt; brand
+Q1_hour_clean.sh ('322', '344') -&gt; reverse
+Q1_hour_clean.sh ('344', '365') -&gt; filter</msg>
+<status status="PASS" endtime="20140301 12:15:23.016" starttime="20140301 12:15:22.894"></status>
+</kw>
+<test name="get account industry" timeout="">
+<doc></doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.019" starttime="20140301 12:15:23.018"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:23.027" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:23.027" starttime="20140301 12:15:23.019"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.029" starttime="20140301 12:15:23.028"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/CA</arg>
+<arg>CA</arg>
+<arg>I</arg>
+<arg>424949</arg>
+<arg>00000011111000000000</arg>
+<arg>2120605</arg>
+<arg>423435</arg>
+<arg>0</arg>
+<arg>""</arg>
+<arg>1</arg>
+<arg>4294967295</arg>
+<arg>鲜花网（张立峰）</arg>
+<arg>竞通在线</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.031" starttime="20140301 12:15:23.029"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.032" starttime="20140301 12:15:23.031"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp</arg>
+<arg>1111</arg>
+<arg>424949</arg>
+<arg>鲜花</arg>
+<arg>104</arg>
+<arg>200</arg>
+<arg>51</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.034" starttime="20140301 12:15:23.032"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Account Industry" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.038" starttime="20140301 12:15:23.034"></status>
+</kw>
+<kw type="kw" name="${accountid_industry} = showQ_q1_hour.Get Acc Insdustry" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:23.541" level="INFO">${accountid_industry} = 2120605</msg>
+<status status="PASS" endtime="20140301 12:15:23.541" starttime="20140301 12:15:23.039"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${accountid_industry}</arg>
+<arg>2120605</arg>
+</arguments>
+<msg timestamp="20140301 12:15:23.542" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:23.543" starttime="20140301 12:15:23.541"></status>
+</kw>
+<tags>
+<tag>account industry</tag>
+<tag>important</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:23.543" critical="yes" starttime="20140301 12:15:23.017"></status>
+</test>
+<status status="PASS" endtime="20140301 12:15:23.544" starttime="20140301 12:15:22.887"></status>
+</suite>
+<suite source="/search/odin/autotest/showQ_q1_hour/pybot/case/get_Q1Q2_by_pv_ctr.txt" name="get Q1Q2 by pv ctr">
+<doc></doc>
+<metadata>
+</metadata>
+<kw type="setup" name="showQ_q1_hour.Split Script" timeout="">
+<doc></doc>
+<arguments>
+<arg>Q1_hour_clean.sh</arg>
+</arguments>
+<msg timestamp="20140301 12:15:23.675" level="INFO">Q1_hour_clean.sh ('48', '215') -&gt; ctr
+Q1_hour_clean.sh ('215', '227') -&gt; query
+Q1_hour_clean.sh ('227', '245') -&gt; account
+Q1_hour_clean.sh ('253', '305') -&gt; history
+Q1_hour_clean.sh ('305', '322') -&gt; brand
+Q1_hour_clean.sh ('322', '344') -&gt; reverse
+Q1_hour_clean.sh ('344', '365') -&gt; filter</msg>
+<status status="PASS" endtime="20140301 12:15:23.676" starttime="20140301 12:15:23.551"></status>
+</kw>
+<test name="Q2 if low pv at 00:00" timeout="">
+<doc>If PV_L2&lt;=pv&lt;=PV_L, ctr&lt;CTR_L, CUR_HOUR==0000 then Q2</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.679" starttime="20140301 12:15:23.678"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Test Variable" timeout="">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>0000</arg>
+</arguments>
+<msg timestamp="20140301 12:15:23.680" level="INFO">${CUR_TIME} = 0000</msg>
+<status status="PASS" endtime="20140301 12:15:23.680" starttime="20140301 12:15:23.679"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:23.699" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.0000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:23.699" starttime="20140301 12:15:23.681"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_L</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.701" starttime="20140301 12:15:23.700"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_L2</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.705" starttime="20140301 12:15:23.702"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_L</arg>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.709" starttime="20140301 12:15:23.705"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.710" starttime="20140301 12:15:23.709"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${LAST_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.712" starttime="20140301 12:15:23.710"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${LAST_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.714" starttime="20140301 12:15:23.712"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.715" starttime="20140301 12:15:23.714"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:23.716" starttime="20140301 12:15:23.715"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:23.721" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 0000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:23.722" starttime="20140301 12:15:23.717"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.232" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:24.231" starttime="20140301 12:15:23.722"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.233" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:24.233" starttime="20140301 12:15:24.232"></status>
+</kw>
+<tags>
+<tag>pv ctr</tag>
+<tag>Q1_list</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:24.234" critical="yes" starttime="20140301 12:15:23.676"></status>
+</test>
+<test name="Q2 if low pv at 02:30" timeout="">
+<doc>If PV_L2&lt;=pv&lt;=PV_L, ctr&lt;CTR_L, CUR_HOUR==0230 then Q2</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.237" starttime="20140301 12:15:24.236"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Test Variable" timeout="">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>0230</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.238" level="INFO">${CUR_TIME} = 0230</msg>
+<status status="PASS" endtime="20140301 12:15:24.238" starttime="20140301 12:15:24.237"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.257" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.0230
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:24.258" starttime="20140301 12:15:24.239"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_L</arg>
+<arg>20</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.259" starttime="20140301 12:15:24.258"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_L2</arg>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.263" starttime="20140301 12:15:24.260"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_L</arg>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.267" starttime="20140301 12:15:24.264"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.268" starttime="20140301 12:15:24.267"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.270" starttime="20140301 12:15:24.268"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.272" starttime="20140301 12:15:24.270"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.273" starttime="20140301 12:15:24.272"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.275" starttime="20140301 12:15:24.273"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.279" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 0230 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:24.280" starttime="20140301 12:15:24.275"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.790" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:24.789" starttime="20140301 12:15:24.280"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.791" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:24.791" starttime="20140301 12:15:24.790"></status>
+</kw>
+<tags>
+<tag>extend</tag>
+<tag>pv ctr</tag>
+<tag>Q1_list</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:24.792" critical="yes" starttime="20140301 12:15:24.235"></status>
+</test>
+<test name="Q1 if high pv" timeout="">
+<doc>If pv &gt; PV_H,ctr&lt;CTR_limit, then Q1</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.795" starttime="20140301 12:15:24.794"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.814" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:24.814" starttime="20140301 12:15:24.795"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_H</arg>
+<arg>150</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.816" starttime="20140301 12:15:24.815"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_H</arg>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.820" starttime="20140301 12:15:24.817"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.821" starttime="20140301 12:15:24.821"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.823" starttime="20140301 12:15:24.821"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>50</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.825" starttime="20140301 12:15:24.823"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.826" starttime="20140301 12:15:24.825"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:24.828" starttime="20140301 12:15:24.826"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:24.832" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:24.833" starttime="20140301 12:15:24.828"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1113</arg>
+</arguments>
+<msg timestamp="20140301 12:15:25.343" level="INFO">${star} = 1</msg>
+<status status="PASS" endtime="20140301 12:15:25.342" starttime="20140301 12:15:24.833"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20140301 12:15:25.344" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:25.344" starttime="20140301 12:15:25.343"></status>
+</kw>
+<tags>
+<tag>pv ctr</tag>
+<tag>Q1_list</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:25.345" critical="yes" starttime="20140301 12:15:24.793"></status>
+</test>
+<test name="Q1 low ctr R1" timeout="">
+<doc>IF pv&gt; PV_limit, ctr&lt;CTR_limit, pv103&gt;0, (cd103+cd[i])/(pv103+pv[i])&lt;CTR_limit3, then Q1</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.348" starttime="20140301 12:15:25.347"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:25.367" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:25.367" starttime="20140301 12:15:25.349"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_limit</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.369" starttime="20140301 12:15:25.368"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_H</arg>
+<arg>310</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.373" starttime="20140301 12:15:25.370"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit</arg>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.377" starttime="20140301 12:15:25.373"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit3</arg>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.381" starttime="20140301 12:15:25.377"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.382" starttime="20140301 12:15:25.381"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>300</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.384" starttime="20140301 12:15:25.382"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>50</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.386" starttime="20140301 12:15:25.384"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.386" starttime="20140301 12:15:25.386"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10300</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.388" starttime="20140301 12:15:25.387"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10400</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.390" starttime="20140301 12:15:25.389"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:25.395" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:25.395" starttime="20140301 12:15:25.391"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1113</arg>
+</arguments>
+<msg timestamp="20140301 12:15:25.906" level="INFO">${star} = 1</msg>
+<status status="PASS" endtime="20140301 12:15:25.905" starttime="20140301 12:15:25.396"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20140301 12:15:25.907" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:25.907" starttime="20140301 12:15:25.906"></status>
+</kw>
+<tags>
+<tag>pv ctr</tag>
+<tag>Q1_list</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:25.908" critical="yes" starttime="20140301 12:15:25.346"></status>
+</test>
+<test name="Q2 low ctr R1" timeout="">
+<doc>IF pv&gt; PV_limit, ctr&lt;CTR_limit, pv103&gt;0, CTR_limit3&lt;(cd103+cd[i])/(pv103+pv[i])&lt;CTR_limit4, then Q2</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.911" starttime="20140301 12:15:25.910"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:25.930" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:25.931" starttime="20140301 12:15:25.912"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_limit</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.932" starttime="20140301 12:15:25.931"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit</arg>
+<arg>0.9</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.936" starttime="20140301 12:15:25.933"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit3</arg>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.940" starttime="20140301 12:15:25.937"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit4</arg>
+<arg>0.6</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.944" starttime="20140301 12:15:25.940"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.945" starttime="20140301 12:15:25.944"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>300</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.947" starttime="20140301 12:15:25.945"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.949" starttime="20140301 12:15:25.947"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.950" starttime="20140301 12:15:25.949"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10300</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.951" starttime="20140301 12:15:25.950"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10400</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:25.953" starttime="20140301 12:15:25.952"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:25.958" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:25.959" starttime="20140301 12:15:25.954"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1113</arg>
+</arguments>
+<msg timestamp="20140301 12:15:26.469" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:26.468" starttime="20140301 12:15:25.959"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:26.470" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:26.470" starttime="20140301 12:15:26.469"></status>
+</kw>
+<tags>
+<tag>pv ctr</tag>
+<tag>Q1_list</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:26.471" critical="yes" starttime="20140301 12:15:25.909"></status>
+</test>
+<test name="Q1 without bd pv" timeout="">
+<doc>IF pv&gt; PV_limit, ctr&lt;CTR_limit, pv103==0,  then Q1</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:26.474" starttime="20140301 12:15:26.473"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:26.493" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:26.493" starttime="20140301 12:15:26.474"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_limit</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:26.495" starttime="20140301 12:15:26.494"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit</arg>
+<arg>0.9</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:26.499" starttime="20140301 12:15:26.496"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:26.500" starttime="20140301 12:15:26.499"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>300</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:26.502" starttime="20140301 12:15:26.500"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:26.504" starttime="20140301 12:15:26.502"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:26.504" starttime="20140301 12:15:26.504"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:26.506" starttime="20140301 12:15:26.505"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:26.511" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:26.512" starttime="20140301 12:15:26.507"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1113</arg>
+</arguments>
+<msg timestamp="20140301 12:15:27.022" level="INFO">${star} = 1</msg>
+<status status="PASS" endtime="20140301 12:15:27.021" starttime="20140301 12:15:26.512"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20140301 12:15:27.023" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:27.023" starttime="20140301 12:15:27.022"></status>
+</kw>
+<tags>
+<tag>pv ctr</tag>
+<tag>Q1_list</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:27.024" critical="yes" starttime="20140301 12:15:26.472"></status>
+</test>
+<test name="Q2 low ctr2 R1" timeout="">
+<doc>IF pv&gt; PV_limit2, ctr&lt;CTR_limit2, pv103&gt;0, (cd103+cd[i])/(pv103+pv[i])&lt;CTR_limit4, then Q2</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.027" starttime="20140301 12:15:27.026"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:27.046" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:27.047" starttime="20140301 12:15:27.028"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_limit</arg>
+<arg>400</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.049" starttime="20140301 12:15:27.047"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_limit2</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.052" starttime="20140301 12:15:27.049"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit2</arg>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.056" starttime="20140301 12:15:27.053"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit4</arg>
+<arg>0.3</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.060" starttime="20140301 12:15:27.056"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.061" starttime="20140301 12:15:27.060"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>300</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.063" starttime="20140301 12:15:27.061"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>50</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.065" starttime="20140301 12:15:27.063"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.066" starttime="20140301 12:15:27.065"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10300</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.067" starttime="20140301 12:15:27.066"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10400</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.069" starttime="20140301 12:15:27.068"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:27.074" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:27.074" starttime="20140301 12:15:27.070"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1113</arg>
+</arguments>
+<msg timestamp="20140301 12:15:27.585" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:27.584" starttime="20140301 12:15:27.075"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:27.586" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:27.586" starttime="20140301 12:15:27.585"></status>
+</kw>
+<tags>
+<tag>pv ctr</tag>
+<tag>Q1_list</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:27.587" critical="yes" starttime="20140301 12:15:27.025"></status>
+</test>
+<test name="Q2 without bd pv" timeout="">
+<doc>IF pv&gt; PV_limit2, ctr&lt;CTR_limit2, pv103==0, then Q2</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.590" starttime="20140301 12:15:27.589"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:27.609" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:27.609" starttime="20140301 12:15:27.590"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_limit</arg>
+<arg>400</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.611" starttime="20140301 12:15:27.610"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_limit2</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.615" starttime="20140301 12:15:27.612"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_limit2</arg>
+<arg>0.9</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.619" starttime="20140301 12:15:27.615"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.620" starttime="20140301 12:15:27.619"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>300</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.622" starttime="20140301 12:15:27.620"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.624" starttime="20140301 12:15:27.622"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.625" starttime="20140301 12:15:27.624"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>3</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10100</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:27.626" starttime="20140301 12:15:27.625"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:27.631" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:27.632" starttime="20140301 12:15:27.627"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1113</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.142" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:28.141" starttime="20140301 12:15:27.632"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.143" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:28.143" starttime="20140301 12:15:28.142"></status>
+</kw>
+<tags>
+<tag>pv ctr</tag>
+<tag>Q1_list</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:28.144" critical="yes" starttime="20140301 12:15:27.588"></status>
+</test>
+<test name="industry_list" timeout="">
+<doc>If  (pv103+pv[i])&gt;'$PV_industry'  , (cd103+cd[i])/(pv103+pv[i])&lt;'$CTR_industry', print to industry_list</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.147" starttime="20140301 12:15:28.146"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.170" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/pv_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:28.170" starttime="20140301 12:15:28.148"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_industry</arg>
+<arg>50</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.173" starttime="20140301 12:15:28.171"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_industry</arg>
+<arg>0.8</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.176" starttime="20140301 12:15:28.173"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.177" starttime="20140301 12:15:28.176"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>60</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.179" starttime="20140301 12:15:28.177"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.183" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:28.184" starttime="20140301 12:15:28.179"></status>
+</kw>
+<kw type="kw" name="${adid}, ${accid}, ${keyword} = showQ_q1_hour.Get Industry List" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.686" level="INFO">${adid} = 1113</msg>
+<msg timestamp="20140301 12:15:28.686" level="INFO">${accid} = 2222</msg>
+<msg timestamp="20140301 12:15:28.687" level="INFO">${keyword} = flower</msg>
+<status status="PASS" endtime="20140301 12:15:28.686" starttime="20140301 12:15:28.184"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${adid}</arg>
+<arg>1113</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.688" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:28.688" starttime="20140301 12:15:28.687"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${accid}</arg>
+<arg>2222</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.689" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:28.689" starttime="20140301 12:15:28.688"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${keyword}</arg>
+<arg>flower</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.691" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:28.691" starttime="20140301 12:15:28.690"></status>
+</kw>
+<tags>
+<tag>industry</tag>
+<tag>pv ctr</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:28.691" critical="yes" starttime="20140301 12:15:28.145"></status>
+</test>
+<test name="industry_kwd" timeout="">
+<doc>If  (pv103+pv[i])&gt;'$PV_industry'  , (cd103+cd[i])/(pv103+pv[i])&lt;'$CTR_industry', print to industry_list</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.695" starttime="20140301 12:15:28.694"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.717" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cd_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/pv_log.1000
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:28.718" starttime="20140301 12:15:28.695"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>PV_industry</arg>
+<arg>50</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.720" starttime="20140301 12:15:28.718"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_industry</arg>
+<arg>0.8</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.723" starttime="20140301 12:15:28.720"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.724" starttime="20140301 12:15:28.724"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1113</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>60</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:28.726" starttime="20140301 12:15:28.725"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:28.731" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:28.731" starttime="20140301 12:15:28.726"></status>
+</kw>
+<kw type="kw" name="${keyword} = showQ_q1_hour.Get Industry Kwd" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:29.233" level="INFO">${keyword} = flower</msg>
+<status status="PASS" endtime="20140301 12:15:29.233" starttime="20140301 12:15:28.732"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${keyword}</arg>
+<arg>flower</arg>
+</arguments>
+<msg timestamp="20140301 12:15:29.234" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:29.235" starttime="20140301 12:15:29.234"></status>
+</kw>
+<tags>
+<tag>industry</tag>
+<tag>pv ctr</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:29.235" critical="yes" starttime="20140301 12:15:28.692"></status>
+</test>
+<test name="now_pv_click" timeout="">
+<doc>add history_pv_click and now_pv_click</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:29.238" starttime="20140301 12:15:29.237"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/acc_res.txt</arg>
+<arg>${CUR_DATE}/cheating_pid</arg>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:29.253" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/input/20130625/acc_res.txt
+/search/odin/autotest/showQ_q1_hour/flow/input/20130625/cheating_pid
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:29.254" starttime="20140301 12:15:29.238"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:29.255" starttime="20140301 12:15:29.254"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:29.257" starttime="20140301 12:15:29.255"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Append Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${LAST_TIME}</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>104</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:29.259" starttime="20140301 12:15:29.257"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:29.259" starttime="20140301 12:15:29.259"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/pv_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>612635137</arg>
+<arg>flower</arg>
+<arg>flower</arg>
+<arg>10400</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:29.261" starttime="20140301 12:15:29.260"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:29.262" starttime="20140301 12:15:29.262"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/cd_log.${CUR_TIME}</arg>
+<arg>sogou123</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>612635137</arg>
+<arg>flower</arg>
+<arg>0</arg>
+<arg>flower</arg>
+<arg>10400</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:29.264" starttime="20140301 12:15:29.263"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Q1Q2 By Pv Ctr" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:29.269" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/ctr.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:29.269" starttime="20140301 12:15:29.265"></status>
+</kw>
+<kw type="kw" name="${pv} = showQ_q1_hour.Get Pv Cd" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${CUR_TIME}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20140301 12:15:29.776" level="INFO">awk '$5==1{print $6}' /search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/adid_accid_query_pv_cd.1000</msg>
+<msg timestamp="20140301 12:15:29.776" level="INFO">${pv} = 16</msg>
+<status status="PASS" endtime="20140301 12:15:29.776" starttime="20140301 12:15:29.270"></status>
+</kw>
+<kw type="kw" name="${click} = showQ_q1_hour.Get Pv Cd" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/adid_accid_query_pv_cd.${CUR_TIME}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:30.283" level="INFO">awk '$5==2{print $6}' /search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/adid_accid_query_pv_cd.1000</msg>
+<msg timestamp="20140301 12:15:30.283" level="INFO">${click} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:30.283" starttime="20140301 12:15:29.777"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${pv}</arg>
+<arg>16</arg>
+</arguments>
+<msg timestamp="20140301 12:15:30.285" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:30.285" starttime="20140301 12:15:30.284"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${click}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:30.286" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:30.286" starttime="20140301 12:15:30.285"></status>
+</kw>
+<tags>
+<tag>pv_click</tag>
+<tag>pv ctr</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:30.287" critical="yes" starttime="20140301 12:15:29.236"></status>
+</test>
+<status status="PASS" endtime="20140301 12:15:30.288" starttime="20140301 12:15:23.546"></status>
+</suite>
+<suite source="/search/odin/autotest/showQ_q1_hour/pybot/case/get_queryword_industry.txt" name="Get Queryword Industry">
+<doc>use QueryClassifier.exe to split queryword's industry</doc>
+<metadata>
+</metadata>
+<kw type="setup" name="showQ_q1_hour.Split Script" timeout="">
+<doc></doc>
+<arguments>
+<arg>Q1_hour_clean.sh</arg>
+</arguments>
+<msg timestamp="20140301 12:15:30.418" level="INFO">Q1_hour_clean.sh ('48', '215') -&gt; ctr
+Q1_hour_clean.sh ('215', '227') -&gt; query
+Q1_hour_clean.sh ('227', '245') -&gt; account
+Q1_hour_clean.sh ('253', '305') -&gt; history
+Q1_hour_clean.sh ('305', '322') -&gt; brand
+Q1_hour_clean.sh ('322', '344') -&gt; reverse
+Q1_hour_clean.sh ('344', '365') -&gt; filter</msg>
+<status status="PASS" endtime="20140301 12:15:30.418" starttime="20140301 12:15:30.294"></status>
+</kw>
+<test name="get queryword's industry" timeout="">
+<doc>use QueryClassifier.exe to split queryword's industry</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:30.421" starttime="20140301 12:15:30.420"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+</arguments>
+<msg timestamp="20140301 12:15:30.429" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5</msg>
+<status status="PASS" endtime="20140301 12:15:30.430" starttime="20140301 12:15:30.422"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:30.431" starttime="20140301 12:15:30.430"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}</arg>
+<arg>鲜花</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:30.433" starttime="20140301 12:15:30.431"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Get Queryword Industry" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:39.708" starttime="20140301 12:15:30.433"></status>
+</kw>
+<kw type="kw" name="${keyword}, ${industry} = showQ_q1_hour.Get Kwd Industry" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_kwd.${CUR_TIME}.out</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.214" level="INFO">${keyword} = \xcf</msg>
+<msg timestamp="20140301 12:15:40.214" level="INFO">${industry} = 生活服务/鲜花服务</msg>
+<status status="PASS" endtime="20140301 12:15:40.213" starttime="20140301 12:15:39.709"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${industry}</arg>
+<arg>生活服务/鲜花服务</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.216" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:40.216" starttime="20140301 12:15:40.215"></status>
+</kw>
+<tags>
+<tag>normal</tag>
+<tag>queryword industry</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:40.216" critical="yes" starttime="20140301 12:15:30.419"></status>
+</test>
+<status status="PASS" endtime="20140301 12:15:40.217" starttime="20140301 12:15:30.288"></status>
+</suite>
+<suite source="/search/odin/autotest/showQ_q1_hour/pybot/case/history_protect.txt" name="History Protect">
+<doc>计算历史7天ctr，对Q1_list.$CUR_TIME.tmp和industry_list.$CUR_TIME.tmp3中的广告再处理，若历史CTR较高，则不判为1星2星广告。</doc>
+<metadata>
+</metadata>
+<kw type="setup" name="showQ_q1_hour.Split Script" timeout="">
+<doc></doc>
+<arguments>
+<arg>Q1_hour_clean.sh</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.349" level="INFO">Q1_hour_clean.sh ('48', '215') -&gt; ctr
+Q1_hour_clean.sh ('215', '227') -&gt; query
+Q1_hour_clean.sh ('227', '245') -&gt; account
+Q1_hour_clean.sh ('253', '305') -&gt; history
+Q1_hour_clean.sh ('305', '322') -&gt; brand
+Q1_hour_clean.sh ('322', '344') -&gt; reverse
+Q1_hour_clean.sh ('344', '365') -&gt; filter</msg>
+<status status="PASS" endtime="20140301 12:15:40.349" starttime="20140301 12:15:40.226"></status>
+</kw>
+<test name="Q1 still Q1" timeout="">
+<doc>Q1_list.$CUR_TIME.tmp中的1星广告，ctr&lt;limit1, 仍为1星</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.353" starttime="20140301 12:15:40.352"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.365" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_list.1000.tmp3</msg>
+<status status="PASS" endtime="20140301 12:15:40.365" starttime="20140301 12:15:40.353"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_hislimit1</arg>
+<arg>0.4</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.367" starttime="20140301 12:15:40.366"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.368" starttime="20140301 12:15:40.367"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>100</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.370" starttime="20140301 12:15:40.368"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.371" starttime="20140301 12:15:40.371"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.373" starttime="20140301 12:15:40.371"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.378" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:40.378" starttime="20140301 12:15:40.373"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.888" level="INFO">${star} = 1</msg>
+<status status="PASS" endtime="20140301 12:15:40.887" starttime="20140301 12:15:40.379"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.889" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:40.890" starttime="20140301 12:15:40.889"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>important</tag>
+<tag>Q1</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:40.890" critical="yes" starttime="20140301 12:15:40.349"></status>
+</test>
+<test name="Q1 update to Q2 001" timeout="">
+<doc>Q1_list.$CUR_TIME.tmp中的1星广告，ctr&gt;=history_limit1,pv&lt;70, 升为2星</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.894" starttime="20140301 12:15:40.893"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.906" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_list.1000.tmp3</msg>
+<status status="PASS" endtime="20140301 12:15:40.906" starttime="20140301 12:15:40.895"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_hislimit1</arg>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.908" starttime="20140301 12:15:40.907"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.909" starttime="20140301 12:15:40.909"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>60</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.911" starttime="20140301 12:15:40.910"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.912" starttime="20140301 12:15:40.912"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:40.914" starttime="20140301 12:15:40.913"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:40.919" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:40.919" starttime="20140301 12:15:40.915"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:41.430" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:41.429" starttime="20140301 12:15:40.920"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:41.431" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:41.432" starttime="20140301 12:15:41.431"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>important</tag>
+<tag>Q1</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:41.432" critical="yes" starttime="20140301 12:15:40.891"></status>
+</test>
+<test name="Q1 update to Q2 002" timeout="">
+<doc>Q1_list.$CUR_TIME.tmp中的1星广告，limit3&gt;ctr&gt;=limit1,pv&gt;70, 升为2星</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.436" starttime="20140301 12:15:41.435"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:41.448" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_list.1000.tmp3</msg>
+<status status="PASS" endtime="20140301 12:15:41.448" starttime="20140301 12:15:41.437"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_hislimit1</arg>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.450" starttime="20140301 12:15:41.449"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_hislimit3</arg>
+<arg>0.4</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.454" starttime="20140301 12:15:41.451"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.455" starttime="20140301 12:15:41.455"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>100</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.457" starttime="20140301 12:15:41.456"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.458" starttime="20140301 12:15:41.458"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.460" starttime="20140301 12:15:41.459"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:41.465" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:41.465" starttime="20140301 12:15:41.461"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:41.976" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:41.975" starttime="20140301 12:15:41.466"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:41.977" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:41.977" starttime="20140301 12:15:41.976"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>normal</tag>
+<tag>Q1</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:41.978" critical="yes" starttime="20140301 12:15:41.433"></status>
+</test>
+<test name="Q1 delete" timeout="">
+<doc>Q1_list.$CUR_TIME.tmp中的1星广告，ctr&gt;=limit1,ctr&gt;=limit3, pv&gt;70, 非Q1Q2</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.982" starttime="20140301 12:15:41.981"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:41.994" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_list.1000.tmp3</msg>
+<status status="PASS" endtime="20140301 12:15:41.994" starttime="20140301 12:15:41.982"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_hislimit1</arg>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:41.996" starttime="20140301 12:15:41.995"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_hislimit3</arg>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.000" starttime="20140301 12:15:41.997"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.001" starttime="20140301 12:15:42.001"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>100</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.003" starttime="20140301 12:15:42.002"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.004" starttime="20140301 12:15:42.004"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>1</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.006" starttime="20140301 12:15:42.005"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:42.011" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:42.011" starttime="20140301 12:15:42.007"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:42.518" level="INFO">${star} = None</msg>
+<status status="PASS" endtime="20140301 12:15:42.518" starttime="20140301 12:15:42.012"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>${None}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:42.520" level="INFO">Argument types are:
+&lt;type 'NoneType'&gt;
+&lt;type 'NoneType'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:42.520" starttime="20140301 12:15:42.519"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>important</tag>
+<tag>Q1</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:42.520" critical="yes" starttime="20140301 12:15:41.979"></status>
+</test>
+<test name="Q2 still Q2 001" timeout="">
+<doc>Q1_list.$CUR_TIME.tmp中的2星广告，PV&lt;=70, 仍为2星</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.524" starttime="20140301 12:15:42.523"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:42.536" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_list.1000.tmp3</msg>
+<status status="PASS" endtime="20140301 12:15:42.537" starttime="20140301 12:15:42.525"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.538" starttime="20140301 12:15:42.537"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>50</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.540" starttime="20140301 12:15:42.538"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.541" starttime="20140301 12:15:42.540"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:42.543" starttime="20140301 12:15:42.541"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:42.547" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:42.548" starttime="20140301 12:15:42.543"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:43.058" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:43.057" starttime="20140301 12:15:42.548"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:43.059" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:43.060" starttime="20140301 12:15:43.059"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>important</tag>
+<tag>Q1</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:43.060" critical="yes" starttime="20140301 12:15:42.521"></status>
+</test>
+<test name="Q2 still Q2 002" timeout="">
+<doc>Q1_list.$CUR_TIME.tmp中的2星广告，PV&gt;70, ctr&lt;limit2, 仍为2星</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.064" starttime="20140301 12:15:43.063"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:43.076" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_list.1000.tmp3</msg>
+<status status="PASS" endtime="20140301 12:15:43.076" starttime="20140301 12:15:43.064"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_hislimit2</arg>
+<arg>0.4</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.079" starttime="20140301 12:15:43.077"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.080" starttime="20140301 12:15:43.079"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>100</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.082" starttime="20140301 12:15:43.080"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.083" starttime="20140301 12:15:43.082"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.085" starttime="20140301 12:15:43.083"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:43.089" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:43.090" starttime="20140301 12:15:43.085"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:43.600" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:43.599" starttime="20140301 12:15:43.090"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:43.601" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:43.602" starttime="20140301 12:15:43.601"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>normal</tag>
+<tag>Q1</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:43.602" critical="yes" starttime="20140301 12:15:43.061"></status>
+</test>
+<test name="Q2 delelte" timeout="">
+<doc>Q1_list.$CUR_TIME.tmp中的2星广告，PV&gt;70, ctr&gt;=limit2, 非Q1Q2</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.606" starttime="20140301 12:15:43.605"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:43.618" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/industry_list.1000.tmp3</msg>
+<status status="PASS" endtime="20140301 12:15:43.618" starttime="20140301 12:15:43.606"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_hislimit2</arg>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.620" starttime="20140301 12:15:43.619"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.621" starttime="20140301 12:15:43.620"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>100</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.623" starttime="20140301 12:15:43.621"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.624" starttime="20140301 12:15:43.623"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+<arg>2</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:43.626" starttime="20140301 12:15:43.624"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:43.631" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:43.631" starttime="20140301 12:15:43.626"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:44.137" level="INFO">${star} = None</msg>
+<status status="PASS" endtime="20140301 12:15:44.137" starttime="20140301 12:15:43.632"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>${NONE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:44.139" level="INFO">Argument types are:
+&lt;type 'NoneType'&gt;
+&lt;type 'NoneType'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:44.139" starttime="20140301 12:15:44.138"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>important</tag>
+<tag>Q1</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:44.139" critical="yes" starttime="20140301 12:15:43.603"></status>
+</test>
+<test name="industry Q2" timeout="">
+<doc>industry_list.$CUR_TIME.tmp3, pv&gt;70,CTR&gt;=history_limit, 为2星广告</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.143" starttime="20140301 12:15:44.142"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+</arguments>
+<msg timestamp="20140301 12:15:44.154" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1_list.1000.tmp</msg>
+<status status="PASS" endtime="20140301 12:15:44.154" starttime="20140301 12:15:44.143"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_his_industry</arg>
+<arg>0.4</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.156" starttime="20140301 12:15:44.155"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.157" starttime="20140301 12:15:44.157"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>1234567</arg>
+<arg>103</arg>
+<arg>100</arg>
+<arg>60</arg>
+<arg>60</arg>
+<arg>生活服务/鲜花服务</arg>
+<arg>noyeyoukwd</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.159" starttime="20140301 12:15:44.158"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.160" starttime="20140301 12:15:44.160"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>100</arg>
+<arg>60</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.162" starttime="20140301 12:15:44.161"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:44.167" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:44.168" starttime="20140301 12:15:44.163"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:44.678" level="INFO">${star} = 2</msg>
+<status status="PASS" endtime="20140301 12:15:44.677" starttime="20140301 12:15:44.168"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20140301 12:15:44.679" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:44.680" starttime="20140301 12:15:44.679"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>important</tag>
+<tag>industry</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:44.680" critical="yes" starttime="20140301 12:15:44.140"></status>
+</test>
+<test name="industry Q1 001" timeout="">
+<doc>industry_list.$CUR_TIME.tmp3, pv&lt;=70, 为1星广告</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.683" starttime="20140301 12:15:44.682"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+</arguments>
+<msg timestamp="20140301 12:15:44.695" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1_list.1000.tmp</msg>
+<status status="PASS" endtime="20140301 12:15:44.696" starttime="20140301 12:15:44.684"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.697" starttime="20140301 12:15:44.696"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>1234567</arg>
+<arg>103</arg>
+<arg>100</arg>
+<arg>60</arg>
+<arg>60</arg>
+<arg>生活服务/鲜花服务</arg>
+<arg>noyeyoukwd</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.699" starttime="20140301 12:15:44.697"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.700" starttime="20140301 12:15:44.700"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>60</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:44.702" starttime="20140301 12:15:44.701"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:44.707" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:44.707" starttime="20140301 12:15:44.703"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.218" level="INFO">${star} = 1</msg>
+<status status="PASS" endtime="20140301 12:15:45.217" starttime="20140301 12:15:44.708"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.219" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:45.220" starttime="20140301 12:15:45.219"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>important</tag>
+<tag>industry</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:45.220" critical="yes" starttime="20140301 12:15:44.681"></status>
+</test>
+<test name="industry Q1 002" timeout="">
+<doc>industry_list.$CUR_TIME.tmp3, pv&gt;70,ctr&lt;history_limit, 为1星广告</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:45.224" starttime="20140301 12:15:45.223"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.235" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1_list.1000.tmp</msg>
+<status status="PASS" endtime="20140301 12:15:45.235" starttime="20140301 12:15:45.224"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Set Q1 Conf" timeout="">
+<doc></doc>
+<arguments>
+<arg>CTR_his_industry</arg>
+<arg>0.4</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:45.237" starttime="20140301 12:15:45.236"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:45.238" starttime="20140301 12:15:45.237"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/industry_list.${CUR_TIME}.tmp3</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>1234567</arg>
+<arg>103</arg>
+<arg>100</arg>
+<arg>60</arg>
+<arg>60</arg>
+<arg>生活服务/鲜花服务</arg>
+<arg>noyeyoukwd</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:45.240" starttime="20140301 12:15:45.238"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Note" timeout="">
+<doc></doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:45.241" starttime="20140301 12:15:45.241"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/7_ads_ctr_log</arg>
+<arg>1111</arg>
+<arg></arg>
+<arg></arg>
+<arg>100</arg>
+<arg>30</arg>
+<arg>40</arg>
+<arg>20</arg>
+<arg>2000</arg>
+<arg>4000</arg>
+<arg>4500</arg>
+<arg>10000</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:45.243" starttime="20140301 12:15:45.241"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.History Protect" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.248" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/history.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:45.248" starttime="20140301 12:15:45.244"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp2</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.758" level="INFO">${star} = 1</msg>
+<status status="PASS" endtime="20140301 12:15:45.757" starttime="20140301 12:15:45.249"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.759" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:45.760" starttime="20140301 12:15:45.759"></status>
+</kw>
+<tags>
+<tag>history protect</tag>
+<tag>industry</tag>
+<tag>normal</tag>
+</tags>
+<status status="PASS" endtime="20140301 12:15:45.760" critical="yes" starttime="20140301 12:15:45.221"></status>
+</test>
+<status status="PASS" endtime="20140301 12:15:45.761" starttime="20140301 12:15:40.218"></status>
+</suite>
+<suite source="/search/odin/autotest/showQ_q1_hour/pybot/case/history_reverse.txt" name="History Reverse">
+<doc></doc>
+<metadata>
+</metadata>
+<kw type="setup" name="showQ_q1_hour.Split Script" timeout="">
+<doc></doc>
+<arguments>
+<arg>Q1_hour_clean.sh</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.893" level="INFO">Q1_hour_clean.sh ('48', '215') -&gt; ctr
+Q1_hour_clean.sh ('215', '227') -&gt; query
+Q1_hour_clean.sh ('227', '245') -&gt; account
+Q1_hour_clean.sh ('253', '305') -&gt; history
+Q1_hour_clean.sh ('305', '322') -&gt; brand
+Q1_hour_clean.sh ('322', '344') -&gt; reverse
+Q1_hour_clean.sh ('344', '365') -&gt; filter</msg>
+<status status="PASS" endtime="20140301 12:15:45.893" starttime="20140301 12:15:45.770"></status>
+</kw>
+<test name="history reverse" timeout="">
+<doc>若历史星级&lt;=2, 且不在当前时间Q1Q2列表中，则升为3星</doc>
+<kw type="setup" name="showQ_q1_hour.Clear Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:45.898" starttime="20140301 12:15:45.897"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Touch" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1</arg>
+<arg>${CUR_DATE}/Q1/Q1.md5</arg>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.910" level="INFO">/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1.md5
+/search/odin/autotest/showQ_q1_hour/flow/result/20130625/Q1/Q1_list.1000.tmp3</msg>
+<status status="PASS" endtime="20140301 12:15:45.910" starttime="20140301 12:15:45.899"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Write Data" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${LAST_TIME}</arg>
+<arg>1</arg>
+<arg>1111</arg>
+<arg>2222</arg>
+<arg>flower</arg>
+<arg>103</arg>
+<arg>1</arg>
+<arg>15</arg>
+</arguments>
+<status status="PASS" endtime="20140301 12:15:45.913" starttime="20140301 12:15:45.911"></status>
+</kw>
+<kw type="kw" name="showQ_q1_hour.Reverse 1hourbefore Q1Q2" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_TIME}</arg>
+<arg>${LAST_TIME}</arg>
+<arg>${CUR_DATE}</arg>
+<arg>${LAST_DATE}</arg>
+</arguments>
+<msg timestamp="20140301 12:15:45.917" level="INFO">cd /search/odin/autotest/showQ_q1_hour/flow/;sh debug/reverse.sh 1000 0930 20130625 20130624 1&gt;/dev/null 2&gt;/dev/null &amp;</msg>
+<status status="PASS" endtime="20140301 12:15:45.918" starttime="20140301 12:15:45.913"></status>
+</kw>
+<kw type="kw" name="${star} = showQ_q1_hour.Get Star" timeout="">
+<doc></doc>
+<arguments>
+<arg>${CUR_DATE}/Q1/Q1_list.${CUR_TIME}.tmp4</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20140301 12:15:46.427" level="INFO">${star} = 3</msg>
+<status status="PASS" endtime="20140301 12:15:46.426" starttime="20140301 12:15:45.918"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal" timeout="">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${star}</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20140301 12:15:46.428" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20140301 12:15:46.429" starttime="20140301 12:15:46.428"></status>
+</kw>
+<tags>
+</tags>
+<status status="PASS" endtime="20140301 12:15:46.429" critical="yes" starttime="20140301 12:15:45.894"></status>
+</test>
+<status status="PASS" endtime="20140301 12:15:46.430" starttime="20140301 12:15:45.765"></status>
+</suite>
+<status status="PASS" endtime="20140301 12:15:46.431" starttime="20140301 12:15:17.067"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="34">Critical Tests</stat>
+<stat fail="0" pass="34">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="8" fail="0">Filter</stat>
+<stat info="" links="" doc="" combined="" pass="7" fail="0">Q1</stat>
+<stat info="" links="" doc="" combined="" pass="8" fail="0">Q1_list</stat>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">account industry</stat>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">extend</stat>
+<stat info="" links="" doc="" combined="" pass="10" fail="0">history protect</stat>
+<stat info="" links="" doc="" combined="" pass="15" fail="0">important</stat>
+<stat info="" links="" doc="" combined="" pass="10" fail="0">industry</stat>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">language</stat>
+<stat info="" links="" doc="" combined="" pass="5" fail="0">normal</stat>
+<stat info="" links="" doc="" combined="" pass="3" fail="0">place</stat>
+<stat info="" links="" doc="" combined="" pass="11" fail="0">pv ctr</stat>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">pv_click</stat>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">queryword industry</stat>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">wangdian</stat>
+<stat info="" links="" doc="" combined="" pass="3" fail="0">yeyou</stat>
+</tag>
+<suite>
+<stat fail="0" name="showQ q1 hour" idx="s1" pass="34">showQ q1 hour</stat>
+<stat fail="0" name="Acc Kwd Black List" idx="s1-s1" pass="1">showQ q1 hour.Acc Kwd Black List</stat>
+<stat fail="0" name="Brand Protect" idx="s1-s2" pass="1">showQ q1 hour.Brand Protect</stat>
+<stat fail="0" name="Filter" idx="s1-s3" pass="8">showQ q1 hour.Filter</stat>
+<stat fail="0" name="Get Account Industry" idx="s1-s4" pass="1">showQ q1 hour.Get Account Industry</stat>
+<stat fail="0" name="get Q1Q2 by pv ctr" idx="s1-s5" pass="11">showQ q1 hour.get Q1Q2 by pv ctr</stat>
+<stat fail="0" name="Get Queryword Industry" idx="s1-s6" pass="1">showQ q1 hour.Get Queryword Industry</stat>
+<stat fail="0" name="History Protect" idx="s1-s7" pass="10">showQ q1 hour.History Protect</stat>
+<stat fail="0" name="History Reverse" idx="s1-s8" pass="1">showQ q1 hour.History Reverse</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
