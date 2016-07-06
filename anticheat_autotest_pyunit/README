@@ -1,0 +1,9 @@
+BackGrand, Anti Cheat System detect  and make fault clicks invaild.  Meanwhile, this system  make sure valid click be billed correctly. 
+In this automation framework, I rewrote base lib,user lib, test cases in Python programming language.  And Python Unit is the running
+tool.
+Forgive me,I deleted all the test cases in order to protect bussiness security. 
+
+There are some tips to make this framework effeciently.
+1. Server only restart once in one test suite. I understand we need to restart our server once a case in order to keep cases not influence each other. Assume  you have one thousand cases, which are divided into 20 test suites, and one server restart time is 10 seconds which is very short for back-end services. You would need more than 2 Hours just for restarting service. You doesn't use that time to check the product. Consider another situation. If we only restart server once a test suite, we only need 10*20=200 seconds. Time saves. But how could we make sure case in one suite don't influence each other？ We should make sure each test case's test data is unique in one test case. For example, there is a rule: one IP could not click more than 10 times. We make sure each case would have different IP. So cases won't inflence each other.
+2. Rewrote test cases. Not to import package which is not use in your test case files. I know we all love copying. But it really waste time. 
+3. Customer your automation framework. Don't try to make it fit all applications. 
