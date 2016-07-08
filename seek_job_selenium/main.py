@@ -26,8 +26,9 @@ browser_driver = webdriver.Chrome(chromedriver_path)
 
 #login
 browser_driver.get('https://www.seek.co.nz/Login/SignIn?returnUrl=%2F&feature=Navigation&inUse=False')
-browser_driver.find_element_by_xpath('//*[@id="Email"]').send_keys('sunyingms@gmail.com')
-browser_driver.find_element_by_xpath('//*[@id="Password"]').send_keys('newBaby@Apr')
+#need input your account name and passwd
+browser_driver.find_element_by_xpath('//*[@id="Email"]').send_keys('youSeekAccount')
+browser_driver.find_element_by_xpath('//*[@id="Password"]').send_keys('passwd')
 browser_driver.find_element_by_xpath('//*[@id="signInForm"]/div/button').click()
 time.sleep(10)
 line=1
