@@ -1,15 +1,14 @@
-# coding:GBK
 import os,re,time
 import string
 
-# 配置文件
+# cofiguration
 class Config:
 	def __init__(self, id):
 		self.id = id
 		self.path = self.id.get('path_conf')
 		self.path_bak = self.id.get('path_conf_bak')
 
-	#设置配置项
+	#set the configuration item
 	def setConfig(self, item, value, mode=1):
 		f = file(self.path,'r')
 		cfg = f.read()
@@ -32,7 +31,7 @@ class Config:
 		f.close()
 
 
-	#获取配置项
+	#get configuration item
 	def getConfig(self, item):
 		f = file(self.path,'r')
 		cfg = f.read()
@@ -41,7 +40,7 @@ class Config:
 		f.close()
 		return fd[0]
 
-	#删除配置项
+	#remove the configuration item
 	def removeConfig(self, item):
 		f = file(self.path,'r')
 		cfg = f.read()
@@ -53,7 +52,7 @@ class Config:
 		f.write(new)
 		f.close()
 
-	#恢复配置文件
+	#鎭㈠閰嶇疆鏂囦欢
 	def recoverConfig(self):
 		cmd = 'cp -f ' + self.path_bak + ' ' + self.path
 		os.popen(cmd).read()
