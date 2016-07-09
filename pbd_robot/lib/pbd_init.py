@@ -1,4 +1,3 @@
-# coding:GBK
 from baseLib import base_init
 
 pbd_cfg_g = "/search/odin/autotest/pbd/pybot/conf/pbd.cfg"
