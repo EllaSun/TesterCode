@@ -3,7 +3,6 @@ import os, re, time
 import string
 import commands
 
-"""日志类"""
 class Log:
 	def __init__(self, path_, log_, head=0, tail=0):
 		self.path = path_
@@ -14,7 +13,7 @@ class Log:
 		self.log_tail = tail
 
 	def __getSection__(self, all = True):
-		'''确定本次读取日志的范围'''
+		'''determine the scope of the log. where is the beginning and where is the end.'''
 		cmd = "cat " + self.log + "*|wc -l"
 		log_tail_n = os.popen(cmd).read()
 		if log_tail_n != self.log_tail:
@@ -25,7 +24,7 @@ class Log:
 		return int(self.log_tail) - int(self.log_head)
 
 	def find(self, key1="", key2=""):
-		'''包含字符串key1和key2的行数'''
+		'''return the line num which include key1 and key2'''
 		t = self.__getSection__()
 		if self.log_head == 0:
 			cmd = "cat " + self.log + "* | grep \"" + str(key1) + "\" | grep \"" + str(key2) + "\" | wc -l"
@@ -35,9 +34,9 @@ class Log:
 		return int(res)
 
 	def getAll(self, key="", all = True):
-		'''返回日志某行某列的数据'''
+		'''return the content of the log which include the predefined key'''  
 		t = self.__getSection__(all = all)
-		#读取范围内的日志
+		'''find the key in the specified scope of the log'''
 		if self.log_head == 0 and t != 0:
 			cmd = "cat " + self.log + "* | grep \"" + key + "\""
 		else:
@@ -82,7 +81,7 @@ class Log:
 		return rr>>int(begin)
 
 	def rmAll(self):
-		'''清空全部日志'''
+		'''remove all the logs'''
 		cmd = "rm " + self.path + "/* -rf"  
 		res = os.popen(cmd).read()
 	
