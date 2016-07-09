@@ -52,7 +52,7 @@ class Config:
 		f.write(new)
 		f.close()
 
-	#恢复配置文件
+	#recover the configuration file
 	def recoverConfig(self):
 		cmd = 'cp -f ' + self.path_bak + ' ' + self.path
 		os.popen(cmd).read()
