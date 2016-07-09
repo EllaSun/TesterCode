@@ -1,4 +1,3 @@
-# coding:GBK
 from baseLib import base_server
 from baseLib import base_conf
 
@@ -42,12 +41,10 @@ class antiCheat(base_server.Server):
 		time.sleep(0.2)
 	
 	def tearDown(self):
-		##########检查log是否打报警信息##############################
 		lm_err = ["LM_ERROR", "LM_CRTIC"]
 		for lm in lm_err:
 			if(int(self.log.find_error_log(key = lm)) > 0):
 				print "[!]Check antiCheat error_log, there is \"", lm, "\"."
-		################################################################
 		
 
 
