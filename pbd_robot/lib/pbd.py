@@ -1,4 +1,3 @@
-#coding: gbk
 import re,os,time
 from lib import pbd_data
 from lib import pbd_init
