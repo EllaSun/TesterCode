@@ -1,9 +1,8 @@
-# coding:GBK
 import os,re
 import ConfigParser
 from baseLib import base_data
 
-# 配置文件
+# cofiguration
 class Config:
 	def __init__(self, section, cfg, cfg_bak = None, mode = 1):
 		self.cf = ConfigParser.ConfigParser()
