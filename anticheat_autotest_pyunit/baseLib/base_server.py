@@ -1,4 +1,3 @@
-# coding:GBK
 import os,time,sys
 import string
 from baseLib import base_init
@@ -9,7 +8,7 @@ class Server:
 		self.app_name = app_name
 
 	def start(self):
-		'''启动Server'''
+		'''start server'''
 		if self.start_script == None:
 			return -1
 		os.system(self.start_script)
@@ -24,7 +23,7 @@ class Server:
 		return pid
 
 	def stop(self):
-		'''停止Server'''
+		'''stop server'''
 		os.system("killall -9 -q " + self.app_name)
 		pid = os.popen("pidof " + self.app_name).readline().strip('\n')
 		if pid == None or pid == "":
@@ -33,7 +32,7 @@ class Server:
 			return -1
 
 	def getAppStatus(self):
-		'''获取应用程序运行状态'''
+		'''get application runing status'''
 		cmd = "ps aux|grep " + self.app_name + "|grep -v grep |awk '{print $8}'"
 		return os.popen(cmd).readline()
 
