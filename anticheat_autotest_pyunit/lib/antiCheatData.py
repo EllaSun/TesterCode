@@ -1,4 +1,3 @@
-#coding: gbk
 from baseLib import base_data
 import copy
 
@@ -111,7 +110,7 @@ class antiCheatData(base_data.Data):
 		newLine = pid + '\t' + level
 		self.append(path + 'pid_level', newLine)
 
-	#Ö¸¶¨¸ñÊ½µÄÊı¾İ£¬Ìí¼Ó½ô¼±ÉÏÏßÎÄ¼ş
+	#æŒ‡å®šæ ¼å¼çš„æ•°æ®ï¼Œæ·»åŠ ç´§æ€¥ä¸Šçº¿æ–‡ä»¶
 	def setEmergeFile(self, emergeParam = emergeParam):
 		data  = emergeParam['ip']  + '\t' 
 		data += emergeParam['pid'] + '\t'	
