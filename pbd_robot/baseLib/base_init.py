@@ -1,13 +1,13 @@
-# coding:GBK
 import os
 import ConfigParser
 
 class Init:
 	def __init__(self, cfg):
-		#¼ÓÔØÅäÖÃÎÄ¼ş
+		#load the configuration file
 		self.config = ConfigParser.ConfigParser()
 		self.config.read(cfg)
-		#³õÊ¼»¯Ä¿Â¼ÅäÖÃĞÅÏ¢
+		#init the data flows directory
+		#according to the data flow specification, different module should be in the specified directory
 		self.home_dir = self.getHomeDir()
 		self.conf_dir = self.getConfDir()
 		self.data_dir = self.getDataDir()
@@ -17,20 +17,20 @@ class Init:
 		self.lib_dir = self.getLibDir()
 		self.log_dir = self.getLogDir()
 		self.script_dir = self.getScriptDir()
-		#³õÊ¼»¯ÅäÖÃÎÄ¼şÅäÖÃĞÅÏ¢
+		#init the configuration
 		self.server_cfg = self.getServerConfig()
 		self.server_cfg_bak = self.getServerConfigBak()
 		self.query_server_cfg = self.getQueryConfig()
 		self.query_server_cfg_bak = self.getQueryConfigBak()
 		self.adlog_cfg = self.getAdlogCfg()
-		#³õÊ¼»¯app
+		#init the application
 		self.app_name = self.getAppName()
 		self.app_full_path = self.getAppFullPath()
-		#Æô¶¯½Å±¾
+		#init the start script
 		self.start_script = self.getStartScript()
 
 	def getOpt(self, section, option):
-		'''»ñÈ¡Ä³¸öoption'''
+		'''get the option of the section'''
 		try:
 			dir = self.config.get(section, option)
 		except:
@@ -38,7 +38,7 @@ class Init:
 		return dir
 
 	def getHomeDir(self):
-		'''»ñÈ¡home_dir'''
+		'''get the home directory'''
 		dir = self.getOpt("base", "home_dir")
 		if dir == None:
 			return None
@@ -47,7 +47,7 @@ class Init:
 		return dir
 
 	def getBinDir(self):
-		'''»ñÈ¡binÄ¿Â¼'''
+		'''get the bin directory'''
 		dir = self.getOpt("base", "bin_dir")
 		if dir == None:
 			return None
@@ -56,7 +56,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getLibDir(self):
-		'''»ñÈ¡libÄ¿Â¼'''
+		'''get the library directory'''
 		dir = self.getOpt("base", "lib_dir")
 		if dir == None:
 			return None
@@ -65,7 +65,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getConfDir(self):
-		'''»ñÈ¡confÄ¿Â¼'''
+		'''get the configuration directory'''
 		dir = self.getOpt("base", "conf_dir")
 		if dir == None:
 			return None
@@ -74,7 +74,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getDataDir(self):
-		'''»ñÈ¡dataÄ¿Â¼'''
+		'''get the data directory'''
 		dir = self.getOpt("base", "data_dir")
 		if dir == None:
 			return None
@@ -83,7 +83,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getInputDir(self):
-		'''»ñÈ¡dataÄ¿Â¼'''
+		'''get the data directory'''
 		dir = self.getOpt("base", "input_dir")
 		if dir == None:
 			return None
@@ -92,7 +92,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getResultDir(self):
-		'''»ñÈ¡dataÄ¿Â¼'''
+		'''get the data directory'''
 		dir = self.getOpt("base", "result_dir")
 		if dir == None:
 			return None
@@ -101,7 +101,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getLogDir(self):
-		'''»ñÈ¡logÄ¿Â¼'''
+		'''get the log diretory'''
 		dir = self.getOpt("base", "log_dir")
 		if dir == None:
 			return None
@@ -111,7 +111,7 @@ class Init:
 
 
 	def getScriptDir(self):
-		'''»ñÈ¡logÄ¿Â¼'''
+		'''get the log directory'''
 		dir = self.getOpt("base", "script_dir")
 		if dir == None:
 			return None
@@ -120,15 +120,15 @@ class Init:
 		return self.home_dir + dir
 
 	def getAppName(self):
-		'''»ñÈ¡¿ÉÖ´ĞĞ³ÌĞòÃû'''
+		'''è·å–å¯æ‰§è¡Œç¨‹åºå'''
 		return self.getOpt("app", "app_name")
 
 	def getAppFullPath(self):
-		'''»ñÈ¡¿ÉÖ´ĞĞ³ÌĞòµÄÈ«Â·¾¶'''
+		'''è·å–å¯æ‰§è¡Œç¨‹åºçš„å…¨è·¯å¾„'''
 		return str(self.bin_dir) + str(self.app_name)
 
 	def getServerConfig(self):
-		'''»ñÈ¡ÅäÖÃÎÄ¼ş'''
+		'''get the server's configuration'''
 		cfg = self.getOpt("conf", "server_cfg")
 		if cfg == None:
 			return None
@@ -137,7 +137,7 @@ class Init:
 		return str(self.conf_dir) + cfg
 
 	def getServerConfigBak(self):
-		'''»ñÈ¡±¸·İÅäÖÃÎÄ¼ş'''
+		'''get the backup server configuration'''
 		cfg = self.getOpt("conf", "server_cfg_bak")
 		if cfg == None:
 			return None
@@ -146,7 +146,7 @@ class Init:
 		return str(self.conf_dir) + cfg
 
 	def getQueryConfig(self):
-		'''»ñÈ¡ÅäÖÃÎÄ¼ş'''
+		'''get the query server's configuration'''
 		cfg = self.getOpt("conf", "query_cfg")
 		if cfg == None:
 			return None
@@ -155,7 +155,7 @@ class Init:
 		return str(self.conf_dir) + cfg
 
 	def getQueryConfigBak(self):
-		'''»ñÈ¡±¸·İÅäÖÃÎÄ¼ş'''
+		'''get query server's configuration'''
 		cfg = self.getOpt("conf", "query_cfg_bak")
 		if cfg == None:
 			return None
@@ -164,14 +164,14 @@ class Init:
 		return str(self.conf_dir) + cfg
 
 	def getAdlogCfg(self):
-		'''»ñÈ¡Adlog.cfg'''
+		'''get adlog.cfg'''
 		cfg = self.getOpt("conf", "adlog_cfg")
 		if cfg == None:
 			return None
 		return self.conf_dir + cfg
 
 	def getStartScript(self):
-		'''»ñÈ¡Æô¶¯½Å±¾'''
+		'''get start script'''
 		sh = self.getOpt("script", "start_script")
 		if sh == None:
 			return None
