@@ -2,4 +2,4 @@
 ${date}	20140301
 ${input_path} input/
 ${data_path} data/
-${script_path} script/
+${script_path} script/ 
