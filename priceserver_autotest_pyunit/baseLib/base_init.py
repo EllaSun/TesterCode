@@ -1,33 +1,32 @@
-# coding:GBK
-import os
+import os,time,sys
+import string
 import ConfigParser
+from baseLib import base_sys
 
 class Init:
 	def __init__(self, cfg):
-		#加载配置文件
+		'''load configeruation'''
 		self.config = ConfigParser.ConfigParser()
 		self.config.read(cfg)
-		#初始化目录配置信息
+		'''init diretory configuration'''
 		self.home_dir = self.getHomeDir()
 		self.conf_dir = self.getConfDir()
 		self.data_dir = self.getDataDir()
 		self.bin_dir = self.getBinDir()
 		self.lib_dir = self.getLibDir()
 		self.log_dir = self.getLogDir()
-		#初始化配置文件配置信息
+		'''init automation framework's configuration'''
 		self.server_cfg = self.getServerConfig()
 		self.server_cfg_bak = self.getServerConfigBak()
-		self.query_server_cfg = self.getQueryConfig()
-		self.query_server_cfg_bak = self.getQueryConfigBak()
 		self.adlog_cfg = self.getAdlogCfg()
-		#初始化app
+		''' init test objective'''
 		self.app_name = self.getAppName()
 		self.app_full_path = self.getAppFullPath()
-		#启动脚本
+		'''init start script'''
 		self.start_script = self.getStartScript()
 
 	def getOpt(self, section, option):
-		'''获取某个option'''
+		'''get the option in the section'''
 		try:
 			dir = self.config.get(section, option)
 		except:
@@ -35,7 +34,7 @@ class Init:
 		return dir
 
 	def getHomeDir(self):
-		'''获取home_dir'''
+		'''get the home directory'''
 		dir = self.getOpt("base", "home_dir")
 		if dir == None:
 			return None
@@ -44,7 +43,7 @@ class Init:
 		return dir
 
 	def getBinDir(self):
-		'''获取bin目录'''
+		'''get the binary directory'''
 		dir = self.getOpt("base", "bin_dir")
 		if dir == None:
 			return None
@@ -53,7 +52,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getLibDir(self):
-		'''获取lib目录'''
+		'''get the library directory'''
 		dir = self.getOpt("base", "lib_dir")
 		if dir == None:
 			return None
@@ -62,7 +61,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getConfDir(self):
-		'''获取conf目录'''
+		'''get configration directory'''
 		dir = self.getOpt("base", "conf_dir")
 		if dir == None:
 			return None
@@ -71,7 +70,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getDataDir(self):
-		'''获取data目录'''
+		'''get the data directory'''
 		dir = self.getOpt("base", "data_dir")
 		if dir == None:
 			return None
@@ -80,7 +79,7 @@ class Init:
 		return self.home_dir + dir
 
 	def getLogDir(self):
-		'''获取log目录'''
+		'''get the log directory'''
 		dir = self.getOpt("base", "log_dir")
 		if dir == None:
 			return None
@@ -89,15 +88,15 @@ class Init:
 		return self.home_dir + dir
 
 	def getAppName(self):
-		'''获取可执行程序名'''
+		'''get the excutable application's name'''
 		return self.getOpt("app", "app_name")
 
 	def getAppFullPath(self):
-		'''获取可执行程序的全路径'''
+		'''get the absolute path of the excutable application'''
 		return str(self.bin_dir) + str(self.app_name)
 
 	def getServerConfig(self):
-		'''获取配置文件'''
+		'''get the server's configuration'''
 		cfg = self.getOpt("conf", "server_cfg")
 		if cfg == None:
 			return None
@@ -106,7 +105,7 @@ class Init:
 		return str(self.conf_dir) + cfg
 
 	def getServerConfigBak(self):
-		'''获取备份配置文件'''
+		'''get the server's backup configuration'''
 		cfg = self.getOpt("conf", "server_cfg_bak")
 		if cfg == None:
 			return None
@@ -114,35 +113,16 @@ class Init:
 			return str(self.home_dir) + cfg
 		return str(self.conf_dir) + cfg
 
-	def getQueryConfig(self):
-		'''获取配置文件'''
-		cfg = self.getOpt("conf", "query_cfg")
-		if cfg == None:
-			return None
-		if self.conf_dir == None:
-			return str(self.home_dir) + cfg
-		return str(self.conf_dir) + cfg
-
-	def getQueryConfigBak(self):
-		'''获取备份配置文件'''
-		cfg = self.getOpt("conf", "query_cfg_bak")
-		if cfg == None:
-			return None
-		if self.conf_dir == None:
-			return str(self.home_dir) + cfg
-		return str(self.conf_dir) + cfg
-
 	def getAdlogCfg(self):
-		'''获取Adlog.cfg'''
+		'''get the adlog configuration'''
 		cfg = self.getOpt("conf", "adlog_cfg")
 		if cfg == None:
 			return None
 		return self.conf_dir + cfg
 
 	def getStartScript(self):
-		'''获取启动脚本'''
+		'''get the start script'''
 		sh = self.getOpt("script", "start_script")
 		if sh == None:
 			return None
 		return self.home_dir + sh
-
