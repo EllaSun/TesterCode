@@ -1,6 +1,6 @@
 | *** Test Cases *** |
 | low_ctr |
-|    | [Documentation] | Click/pv<l_click_pv，打印Ctr低 |
+|    | [Documentation] | Click/pv<l_click_pv, print the low ctr |
 |    | ... |
 |    | ... | python $SCRIPT_PATH/pid_info_reporter.py $PID_INFO_PATH/pid_ip_type $PID_INFO_PATH/pid_refer_type $PID_INFO_PATH/pid_query_type $PID_INFO_PATH/pid_cost $PID_INFO_PATH/pid_type_rank data/cheatpid_type/cheatpid_type_$date $INPUT_PATH/lyb_info $PID_INFO_PATH/pid_ml_stat_info $HOT_KWD_PID_FILE $RULE_PID_WHITE_LIST $FEATURE_CONF_FILE \ $OUTPUT_PATH/pid.report.$date |
 |    | note | pid_ip_type | pid | ip |
