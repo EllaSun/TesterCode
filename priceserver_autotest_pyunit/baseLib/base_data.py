@@ -1,67 +1,57 @@
-# coding:GBK
-import os
+import os,re,time
+import string
 
-# 数据文件类
+# Data
 class Data:
 	def __init__(self):
 		pass
 
 	def append(self, file, content):
-		'''追加数据文件'''
+		'''append data to a data file'''
 		file = open(file, 'a')
 		file.write(content + "\n")
 		file.close()
 
-	def append_bin(self, file, content):
-		'''追加数据文件'''
-		file = open(file, 'ab')
-		file.write(content)
-		file.close()
-
 	def write(self, file, content):
-		'''写数据文件'''
+		'''write a data file'''
 		file = open(file, 'w')
 		file.write(content + "\n")
 		file.close()
 
-	def write_bin(self, file, content):
-		'''写数据文件'''
-		file = open(file, 'wb')
-		file.write(content)
-		file.close()
-
 	def read(self, file):
-		'''读数据文件'''
+		'''read a data file.'''
+		'''return a list. Each item of the list is a line of the data file'''
 		file = open(file, 'r')
 		content = file.read().strip('\n').split('\n')
 		file.close()
 		return content
 
 	def readAll(self, file):
-		'''读数据文件'''
+	        '''read a data file.'''
+	        '''return a string which include whole content of the data file with carriage return characters'''
 		file = open(file, 'r')
 		content = file.read()
 		file.close()
 		return content
 
 	def readLine(self, file, line):
-		'''读数据文件中某一行'''
+		'''get the specified line in the data file'''
 		line = self.read(file)[int(line)]
 		return str(line)
 
 	def clear(self, file):
-		'''清空数据文件'''
+		''' clear the data file'''
 		file = open(file, 'w')
 		file.write('')
 		file.close()
 
 	def clearFiles(self, files):
-		'''批量清空指定数据文件'''
+		'''clear batch of data files'''
 		for f in files:
 			self.clear(f)
 	
 	def clearBatch(self, dir, files=None):
-		'''批量清空指定目录下数据文件'''
+		'''clear batch of data files in specified directory'''
 		if files == None:
 			files = os.listdir(str(dir))
 		for f in files:
@@ -69,5 +59,5 @@ class Data:
 			self.clear(file)
 
 	def rm(self, file):
-		'''删除数据文件'''
+		'''delete a data file'''
 		os.remove(file)
