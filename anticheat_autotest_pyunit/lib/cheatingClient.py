@@ -1,4 +1,3 @@
-#coding:gbk
 from baseLib import base_server, base_data
 import os, re, time, commands, struct
 import string, copy, md5
@@ -63,11 +62,11 @@ class cheatingClient(base_server.Server):
 
 	def makeLevel(self, levl, leftMove = 15):
 		reserved = 8421889
-		#15-18ÎªÁªÃË¼¶±ğ
+		#15-18 level is the union channel
 		if leftMove == 15:
-			#½«15-18ÖÃ0
+			#å°†15-18ç½®0
 			reserved = reserved & 4294721535
-		#ÖÃ15-18Î»
+		#set 15-19 bit
 		reserved = reserved | (levl << leftMove)
         	return reserved
 
@@ -75,9 +74,9 @@ class cheatingClient(base_server.Server):
 			suid='7EA0010A81430A0A00000000574E63C6', yyid='7E43B0FD2EA99B7DD88F7CA2E22E25D1', cookie=makeCookie(),\
 			flag = '00000001', reserved = '08421889', s_type = '1', price = '32', url='http://www.abc.com', letGoType = 1,\
 			ml = -1, mc = -1, isBack = 0, serviceType="20100",isInvalid='0',newXmlCookie='',extendReserved='8', \
-			creativeId='4444', groupTemp='0',cookieTime=0, pvTime=0, searchKeyWord="ÏÊ»¨",clickId=None, planId="0", \
+			creativeId='4444', groupTemp='0',cookieTime=0, pvTime=0, searchKeyWord="é²œèŠ±",clickId=None, planId="0", \
 			md5Res='ffffffffffffffff', ma="2375,1344,238,553,250,560,1424,723", cx_type="0", cx_indus="0", lu="", upos="0", \
-			queryReserved="0", maxPrice="0", keyword="ÏÊ»¨"):
+			queryReserved="0", maxPrice="0", keyword="é²œèŠ±"):
 		data = clickTemplate.replace('{[(flag)]}', str(flag))
 		data = data.replace('{[(reserved)]}', str(reserved))
 		data = data.replace('{[(serverTime)]}', str(serverTime))
@@ -165,7 +164,7 @@ class cheatingClient(base_server.Server):
 		
 	def addMassiveNoIPCRepeatClicks(self, n, cpcId, accId, pid='sogou', flag = '00000001', reserved = '08421889', s_type = '3'):
 		cookie = makeCookie()
-		#Éú³É²»ÖØ¸´µÄIPµØÖ·
+		#generate no repeating ip addresses
 		ipN = 100100100100
 		for i in range(n):
 			serverTime = getValidTime()
