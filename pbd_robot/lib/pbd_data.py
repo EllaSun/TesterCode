@@ -1,4 +1,3 @@
-#coding: gbk
 import sys
 import time
 import commands
