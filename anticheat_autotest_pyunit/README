@@ -15,4 +15,4 @@ inflence each other.
 2. Rewrote test cases. Not to import package which is not use in your test case files. I know we all love copying. But it really waste 
 time. 
 
-3. Customer your automation framework. Don't try to make it fit all applications. 
+3. Customized your automation framework. Don't try to make it fit all applications. 
