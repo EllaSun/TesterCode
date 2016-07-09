@@ -1,4 +1,3 @@
-# coding:GBK
 import os, re, time
 import string
 import commands
