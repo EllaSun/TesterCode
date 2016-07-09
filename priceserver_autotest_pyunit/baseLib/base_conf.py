@@ -1,9 +1,8 @@
-# coding:GBK
 import os
 import ConfigParser
 from baseLib import base_data
 
-# 配置文件
+# configuration
 class Config:
 	def __init__(self, section, cfg, cfg_bak = None, mode = 1):
 		self.cf = ConfigParser.ConfigParser()
@@ -15,7 +14,7 @@ class Config:
 		self.data = base_data.Data()
 
 	def set(self, item, value, isStrip = 1):
-		'''设置配置项'''
+		'''set configuration item'''
 		if self.mode == 1:
 			item = "\"" + item + "\""
 			value = "\"" + value + "\""
@@ -25,7 +24,7 @@ class Config:
 			self.strip()
 
 	def get(self, item):
-		'''获取配置项'''
+		'''get configurtaion item'''
 		if self.mode == 1:
 			item = "\"" + item + "\""
 		try:
@@ -43,7 +42,7 @@ class Config:
 		return res
 
 	def remove(self, item, isStrip = 1):
-		'''删除配置项'''
+		'''delete the configuration item'''
 		if self.mode == 1:
 			item = "\"" + item + "\""
 		try:
@@ -55,13 +54,14 @@ class Config:
 			print "Error"
 
 	def recover(self):
-		'''恢复配置文件'''
+		'''recover the configuaration file'''
 		cmd = 'cp -f ' + self.cfg_bak + ' ' + self.cfg
 		os.system(cmd)
 		self.cf.read(self.cfg)
 
 	def strip(self):
-		'''去掉配置项等号左右空格,注：模块自动添加空格，server读取失败'''
+		'''delete blank spaces around equal sign'''
+		'''note: ConfigParser module add blank autolly which would make server cannot be started'''
 		lines = self.data.read(self.cfg)
 		newLines = []
 		for l in lines:
