@@ -1,4 +1,3 @@
-#coding: gbk
 from baseLib import base_log,base_conf
 import os
 import commands
@@ -117,7 +116,7 @@ class antiCheatLog(base_log.Log):
 		return cheatNum
 
 	def find_error_log(self, key="", key2=""):
-		'''查找error日志中某关键词的出现行数'''
+		'''count the number of lines which include the given keyword'''
 		return self.error.find(key1=key, key2=key2) + self.err.find(key1=key, key2=key2)
 	
 	def makeRollBackClick(self, type):
