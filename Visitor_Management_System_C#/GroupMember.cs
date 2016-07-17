@@ -40,7 +40,7 @@ namespace VMS
 
             b.Add(comboBox_VistorLuggage.Text.ToString());
             b.Add("");
-            //grouplogin.DBconn(b);
+            grouplogin.DBconn(b);
 
 
         }
