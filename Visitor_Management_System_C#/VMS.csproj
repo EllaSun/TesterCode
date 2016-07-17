@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{627DB7B7-71C0-4A5D-94FE-6667DCC9153F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VMS</RootNamespace>
+    <AssemblyName>VMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>index.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutoTest.Designer.cs">
+      <DependentUpon>AutoTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAR_INFO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAR_INFO.Designer.cs">
+      <DependentUpon>CAR_INFO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function.cs" />
+    <Compile Include="GroupLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupLogin.Designer.cs">
+      <DependentUpon>GroupLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupLogout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupLogout.Designer.cs">
+      <DependentUpon>GroupLogout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupMember.Designer.cs">
+      <DependentUpon>GroupMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hand_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hand_Login.Designer.cs">
+      <DependentUpon>Hand_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hand_Logout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hand_Logout.Designer.cs">
+      <DependentUpon>Hand_Logout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDReader.cs" />
+    <Compile Include="SearchVistorInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchVistorInfo.Designer.cs">
+      <DependentUpon>SearchVistorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitorLogin.Designer.cs">
+      <DependentUpon>VisitorLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuardLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuardLogin.Designer.cs">
+      <DependentUpon>GuardLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainpanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainpanel.Designer.cs">
+      <DependentUpon>mainpanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisitorLogout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitorLogout.Designer.cs">
+      <DependentUpon>VisitorLogout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistorReject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistorReject.Designer.cs">
+      <DependentUpon>VistorReject.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoTest.resx">
+      <DependentUpon>AutoTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAR_INFO.resx">
+      <DependentUpon>CAR_INFO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupLogin.resx">
+      <DependentUpon>GroupLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupLogout.resx">
+      <DependentUpon>GroupLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupMember.resx">
+      <DependentUpon>GroupMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuardLogin.resx">
+      <DependentUpon>GuardLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hand_Login.resx">
+      <DependentUpon>Hand_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hand_Logout.resx">
+      <DependentUpon>Hand_Logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainpanel.resx">
+      <DependentUpon>mainpanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchVistorInfo.resx">
+      <DependentUpon>SearchVistorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitorLogin.resx">
+      <DependentUpon>VisitorLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitorLogout.resx">
+      <DependentUpon>VisitorLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistorReject.resx">
+      <DependentUpon>VistorReject.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\聊吧1.ico" />
+    <None Include="Resources\助理1.ico" />
+    <None Include="Resources\maintop.jpg" />
+    <None Include="Resources\rightcheck2.tif" />
+    <None Include="Resources\top25.jpg" />
+    <None Include="Resources\top24.jpg" />
+    <None Include="Resources\top2.jpg" />
+    <None Include="Resources\MAIN_06.jpg" />
+    <None Include="Resources\无命名.jpg" />
+    <None Include="Resources\钥匙1.ico" />
+    <None Include="Resources\聊吧.ico" />
+    <None Include="Resources\pc07.ICO" />
+    <None Include="Resources\地球.ico" />
+    <None Include="Resources\工具3.ico" />
+    <None Include="Resources\工具.ico" />
+    <None Include="Resources\助理.ico" />
+    <None Include="Resources\游戏更新.ico" />
+    <None Include="Resources\钥匙.ico" />
+    <None Include="Resources\top1.jpg" />
+    <None Include="Resources\top.jpg" />
+    <None Include="Resources\MAIN_03.jpg" />
+    <None Include="Resources\LOGIN31.jpg" />
+    <None Include="Resources\046.ico" />
+    <None Include="Resources\0461.ico" />
+    <None Include="Resources\067.ico" />
+    <None Include="Resources\048.ico" />
+    <None Include="Resources\backgroud.jpg" />
+    <None Include="Resources\backgroud1.jpg" />
+    <None Include="Resources\abc-2.jpg" />
+    <None Include="Resources\6.jpg" />
+    <None Include="Resources\golden_offer.jpg" />
+    <Content Include="index.ico" />
+    <None Include="Resources\0481.ico" />
+    <Content Include="Resources\LOGIN4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
