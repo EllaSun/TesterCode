@@ -55,7 +55,6 @@ namespace VMS
         private void button_Print_Click(object sender, EventArgs e)
         {
             
-            DBconn();
             //打印模块
             this.printPreviewDialog1.ShowDialog();
             //
