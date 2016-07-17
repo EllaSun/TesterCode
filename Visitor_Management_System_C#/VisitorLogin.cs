@@ -90,7 +90,7 @@ namespace VMS
         {
 
  
-               //PASS_Check();
+               PASS_Check();
                visitorinfo[9] = comboBox_VistorLuggage.Text;
                 //调用打印函数
                 this.printPreviewDialog1.ShowDialog();
@@ -117,7 +117,7 @@ namespace VMS
                 
                 dt.Columns.Add("id");
                 dt.Columns.Add("luggage");
-                dt.Columns.Add("linshika");
+                //dt.Columns.Add("linshika");
                 DataRow dr1 = dt.NewRow();
                 dt.Rows.Add(dr1);
                 dt.Rows [0][0] = visitorinfo[0];
