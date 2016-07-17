@@ -78,7 +78,7 @@ namespace VMS
         {
             mainpanel mainpanel1 = mainpanel.Getmainpanel();
             //http请求，更改访客状态为“已出园”
-            /*int success_check = httprequest();
+            int success_check = httprequest();
             if (success_check == 0)
             {
                 //MessageBox.Show("数据库请求失败，请重试", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,13 +105,13 @@ namespace VMS
                     File.Delete(unsuccessful_request);
                     Function.DataTableToTXT(dttemp, unsuccessful_request);
                 }
-            }*/
-            //else if (success_check == 1)
-            //{
-               // MessageBox.Show("访客登离成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (success_check == 1)
+            {
+                MessageBox.Show("访客登离成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
          
                 this.Close();                
-            //}
+            }
         }
 
         private void button_Reject_Click(object sender, EventArgs e)
