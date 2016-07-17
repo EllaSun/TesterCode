@@ -466,9 +466,9 @@ namespace VMS
         public bool http_request(out string response_str, string id)
         {
             string http_str = null;
-            http_str = string.Format("http://11.132.169.136:3000/real_times/check_coming_person?id_number={0:s}", id);
-            // http://localhost:3000/real_times/check_guard?name=wumeng&pwd=wumeng
-            // HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create("http://www.baidu.com");
+            http_str = string.Format("http://ip:port/real_times/check_coming_person?id_number={0:s}", id);
+            // http://localhost:3000/real_times/check_guard?name=sunying&pwd=sunying
+            // HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create("http://www.sogou.com");
             HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(http_str);
             HttpWebResponse HttpWResp = null;
             response_str = null;
@@ -503,11 +503,9 @@ namespace VMS
             string http_str = null;
             string a = TxtToString() + "/real_times/check_visitor?id_number={0:s}";
             http_str = string.Format(a, id);
-            //http_str = string.Format("http://11.132.169.136:3000/real_times/check_visitor?id_number={0:s}", id);
-            //http://localhost:3000/real_times/check_visitor?id_number=123456
+
             HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(http_str);
-            //MessageBox.Show(http_str);
-            // HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(http_str);
+
             HttpWebResponse HttpWResp = null;
             response_str = null;
             try
@@ -516,8 +514,7 @@ namespace VMS
             }
             catch (WebException ee)
             {
-                //MessageBox.Show(ee.Status.ToString());
-                //MessageBox.Show(ee.Message);
+
                 return 2;
             }
             Stream reader = HttpWResp.GetResponseStream();
@@ -543,8 +540,7 @@ namespace VMS
             int flag = 0;
             string a = TxtToString() + "/real_times/check_guard?name={0:s}&pwd={1:s}";
             http_str = string.Format(a, user_name, password);
-            //http_str = string.Format("http://11.132.169.136:3000/real_times/check_guard?name={0:s}&pwd={1:s}", user_name, password);
-            //http_str = string.Format("http://11.132.169.165:3000/real_times/check_coming_person?id_number={0:s}", id);
+
             HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(http_str);
             HttpWebResponse HttpWResp = null;
             string response_str = null;
@@ -554,8 +550,7 @@ namespace VMS
             }
             catch (WebException ee)
             {
-                //MessageBox.Show(ee.Status.ToString());
-                //MessageBox.Show(ee.Message);
+
                 return 2;
             }
             Stream reader = HttpWResp.GetResponseStream();
@@ -583,9 +578,7 @@ namespace VMS
             bool flag = false;
             string a = TxtToString() + "/real_times/insert_visitor?vid={0:s}&l={1:s}&cn={2:s}";
             http_str = string.Format(a, vistor_id, luggage);
-            //http_str = string.Format("http://11.132.169.144:3000/real_times/insert_visitor?vid={0:s}&l={1:s}", vistor_id, luggage);
-            //http_str = string.Format("http://11.132.169.165:3000/real_times/check_coming_person?id_number={0:s}", id);
-            //MessageBox.Show(http_str);
+
             HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(http_str);
             HttpWebResponse HttpWResp = null;
             string response_str = null;
@@ -595,8 +588,7 @@ namespace VMS
             }
             catch (WebException ee)
             {
-                //MessageBox.Show(ee.Status.ToString());
-                //MessageBox.Show(ee.Message);
+
                 return false;
             }
             Stream reader = HttpWResp.GetResponseStream();
@@ -624,9 +616,7 @@ namespace VMS
             bool flag = false;
             string a = TxtToString() + "/real_times/update_visitor?id={0:s}";
             http_str = string.Format(a,id);
-           // http_str = string.Format("http://11.132.169.144:3000/real_times/update_visitor?id={0:s}", id);
-            //http_str = string.Format("http://11.132.169.165:3000/real_times/check_coming_person?id_number={0:s}", id);
-            //HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create("http://www.baidu.com");
+
             HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(http_str);
             HttpWebResponse HttpWResp = null;
             string response_str = null;
@@ -636,8 +626,7 @@ namespace VMS
             }
             catch (WebException ee)
             {
-                //MessageBox.Show(ee.Status.ToString());
-                //MessageBox.Show(ee.Message);
+
                 return false;
             }
             Stream reader = HttpWResp.GetResponseStream();
@@ -987,7 +976,7 @@ namespace VMS
                 string txtFilePath = "";
                 if (startpath == "C:\\usr\\" + System.Environment.UserName)
                 {
-                    txtFilePath = "C:\\programme files\\CCB\\vms2.1\\中国建设银行北京数据中心访客管理系统\\media\\url.txt";
+                    txtFilePath = "C:\\programme files\\CCB\\vms2.1\\访客管理系统\\media\\url.txt";
                     
                 }
                 else
@@ -1020,13 +1009,13 @@ namespace VMS
                 else
                 {
                     //连接服务器搜索
-                    /*Function checkfunction = new Function();
+                    Function checkfunction = new Function();
                     string atemp = person_ID;
-                    ArrayList a = checkfunction.GetDBInfo(atemp);*/
+                    ArrayList a = checkfunction.GetDBInfo(atemp);
 
                     //test code
                     //个人登陆
-                    String[] personalLoginArray = { "success", "G1", "AMTP", "1234567", "John", "IBM", "A", "Mandy","Commercial Ad Depart","project A","个人登陆","" };
+                    /*String[] personalLoginArray = { "success", "G1", "AMTP", "1234567", "John", "IBM", "A", "Mandy","Commercial Ad Depart","project A","个人登陆","" };
                     //个人登出
                     String[] personalLogoutArray = { "success", "G1", "AMTP", "1234567", "John", "IBM", "A", "Mandy", "Commercial Ad Depart", "背包", "个人登出", "" };
                     //团体登陆
@@ -1036,7 +1025,7 @@ namespace VMS
                     //no result
                     String[] zeroArray = { };
 
-                    ArrayList a = new ArrayList(personalLoginArray);
+                    ArrayList a = new ArrayList(personalLoginArray);*/
 
                     if (a.Count == 0)
                     {
