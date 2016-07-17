@@ -18,17 +18,10 @@ namespace VMS
         public int CheckGuardINFO(string username, string pw)
         {
             //http连接，得到对应数据
-            //int flag = http_user_login(username, pw);
-            int flag = 1;
+            int flag = http_user_login(username, pw);
+            //int flag = 1;
             //bool flag = true;
-            //if (flag==)
-            //{
-            //    return 1;
-            //}
-            //else
-            //{
-            //    return 0;
-            //}
+
             return flag;
         }
 
