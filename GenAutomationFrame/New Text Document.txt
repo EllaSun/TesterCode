@@ -1,0 +1,7 @@
+1. copy commonSteps, Feature, Scenario, Steps
+2. feature
+   1) find out paths 
+   2) create featureFile
+3. step defination
+   1) find out paths
+   2) create step defination 
