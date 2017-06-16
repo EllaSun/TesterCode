@@ -1,0 +1,2 @@
+Backend: API - Advertisement API - Basic Flow - Get Advertisements using the 'Accept-Language" header to search for an advertisement	Search for an advertisement with Get Advertisements using the "Accept-Language" header to show it's additional language fields
+Backend: API - Advertisement API - Alternative Flow - Get Advertisements using the 'Accept-Language" header to search for an advertisement	Search for an advertisement that has empty additional language fields with Get Advertisements using the "Accept-Language" header to show it's default language fields

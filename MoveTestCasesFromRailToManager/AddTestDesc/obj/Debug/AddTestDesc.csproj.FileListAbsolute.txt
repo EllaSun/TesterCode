@@ -1,0 +1,16 @@
+C:\Ella\mycode\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\AddTestDesc.exe.config
+C:\Ella\mycode\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\AddTestDesc.exe
+C:\Ella\mycode\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\AddTestDesc.pdb
+C:\Ella\mycode\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\WebDriver.dll
+C:\Ella\mycode\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\WebDriver.xml
+C:\Ella\mycode\MoveTestCasesFromRailToManager\AddTestDesc\obj\Debug\AddTestDesc.csprojResolveAssemblyReference.cache
+C:\Ella\mycode\MoveTestCasesFromRailToManager\AddTestDesc\obj\Debug\AddTestDesc.exe
+C:\Ella\mycode\MoveTestCasesFromRailToManager\AddTestDesc\obj\Debug\AddTestDesc.pdb
+C:\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\AddTestDesc.exe.config
+C:\MoveTestCasesFromRailToManager\AddTestDesc\obj\Debug\AddTestDesc.exe
+C:\MoveTestCasesFromRailToManager\AddTestDesc\obj\Debug\AddTestDesc.pdb
+C:\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\AddTestDesc.exe
+C:\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\AddTestDesc.pdb
+C:\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\WebDriver.dll
+C:\MoveTestCasesFromRailToManager\AddTestDesc\bin\Debug\WebDriver.xml
+C:\MoveTestCasesFromRailToManager\AddTestDesc\obj\Debug\AddTestDesc.csprojResolveAssemblyReference.cache
